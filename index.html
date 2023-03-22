@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-二叉排序树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/22/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/" class="article-date">
+  <time class="dt-published" datetime="2023-03-22T08:03:32.705Z" itemprop="datePublished">2023-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h1><h2 id="1-查找第k个最小元素"><a href="#1-查找第k个最小元素" class="headerlink" title="1.查找第k个最小元素"></a>1.查找第k个最小元素</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BSTNode * <span class="title">Search</span> <span class="params">(BSTNode *root, <span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">BSTNode *t=root;</span><br><span class="line"><span class="keyword">while</span>(t)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (k == t-&gt;LeftSize) <span class="keyword">return</span> t;</span><br><span class="line">    <span class="keyword">if</span> (k &lt; t-&gt;LeftSize) t=t-&gt;LeftChild;</span><br><span class="line">    <span class="keyword">else</span> &#123;k =k - LeftSize; t = t→RightChild; &#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-伸展树"><a href="#2-伸展树" class="headerlink" title="2.伸展树"></a>2.伸展树</h2><blockquote>
+<p>问题描述</p>
+<p>分析公司的营业情况是一项相当复杂的工作。经济管理学上定义了一种最小波动值来衡量营业情况：<br>每天的最小波动值&#x3D;min{|该天以前某一天的营业额-该天的营业额|}第一天的最小波动值为第一天的营业额。<br>最小波动值越大，说明营业情况越不稳定。要分析整个公司从成立到现在营业情况是否稳定，只需要把每一天的最小波动值加起来就可以了。<br>现在给出公司成立以来每天的营业额，编写一个程序计算公司成立以来每天的最小波动值的总和数据范围：天数n ≤ 32767，每天的营业额ai ≤ 1,000,000.<br>最后结果T ≤ 2**31。</p>
+</blockquote>
+<p>解题思路：<br>每新<strong>插入的结点</strong>均被调整到<strong>根结点</strong>,那么时间就可以下降下来。</p>
+<p>伸展树的性质：<br>与二叉查找树一样，伸展树也具有有序性。即伸展树中的每一个顶点key都满足：该顶点左子树中的每一个元素都小于key，而其右子树中的每一个元素都大于key。<br>操作特点：<br><strong>结点一旦被访问（如插入，查我，修改），均需要把该结点调整为新的树根。</strong><br>例外，结点点被删除后，则其双亲结点做新树根。</p>
+<p>在 Splay 中旋转分为两种：左旋和右旋。</p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163608777.png" alt="image-20230322163608777"></p>
+<p><strong>具体分析旋转步骤</strong>（假设需要旋转的节点为2 ，其父亲为 1，以右旋为例）：</p>
+<ol>
+<li><p>将 1的左儿子指向2 的右儿子，且 2的右儿子（如果 2有右儿子的话）的父亲指向 1；<code>ch[y][0]=ch[x][1]; if(fa[ch[x][1]]) fa[ch[x][1]]=y;</code></p>
+</li>
+<li><p>如果原来的1 还有父亲 z，那么把z 的某个儿子（原来 1所在的儿子位置）指向 2，且2 的父亲指向z 。<code>fa[x]=z; if(z) ch[z][y==ch[z][1]]=x;</code></p>
+</li>
+<li><p>将2 的右儿子指向1 ，且 1的父亲指向 2；<code>ch[x][chk^1]=y; fa[y]=x;</code></p>
+</li>
+</ol>
+<p><strong>右旋简述：</strong>轴点的右节点指向父节点，如果轴点有右节点，则右节点作为父节点的左节点</p>
+<p><strong>左旋简述：</strong>轴点的左节点指向父节点，如果轴点有左节点，则左节点作为父节点的右节点</p>
+<p>操作：</p>
+<p>1.单旋转</p>
+<p>2.双旋转</p>
+<p>两类</p>
+<p>两种旋转的不同作用:<br>1)之字形旋转-使子树结构的高度减1<br>-趋向于使树结构更加平衡·<br>2)一字形提升<br>一般不会降低树结构的高度<br>它只是把新访问的记录向根结点移动</p>
+<p>旋转操作的总结与实现核心：<br>单旋操作：<br>(左旋、右旋一字形旋转与之字形旋转：利用两次单旋</p>
+<p>右旋:</p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163645154.png" alt="image-20230322163645154"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//右旋操作</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Zig</span><span class="params">(node*x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    node *y=x-&gt;par；</span><br><span class="line">	y-&gt;lc=x-&gt;rC；</span><br><span class="line">	<span class="keyword">if</span> (x-&gt;rc) x-&gt;rc-&gt;par=y;</span><br><span class="line">    x-&gt;par=y-&gt;par; </span><br><span class="line">    <span class="keyword">if</span>(y-&gt;par)&#123;</span><br><span class="line">		<span class="keyword">if</span>(y==y-&gt;par-sic)</span><br><span class="line">			y-&gt;par-&gt;lc=x；</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		y-&gt;par-&gt;rc=x;&#125;</span><br><span class="line">    x-&gt;rc = y;</span><br><span class="line">	y-&gt;par = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>伸展树的调整过程：</strong></p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163708000.png" alt="image-20230322163708000"></p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163722090.png" alt="image-20230322163722090"></p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163741474.png" alt="image-20230322163741474"></p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163759206.png" alt="image-20230322163759206"></p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322163812080.png" alt="image-20230322163812080"></p>
+<p>poj 3481 3580 3533 </p>
+<h2 id="3-四分树"><a href="#3-四分树" class="headerlink" title="3.四分树"></a>3.四分树</h2><p>zoj 1788 1067 1805 1955 1959</p>
+<h3 id="四分树的分割方法"><a href="#四分树的分割方法" class="headerlink" title="四分树的分割方法:"></a>四分树的分割方法:</h3><h4 id="从上而下建立（top-down）"><a href="#从上而下建立（top-down）" class="headerlink" title="从上而下建立（top-down）"></a>从上而下建立（top-down）</h4><p>先检查全区域，内容不同的再四分割，往下逐次递归。这种方法需要大量的运算，因为大量的数据需要重复检查才能确定划分。<br>例如E，F等格网需要检查4次。</p>
+<h4 id="从下而上建立（bottom-up）"><a href="#从下而上建立（bottom-up）" class="headerlink" title="从下而上建立（bottom-up）"></a>从下而上建立（bottom-up）</h4><p>对栅格数据按一定的顺序进行检测，如果相邻的四个格的网值相同，则进行合并，逐次向上递归。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//四分树建立算法</span></span><br><span class="line"><span class="function">quadtree *<span class="title">DFS</span><span class="params">(<span class="type">int</span> r,<span class="type">int</span> c,<span class="type">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">    <span class="type">bool</span> flag=<span class="number">1</span>; </span><br><span class="line">    quadtree *temp=<span class="keyword">new</span> quadtree;</span><br><span class="line">    <span class="keyword">if</span>(len＝＝<span class="number">1</span>) <span class="comment">//value值为“OO＂，“O1＂，＂1＂ 00表示全O，01表示金1，1表示混合点</span></span><br><span class="line">    &#123;</span><br><span class="line">        temp-&gt;value[<span class="number">0</span>]=<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        temp-&gt;value[<span class="number">1</span>]=<span class="string">&#x27;0&#x27;</span>+MAP[r][c&#125;;</span><br><span class="line">        temp-&gt;value[<span class="number">2</span>]=<span class="number">0</span>; </span><br><span class="line">        <span class="keyword">return</span> temp; </span><br><span class="line">    &#125;</span><br><span class="line">	len/=<span class="number">2</span>;</span><br><span class="line">	temp-&gt;child[<span class="number">0</span>]=<span class="built_in">DFS</span>(r,c,len);</span><br><span class="line">   	temp-&gt;child[<span class="number">1</span>]=<span class="built_in">DFS</span>(r,c+len,len);</span><br><span class="line">    temp-&gt;child[<span class="number">2</span>]=<span class="built_in">DFS</span>(r+len,c,len);</span><br><span class="line">    temp-&gt;child[<span class="number">3</span>]=<span class="built_in">DFS</span>(r+len,c+len,len);</span><br><span class="line">   	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!(*temp-＞child[<span class="number">0</span>]==*temp-&gt;child［i］)) </span><br><span class="line">     	&#123; </span><br><span class="line">         flag＝<span class="number">0</span>; <span class="keyword">break</span>; </span><br><span class="line">     	&#125;</span><br><span class="line">    &#125;<span class="comment">//不用合并</span></span><br><span class="line">	<span class="keyword">if</span>(flag)&#123;</span><br><span class="line">        <span class="built_in">strcpy</span>(temp-&gt;value，temp-&gt;child［<span class="number">0</span>］-&gt;value);／／合并到双亲，并删除四个子树</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">		&#123; </span><br><span class="line">            <span class="keyword">delete</span> temp-&gt;child[i];</span><br><span class="line">            temp-&gt;child[i]=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">        <span class="built_in">strcpy</span>(temp-&gt;value,<span class="string">&quot;1&quot;</span>); </span><br><span class="line">    &#125;<span class="comment">//不用合并则更改为混合型</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/22/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/" data-id="clfjee56z0000zcufb5jj67o1" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/22/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-03-22T07:58:52.675Z" itemprop="datePublished">2023-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/03/22/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/22/hello-world/" data-id="clfjehsge0000y4uf9quyh6qc" data-title="Hello World" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/22/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
