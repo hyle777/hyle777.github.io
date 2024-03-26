@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>JavaScript常用数据结构和api | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="js对象 键是字符串类型，平时写对象的时候把键的单引号或双引号省略了。  合并对象 123let obj1 &#x3D; &amp;#123; a: 1 &amp;#125;;let obj2 &#x3D; &amp;#123; b: 2 &amp;#125;;let mergedObj &#x3D; &amp;#123; ...obj1, ...obj2 &amp;#125;;  字符串常见的 JavaScript 字符串方法：  length：获取字符串的长度。 12s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript常用数据结构和api">
+<meta property="og:url" content="http://example.com/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="js对象 键是字符串类型，平时写对象的时候把键的单引号或双引号省略了。  合并对象 123let obj1 &#x3D; &amp;#123; a: 1 &amp;#125;;let obj2 &#x3D; &amp;#123; b: 2 &amp;#125;;let mergedObj &#x3D; &amp;#123; ...obj1, ...obj2 &amp;#125;;  字符串常见的 JavaScript 字符串方法：  length：获取字符串的长度。 12s">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-25T04:48:25.292Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2023-03-21-JavaScript常用数据结构和api" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/" class="article-date">
+  <time class="dt-published" datetime="2023-03-20T16:00:00.000Z" itemprop="datePublished">2023-03-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      JavaScript常用数据结构和api
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a>js对象</h1><ul>
+<li><p>键是字符串类型，平时写对象的时候把键的单引号或双引号省略了。</p>
+</li>
+<li><p>合并对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123; <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> mergedObj = &#123; ...obj1, ...obj2 &#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>常见的 JavaScript 字符串方法：</p>
+<ol>
+<li><p><strong>length</strong>：获取字符串的长度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;Hello, World!&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="property">length</span>); <span class="comment">// 输出 13</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>indexOf</strong> 和 <strong>lastIndexOf</strong>：查找指定子字符串在字符串中的位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">indexOf</span>(<span class="string">&quot;o&quot;</span>)); <span class="comment">// 输出 4</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">lastIndexOf</span>(<span class="string">&quot;o&quot;</span>)); <span class="comment">// 输出 8</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>charAt</strong> 和 <strong>charCodeAt</strong>：获取指定位置的字符和字符的 Unicode 编码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charAt</span>(<span class="number">1</span>)); <span class="comment">// 输出 &quot;e&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charCodeAt</span>(<span class="number">1</span>)); <span class="comment">// 输出 101</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>substring</strong> 和 <strong>substr</strong>：提取字符串中的子字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substring</span>(<span class="number">1</span>, <span class="number">4</span>)); <span class="comment">// 输出 &quot;ell&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substr</span>(<span class="number">1</span>, <span class="number">4</span>)); <span class="comment">// 输出 &quot;ello&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>slice</strong>：提取字符串的部分内容，并返回一个新字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">slice</span>(<span class="number">1</span>, <span class="number">5</span>)); <span class="comment">// 输出 &quot;ello&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>toUpperCase</strong> 和 <strong>toLowerCase</strong>：将字符串转换为大写或小写。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">toUpperCase</span>()); <span class="comment">// 输出 &quot;HELLO, WORLD!&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">toLowerCase</span>()); <span class="comment">// 输出 &quot;hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>trim</strong>：去除字符串两端的空格。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">trim</span>()); <span class="comment">// 输出 &quot;Hello, World!&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>split</strong>：将字符串分割成子字符串数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> str = <span class="string">&quot;apple,banana,orange&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">split</span>(<span class="string">&quot;,&quot;</span>)); <span class="comment">// 输出 [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
+<li>创建数组：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]; <span class="comment">// 通过使用方括号 [] 和逗号分隔的值来创建数组</span></span><br><span class="line"><span class="keyword">var</span> emptyArr = []; <span class="comment">// 创建一个空数组</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>访问和修改数组元素：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]); <span class="comment">// 访问数组中的第一个元素，输出: 1</span></span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">10</span>; <span class="comment">// 修改数组中的第三个元素为 10</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出: [1, 2, 10, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>获取数组长度：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="property">length</span>); <span class="comment">// 输出数组的长度，即包含的元素个数，输出: 5</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>添加和删除数组元素：</li>
+</ol>
+<ul>
+<li>splice(i)：删除下标为i的元素</li>
+<li>push，pop：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">push</span>(<span class="number">6</span>); <span class="comment">// 在数组末尾添加新元素 6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出: [1, 2, 10, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lastElem = arr.<span class="title function_">pop</span>(); <span class="comment">// 移除并返回数组末尾的元素</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(lastElem); <span class="comment">// 输出: 6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出: [1, 2, 10, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>concat() 方法将一个数组中的所有元素添加到另一个数组中</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">arr1 = arr1.<span class="title function_">concat</span>(arr2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr1); <span class="comment">// 输出 [1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拷贝一个数组 </p>
+<p>  直接赋值是浅拷贝，复制了它的引用</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [snake1,snake2] = <span class="variable language_">this</span>.<span class="property">snakes</span>;</span><br></pre></td></tr></table></figure>
+
+<p>  使用JSON库完成深拷贝</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">cells</span>[i] = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(<span class="variable language_">this</span>.<span class="property">cells</span>[i - <span class="number">1</span>]));</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li>filter</li>
+</ol>
+<p>  用于根据指定的条件筛选出符合条件的元素，返回一个新的数组。</p>
+<p>  接受一个回调函数作为参数，该回调函数会被应用于数组的每个元素，并根据回调函数的返回值来确定是否保留该元素。</p>
+<p>语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> newArray = array.<span class="title function_">filter</span>(<span class="title function_">callback</span>(element[, index[, array]])[, thisArg]);</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<p>callback：回调函数，用于对每个元素进行判断。回调函数可以接受三个参数：</p>
+<p>element：当前处理的元素。</p>
+<p>index（可选）：当前处理的元素索引。</p>
+<p>array（可选）：原始数组。</p>
+<p>thisArg（可选）：执行回调函数时使用的 this 值。</p>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">const</span> evenNumbers = numbers.<span class="title function_">filter</span>(<span class="function"><span class="params">number</span> =&gt;</span> number % <span class="number">2</span> === <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(evenNumbers);  <span class="comment">// 输出 [2, 4, 6]</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h1><p>set():添加键值对</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> myMap = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置键值对</span></span><br><span class="line">myMap.<span class="title function_">set</span>(<span class="string">&#x27;key1&#x27;</span>, <span class="string">&#x27;value1&#x27;</span>);</span><br><span class="line">myMap.<span class="title function_">set</span>(<span class="string">&#x27;key2&#x27;</span>, <span class="string">&#x27;value2&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myMap.<span class="title function_">get</span>(<span class="string">&#x27;key1&#x27;</span>)); <span class="comment">// 输出: &quot;value1&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断是否存在某个键</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myMap.<span class="title function_">has</span>(<span class="string">&#x27;key3&#x27;</span>)); <span class="comment">// 输出: false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除键</span></span><br><span class="line">myMap.<span class="title function_">delete</span>(<span class="string">&#x27;key1&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 迭代键值对</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> [key, value] <span class="keyword">of</span> myMap) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;key&#125;</span> = <span class="subst">$&#123;value&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="循环遍历的方式"><a href="#循环遍历的方式" class="headerlink" title="循环遍历的方式"></a>循环遍历的方式</h1><h2 id="1-for-循环"><a href="#1-for-循环" class="headerlink" title="1. for 循环"></a>1. for 循环</h2><ul>
+<li>for…i…遍历数组：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>for… in….遍历对象属性：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span>, <span class="attr">city</span>: <span class="string">&#x27;New York&#x27;</span> &#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(key + <span class="string">&#x27;: &#x27;</span> + obj[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-for…of-循环"><a href="#2-for…of-循环" class="headerlink" title="2. for…of 循环"></a>2. for…of 循环</h2><p>for…of 循环可以遍历可迭代对象（如数组、字符串等），以获取它们的元素值。</p>
+<p>遍历数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> element <span class="keyword">of</span> arr) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-forEach-方法"><a href="#3-forEach-方法" class="headerlink" title="3. forEach 方法"></a>3. forEach 方法</h2><ul>
+<li>数组对象的 forEach 方法提供了一种简洁的方式来遍历数组元素。</li>
+</ul>
+<p>遍历数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(element);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>结合 Object.keys() 方法和 forEach 方法可以遍历对象的属性。</li>
+</ul>
+<p>遍历对象属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span>, <span class="attr">city</span>: <span class="string">&#x27;New York&#x27;</span> &#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">keys</span>(obj).<span class="title function_">forEach</span>(<span class="function">(<span class="params">key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(key + <span class="string">&#x27;: &#x27;</span> + obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="map函数"><a href="#map函数" class="headerlink" title="map函数"></a>map函数</h1><ul>
+<li>map 是 JavaScript 中用于遍历数组的高阶函数，它可以对数组中的每个元素执行指定的操作，并返回由操作结果组成的新数组。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对数组中的每个元素进行平方操作，并返回新数组</span></span><br><span class="line"><span class="keyword">const</span> squaredArr = arr.<span class="title function_">map</span>(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> element * element;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(squaredArr); <span class="comment">// 输出: [1, 4, 9, 16, 25]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>map 方法还可以接受第二个参数，该参数用于指定回调函数中的 this 值。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">multiplier</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="attr">multiply</span>: <span class="keyword">function</span> (<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> x * <span class="variable language_">this</span>.<span class="property">multiplier</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用对象的 multiply 方法对数组中的每个元素进行乘法操作，并返回新数组</span></span><br><span class="line"><span class="keyword">const</span> multipliedArr = arr.<span class="title function_">map</span>(obj.<span class="property">multiply</span>, obj);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(multipliedArr); <span class="comment">// 输出: [2, 4, 6, 8, 10]</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，我们使用对象 obj 的 multiply 方法对数组 arr 中的每个元素进行乘法操作，并将操作结果存储在新数组 multipliedArr 中。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/" data-id="clu6i1n71000yfguf43nt6brz" data-title="JavaScript常用数据结构和api" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SpringBoot分层
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SpringBoot中常见的注解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BootStrap/" rel="tag">BootStrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag">二分 - 前缀和 - 双指针 - 位运算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">云服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E5%B1%82/" rel="tag">分层</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" rel="tag">区间合并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" rel="tag">异步编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E8%A7%A3/" rel="tag">注解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag">离散化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" rel="tag">组件库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag">腾讯云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BootStrap/" style="font-size: 10px;">BootStrap</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 10px;">二分 - 前缀和 - 双指针 - 位运算</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">云服务器</a> <a href="/tags/%E5%88%86%E5%B1%82/" style="font-size: 10px;">分层</a> <a href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" style="font-size: 10px;">区间合并</a> <a href="/tags/%E5%9B%BE/" style="font-size: 10px;">图</a> <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" style="font-size: 10px;">异步编程</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%B3%A8%E8%A7%A3/" style="font-size: 10px;">注解</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 10px;">离散化</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" style="font-size: 10px;">组件库</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 10px;">规范</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">项目</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">SpringBoot项目打包到腾讯云</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/">javadoc注释格式</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/">SpringBoot分层</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/">JavaScript常用数据结构和api</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/">SpringBoot中常见的注解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

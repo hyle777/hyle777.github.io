@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>SpringBoot项目打包到腾讯云 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ssh基本用法远程登录服务器： 1ssh user@hostname   user: 用户名  hostname: IP地址或域名   第一次登录时会提示： 123The authenticity of host &amp;#x27;123.57.47.211 (123.57.47.211)&amp;#x27; can&amp;#x27;t be established.ECDSA key fingerprint is">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot项目打包到腾讯云">
+<meta property="og:url" content="http://example.com/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ssh基本用法远程登录服务器： 1ssh user@hostname   user: 用户名  hostname: IP地址或域名   第一次登录时会提示： 123The authenticity of host &amp;#x27;123.57.47.211 (123.57.47.211)&amp;#x27; can&amp;#x27;t be established.ECDSA key fingerprint is">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:\markdown\imgs\image-20240324165717160.png">
+<meta property="og:image" content="d:\markdown\imgs\image-20240324165903289.png">
+<meta property="og:image" content="d:\markdown\imgs\image-20240324172734731.png">
+<meta property="article:published_time" content="2024-03-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-25T05:11:47.906Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="项目">
+<meta property="article:tag" content="云服务器">
+<meta property="article:tag" content="腾讯云">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:\markdown\imgs\image-20240324165717160.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2024-03-05-项目上线" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/" class="article-date">
+  <time class="dt-published" datetime="2024-03-24T16:00:00.000Z" itemprop="datePublished">2024-03-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      SpringBoot项目打包到腾讯云
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>远程登录服务器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh user@hostname</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>user: 用户名</p>
+</li>
+<li><p>hostname: IP地址或域名</p>
+</li>
+</ul>
+<p>第一次登录时会提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">&#x27;123.57.47.211 (123.57.47.211)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">ECDSA key fingerprint is SHA256:iy237yysfCe013/l+kpDGfEG9xxHxm0dnxnAbJTPpG8.</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></span><br></pre></td></tr></table></figure>
+
+<p>输入yes，然后回车即可。<br>这样会将该服务器的信息记录在~&#x2F;.ssh&#x2F;known_hosts文件中。</p>
+<p>然后输入密码即可登录到远程服务器中。</p>
+<p>默认登录端口号为22。如果想登录某一特定端口：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh user@hostname -p 22</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>创建文件 ~&#x2F;.ssh&#x2F;config。</p>
+<p>然后在文件中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Host myserver1</span><br><span class="line">    HostName IP地址或域名</span><br><span class="line">    User 用户名</span><br><span class="line"></span><br><span class="line">Host myserver2</span><br><span class="line">    HostName IP地址或域名</span><br><span class="line">    User 用户名</span><br></pre></td></tr></table></figure>
+
+<p>之后再使用服务器时，可以直接使用别名myserver1、myserver2。</p>
+<h2 id="密钥登录"><a href="#密钥登录" class="headerlink" title="密钥登录"></a>密钥登录</h2><ul>
+<li><p>创建密钥：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+<p>  然后一直回车即可。</p>
+</li>
+<li><p>免密登录</p>
+<p>  执行结束后，~&#x2F;.ssh&#x2F;目录下会多两个文件：</p>
+<ul>
+<li><p>id_rsa：私钥</p>
+</li>
+<li><p>id_rsa.pub：公钥</p>
+</li>
+</ul>
+<p>  之后想免密码登录哪个服务器，就将公钥传给哪个服务器即可。</p>
+<p>  例如，想免密登录myserver服务器。则将公钥中的内容，复制到myserver中的~&#x2F;.ssh&#x2F;authorized_keys文件里即可。</p>
+<p>  也可以使用如下命令一键添加公钥：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id myserver</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><p>命令格式：</p>
+<p>ssh user@hostname command</p>
+<p>例如：</p>
+<p>ssh user@hostname ls -a</p>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单引号中的$i可以求值</span></span><br><span class="line">ssh myserver <span class="string">&#x27;for ((i = 0; i &lt; 10; i ++ )) do echo $i; done&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 双引号中的$i不可以求值</span></span><br><span class="line">ssh myserver <span class="string">&quot;for ((i = 0; i &lt; 10; i ++ )) do echo <span class="variable">$i</span>; done&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="项目上线"><a href="#项目上线" class="headerlink" title="项目上线"></a>项目上线</h1><h2 id="租服务器和服务器配置"><a href="#租服务器和服务器配置" class="headerlink" title="租服务器和服务器配置"></a>租服务器和服务器配置</h2><p>服务器公网ip: 175.178.0.156 实例密码：M^h:T94uDG)?-JVa</p>
+<ul>
+<li><p>登录到新服务器。打开AC Terminal，然后：</p>
+<p>  阿里云</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@xxx.xxx.xxx.xxx  <span class="comment"># xxx.xxx.xxx.xxx替换成新服务器的公网IP</span></span><br></pre></td></tr></table></figure>
+
+<p>  腾讯云(&#x3D;&#x3D;默认用户名是ubuntu&#x3D;&#x3D;)</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh ubuntu@xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建acs用户：</p>
+<p>  阿里云</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser acs  <span class="comment"># 创建用户acs </span></span><br><span class="line">usermod -aG sudo acs  <span class="comment"># 给用户acs分配sudo权限</span></span><br></pre></td></tr></table></figure>
+
+<p>  腾讯云</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser acs</span><br><span class="line">sudo usermod -aG sudo acs</span><br></pre></td></tr></table></figure>
+
+<p>  新密码：asd123</p>
+</li>
+<li><p>退回AC Terminal</p>
+</li>
+<li><p>配置别名(<code>acs</code>用户的ssh免密登录)</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> .ssh/</span><br><span class="line">vim config</span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host Springboot_server</span><br><span class="line">HostName 175.178.0.156</span><br><span class="line">User acs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置新服务器的工作环境<br>将AC Terminal的配置传到新服务器上：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf server_name:  <span class="comment"># server_name需要换成自己配置的别名</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装tmux和docker<br>  登录自己的服务器，然后安装tmux：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
+<p>  打开tmux。（养成好习惯，所有工作都在tmux里进行，防止意外关闭终端后，工作进度丢失）</p>
+<p>  然后在tmux中根据docker安装教程安装docker即可。</p>
+</li>
+<li><p>安装docker</p>
+<h3 id="Install-using-the-apt-repository"><a href="#Install-using-the-apt-repository" class="headerlink" title="Install using the apt repository"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">Install using the apt repository</a></h3><p>Before you install Docker Engine for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.</p>
+<ol>
+<li><p>Set up Docker’s <code>apt</code> repository.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add Docker&#x27;s official GPG key:</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ca-certificates curl</span><br><span class="line">sudo install -m 0755 -d /etc/apt/keyrings</span><br><span class="line">sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc</span><br><span class="line">sudo <span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.asc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add the repository to Apt sources:</span></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">  <span class="subst">$(. /etc/os-release &amp;&amp; echo <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)</span> stable&quot;</span> | \</span><br><span class="line">  sudo <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Note</strong></p>
+<p>If you use an Ubuntu derivative distro, such as Linux Mint, you may need to use <code>UBUNTU_CODENAME</code> instead of <code>VERSION_CODENAME</code>.</p>
+</blockquote>
+</li>
+<li><p>Install the Docker packages.</p>
+<p>Latest Specific version</p>
+<hr>
+<p>To install the latest version, run:</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+</li>
+<li><p>Verify that the Docker Engine installation is successful by running the <code>hello-world</code> image.</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo docker run hello-world</span></span><br></pre></td></tr></table></figure>
+
+<p>This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.</p>
+</li>
+</ol>
+<p>You have now successfully installed and started Docker Engine.</p>
+<ul>
+<li>下载慢解决方法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010537398/article/details/104977443">https://blog.csdn.net/u010537398/article/details/104977443</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="docker教程"><a href="#docker教程" class="headerlink" title="docker教程"></a>docker教程</h2><h3 id="将当前用户添加到docker用户组"><a href="#将当前用户添加到docker用户组" class="headerlink" title="将当前用户添加到docker用户组"></a>将当前用户添加到docker用户组</h3><p>为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组(可以参考官方文档)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure>
+
+<p>执行完此操作后，需要退出服务器，再重新登录回来，才可以省去sudo权限。</p>
+<h3 id="镜像（images）"><a href="#镜像（images）" class="headerlink" title="镜像（images）"></a>镜像（images）</h3><ol>
+<li><code>docker pull ubuntu:20.04</code>：拉取一个镜像</li>
+<li><code>docker images</code>：列出本地所有镜像</li>
+<li><code>docker image rm ubuntu:20.04</code> 或 <code>docker rmi ubuntu:20.04</code>：删除镜像<code>ubuntu:20.04</code></li>
+<li><code>docker [container] commit CONTAINER IMAGE_NAME:TAG</code>：创建某个container的镜像</li>
+<li><code>docker save -o ubuntu_20_04.tar ubuntu:20.04</code>：将镜像ubuntu:20.04导出到本地文件ubuntu_20_04.tar中</li>
+<li><code>docker load -i ubuntu_20_04.tar</code>：将镜像ubuntu:20.04从本地文件ubuntu_20_04.tar中加载出来</li>
+</ol>
+<h3 id="容器-container"><a href="#容器-container" class="headerlink" title="容器(container)"></a>容器(container)</h3><ol>
+<li><code>docker [container] create -it ubuntu:20.04</code>：利用镜像ubuntu:20.04创建一个容器。</li>
+<li><code>docker ps -a</code>：查看本地的所有容器</li>
+<li><code>docker [container] start CONTAINER</code>：启动容器</li>
+<li><code>docker [container] stop CONTAINER</code>：停止容器</li>
+<li><code>docker [container] restart CONTAINER</code>：重启容器</li>
+<li><code>docker [contaienr] run -itd ubuntu:20.04</code>：创建并启动一个容器</li>
+<li><code>docker [container] attach CONTAINER</code>：进入容器<ul>
+<li>先按Ctrl-p，再按Ctrl-q可以挂起容器</li>
+</ul>
+</li>
+<li><code>docker [container] exec CONTAINER COMMAND</code>：在容器中执行命令</li>
+<li><code>docker [container] rm CONTAINER</code>：删除容器</li>
+<li><code>docker container prune</code>：删除所有已停止的容器</li>
+<li><code>docker export -o xxx.tar CONTAINER</code>：将容器CONTAINER导出到本地文件xxx.tar中</li>
+<li><code>docker import xxx.tar image_name:tag</code>：将本地文件xxx.tar导入成镜像，并将镜像命名为image_name:tag</li>
+<li><code>docker export/import</code>与<code>docker save/load</code>的区别：<ul>
+<li><code>export/import</code>会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</li>
+<li><code>save/load</code>会保存完整记录，体积更大</li>
+</ul>
+</li>
+<li><code>docker top CONTAINER</code>：查看某个容器内的所有进程</li>
+<li><code>docker stats</code>：查看所有容器的统计信息，包括CPU、内存、存储、网络等信息</li>
+<li><code>docker cp xxx CONTAINER:xxx 或 docker cp CONTAINER:xxx xxx</code>：在本地和容器间复制文件</li>
+<li><code>docker rename CONTAINER1 CONTAINER2</code>：重命名容器</li>
+<li><code>docker update CONTAINER --memory 500MB</code>：修改容器限制</li>
+</ol>
+<h2 id="将docker镜像上传到服务器"><a href="#将docker镜像上传到服务器" class="headerlink" title="将docker镜像上传到服务器"></a>将docker镜像上传到服务器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//AC Terminal中</span><br><span class="line"><span class="built_in">cd</span> /var/lib/acwing/docker/images/</span><br><span class="line">//scp传输</span><br><span class="line">scp django_lession_1_0.tar springboot_server:</span><br><span class="line"></span><br><span class="line">//连接服务器</span><br><span class="line">ssh springboot_server</span><br><span class="line">//解压</span><br><span class="line">docker load -i django_lession_1_0.tar</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h2><p><code>docker run -p &lt;host_port&gt;:&lt;container_port&gt;</code> : 将容器的端口映射到主机的端口</p>
+<p>80:http端口 443：https端口 3000,3001,3002：微服务</p>
+<p>docker也需要22端口进行ssh通信，但是22端口主机已占用，所以映射到20000端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 20000:22 -p 443:443 -p 80:80 -p 3000:3000 -p 3001:3001 -p 3002:3002 -itd --name kob_server django_lesson:1.0</span><br></pre></td></tr></table></figure>
+
+<p>进入容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker attach kob_server</span><br></pre></td></tr></table></figure>
+
+<p>赋予权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line">adduser acs</span><br><span class="line">usermod -aG sudo ace</span><br></pre></td></tr></table></figure>
+
+<p>ctrl P+ ctrl Q 挂载容器</p>
+<p>配置安全组（防火墙？），添加20000端口</p>
+<p><img src="D:\markdown\imgs\image-20240324165717160.png" alt="image-20240324165717160"></p>
+<p><img src="D:\markdown\imgs\image-20240324165903289.png" alt="image-20240324165903289"></p>
+<p>ACTerminal配置容器ssh免密登录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .ssh/config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> vim</span><br><span class="line">Host springboot</span><br><span class="line">HostName 175.178.0.156</span><br><span class="line">User acs</span><br><span class="line">Port 20000</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id springboot</span><br><span class="line">ssh springboot</span><br></pre></td></tr></table></figure>
+
+<p>向springboot服务器传配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf springboot:</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在本地gitbash配置容器的免密登录</p>
+<p><img src="D:\markdown\imgs\image-20240324172734731.png" alt="image-20240324172734731"></p>
+<h2 id="安装、配置mysql"><a href="#安装、配置mysql" class="headerlink" title="安装、配置mysql"></a>安装、配置mysql</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql start</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="设置root用户的密码："><a href="#设置root用户的密码：" class="headerlink" title="设置root用户的密码："></a>设置root用户的密码：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH caching_sha2_password BY <span class="string">&#x27;asd123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><p>1.4 mysql服务的关闭与启动（默认开机自动启动，如果想手动操作，可以参考如下命令）</p>
+<p>关闭：net stop mysql80<br>启动：net start mysql80<br>1.5 mysql的常用操作</p>
+<ul>
+<li><p>连接用户名为root，密码为123456的数据库服务：mysql -uroot -p123456</p>
+</li>
+<li><p>show databases;：列出所有数据库</p>
+</li>
+<li><p>create database kob;：创建数据库</p>
+</li>
+<li><p>drop database kob;：删除数据库</p>
+</li>
+<li><p>use kob;：使用数据库kob</p>
+</li>
+<li><p>show tables;：列出当前数据库的所有表</p>
+</li>
+<li><p>create table user(id int, username varchar(100))：创建名称为user的表，表中包含id和username两个属性。</p>
+</li>
+<li><p>drop table user;：删除表</p>
+</li>
+<li><p>insert into user values(1, ‘yxc’);：在表中插入数据</p>
+</li>
+<li><p>select * from user;：查询表中所有数据</p>
+</li>
+<li><p>delete from user where id &#x3D; 2;：删除某行数据</p>
+</li>
+</ul>
+<h3 id="运行建表脚本"><a href="#运行建表脚本" class="headerlink" title="运行建表脚本"></a>运行建表脚本</h3><p>创建create_table.sql</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /home/acs/create_table.sql</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Java8"><a href="#安装Java8" class="headerlink" title="安装Java8"></a>安装Java8</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><ul>
+<li>添加的配置文件：</li>
+</ul>
+<p>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
+<p>&#x2F;etc&#x2F;nginx&#x2F;cert&#x2F;acapp.key</p>
+<p>&#x2F;etc&#x2F;nginx&#x2F;cert&#x2F;acapp.pem</p>
+<ul>
+<li>启动nginx:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/nginx start</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>最后的项目地址：<a target="_blank" rel="noopener" href="https://app6715.acapp.acwing.com.cn/">https://app6715.acapp.acwing.com.cn</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/" data-id="clu6i1n720011fguf80m8fdo0" data-title="SpringBoot项目打包到腾讯云" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">云服务器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag">腾讯云</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">javadoc注释格式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BootStrap/" rel="tag">BootStrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag">二分 - 前缀和 - 双指针 - 位运算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">云服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E5%B1%82/" rel="tag">分层</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" rel="tag">区间合并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" rel="tag">异步编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E8%A7%A3/" rel="tag">注解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag">离散化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" rel="tag">组件库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag">腾讯云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BootStrap/" style="font-size: 10px;">BootStrap</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 10px;">二分 - 前缀和 - 双指针 - 位运算</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">云服务器</a> <a href="/tags/%E5%88%86%E5%B1%82/" style="font-size: 10px;">分层</a> <a href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" style="font-size: 10px;">区间合并</a> <a href="/tags/%E5%9B%BE/" style="font-size: 10px;">图</a> <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" style="font-size: 10px;">异步编程</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%B3%A8%E8%A7%A3/" style="font-size: 10px;">注解</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 10px;">离散化</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" style="font-size: 10px;">组件库</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 10px;">规范</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">项目</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">SpringBoot项目打包到腾讯云</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/">javadoc注释格式</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/">SpringBoot分层</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/">JavaScript常用数据结构和api</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/">SpringBoot中常见的注解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
