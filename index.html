@@ -262,99 +262,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-07-MyBatisPlus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="post-title-link" itemprop="url">MyBatisPlus</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-09-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-09-07T00:00:00+08:00">2024-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="MyBatis-Plus"><a href="#MyBatis-Plus" class="headerlink" title="MyBatis Plus"></a>MyBatis Plus</h1><h2 id="Mapper-和数据库表映射"><a href="#Mapper-和数据库表映射" class="headerlink" title="Mapper 和数据库表映射"></a>Mapper 和数据库表映射</h2><p><code>@TableName(&quot;xxx&quot;)</code>：类和表名映射</p>
-<p><code>@TableFiled(&quot;xxx&quot;)</code>：字段的映射</p>
-<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><p>查询接口：</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png" alt="image-20240907182943968"></p>
-<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><ol>
-<li><p>设置分页拦截器，AOP 思想，查询后进行 limit</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MpCongfig</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">pageInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行分页查询</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPage page <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">userDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">System.out.printIn(<span class="string">&quot;当前页码：&quot;</span>+page.getCurrent());</span><br><span class="line">System.out.println(<span class="string">&quot;每页数据总量：&quot;</span>+page.getSize());</span><br><span class="line">System.out.println(<span class="string">&quot;总页数：&quot;</span>+page.getPages));</span><br><span class="line">System.out.println(<span class="string">&quot;数据总量：&quot;</span>+page.getTotal());</span><br><span class="line">System.out.println(<span class="string">&quot;当前页数据：&quot;</span>+page.getRecords());</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907184702964.png" alt="image-20240907184702964"></p>
-<p><code>QueryWrapper</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QueryWrapper&lt;User&gt; qw = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">qw.1t(<span class="string">&quot;age&quot;</span>,<span class="number">65</span>);</span><br><span class="line">  .ge(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
-
-<p><code>Lambda格式</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">1qw.1t(User:getAge,<span class="number">65</span>).ge(User:getAge,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
-
-<p>&#x3D;&#x3D;null 值处理&#x3D;&#x3D;：字段为 null 就不要这个判断条件</p>
-<p>手动 if 或 lambda 条件参数：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line">1qw.ge(<span class="literal">null</span> !userQuery.getAge(),User:getAge,userQuery.getAge())</span><br><span class="line">   .1t(<span class="literal">null</span> !userQuery.getAge2(),User:getAge,userQuery.getAge2());</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询投影："><a href="#查询投影：" class="headerlink" title="查询投影："></a>查询投影：</h3><p><code>lqw.select(User::getName,User::getAge)</code>或<code>qw.select(&quot;name&quot;,&quot;age&quot;)</code>：选择查询的字段</p>
-<p><code>qw.select(&quot;count(*) as count&quot;)</code>：把 sql 中 select 后面的部分进行替换</p>
-<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><p><code>@TableId(type = IdType.AUTO)</code>：指定 Id 生成策略</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907180422816.png" alt="image-20240907180422816"></p>
-<p><code>@TableLogic(value = &quot;0&quot;, delval = &quot;1&quot;)</code>：把字段标记为逻辑删除字段</p>
-<p><code>@Version</code>：乐观锁</p>
-<p>以上可以在<code>.yml</code>进行全局配置</p>
-<h2 id="代码生成器"><a href="#代码生成器" class="headerlink" title="代码生成器"></a>代码生成器</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-03-SpringBoot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,6 +338,99 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;enterprise&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Enterprise</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String[] subject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="SpringSecurity"><a href="#SpringSecurity" class="headerlink" title="SpringSecurity"></a>SpringSecurity</h2><h3 id="jwt-Token-TODO"><a href="#jwt-Token-TODO" class="headerlink" title="jwt Token TODO"></a>jwt Token TODO</h3><h3 id="权限控制-TODO"><a href="#权限控制-TODO" class="headerlink" title="权限控制 TODO"></a>权限控制 TODO</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-07-MyBatisPlus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="post-title-link" itemprop="url">MyBatisPlus</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-09-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-09-07T00:00:00+08:00">2024-09-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="MyBatis-Plus"><a href="#MyBatis-Plus" class="headerlink" title="MyBatis Plus"></a>MyBatis Plus</h1><h2 id="Mapper-和数据库表映射"><a href="#Mapper-和数据库表映射" class="headerlink" title="Mapper 和数据库表映射"></a>Mapper 和数据库表映射</h2><p><code>@TableName(&quot;xxx&quot;)</code>：类和表名映射</p>
+<p><code>@TableFiled(&quot;xxx&quot;)</code>：字段的映射</p>
+<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><p>查询接口：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png" alt="image-20240907182943968"></p>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><ol>
+<li><p>设置分页拦截器，AOP 思想，查询后进行 limit</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MpCongfig</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">pageInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行分页查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPage page <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">userDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">System.out.printIn(<span class="string">&quot;当前页码：&quot;</span>+page.getCurrent());</span><br><span class="line">System.out.println(<span class="string">&quot;每页数据总量：&quot;</span>+page.getSize());</span><br><span class="line">System.out.println(<span class="string">&quot;总页数：&quot;</span>+page.getPages));</span><br><span class="line">System.out.println(<span class="string">&quot;数据总量：&quot;</span>+page.getTotal());</span><br><span class="line">System.out.println(<span class="string">&quot;当前页数据：&quot;</span>+page.getRecords());</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907184702964.png" alt="image-20240907184702964"></p>
+<p><code>QueryWrapper</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QueryWrapper&lt;User&gt; qw = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">qw.1t(<span class="string">&quot;age&quot;</span>,<span class="number">65</span>);</span><br><span class="line">  .ge(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<p><code>Lambda格式</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">1qw.1t(User:getAge,<span class="number">65</span>).ge(User:getAge,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;null 值处理&#x3D;&#x3D;：字段为 null 就不要这个判断条件</p>
+<p>手动 if 或 lambda 条件参数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line">1qw.ge(<span class="literal">null</span> !userQuery.getAge(),User:getAge,userQuery.getAge())</span><br><span class="line">   .1t(<span class="literal">null</span> !userQuery.getAge2(),User:getAge,userQuery.getAge2());</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询投影："><a href="#查询投影：" class="headerlink" title="查询投影："></a>查询投影：</h3><p><code>lqw.select(User::getName,User::getAge)</code>或<code>qw.select(&quot;name&quot;,&quot;age&quot;)</code>：选择查询的字段</p>
+<p><code>qw.select(&quot;count(*) as count&quot;)</code>：把 sql 中 select 后面的部分进行替换</p>
+<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><p><code>@TableId(type = IdType.AUTO)</code>：指定 Id 生成策略</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907180422816.png" alt="image-20240907180422816"></p>
+<p><code>@TableLogic(value = &quot;0&quot;, delval = &quot;1&quot;)</code>：把字段标记为逻辑删除字段</p>
+<p><code>@Version</code>：乐观锁</p>
+<p>以上可以在<code>.yml</code>进行全局配置</p>
+<h2 id="代码生成器"><a href="#代码生成器" class="headerlink" title="代码生成器"></a>代码生成器</h2>
       
     </div>
 
@@ -906,6 +906,121 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-Java-String%E7%B1%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/15/2024-04-15-Java-String%E7%B1%BB/" class="post-title-link" itemprop="url">Java String类</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-04-15 00:00:00 / Modified: 06:12:54" itemprop="dateCreated datePublished" datetime="2024-04-15T00:00:00+08:00">2024-04-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><ol>
+<li>初始化：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;My name is&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">x</span> <span class="operator">=</span> b;  <span class="comment">// 存储到了相同地址</span></span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> b + <span class="string">&quot;yxc&quot;</span>;  <span class="comment">// String可以通过加号拼接</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> <span class="string">&quot;My age is &quot;</span> + <span class="number">18</span>;  <span class="comment">// int会被隐式转化成字符串&quot;18&quot;</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> String.format(<span class="string">&quot;My age is %d&quot;</span>, <span class="number">18</span>);  <span class="comment">// 格式化字符串，类似于C++中的sprintf</span></span><br><span class="line"><span class="type">String</span> <span class="variable">money_str</span> <span class="operator">=</span> <span class="string">&quot;123.45&quot;</span>;</span><br><span class="line"><span class="type">double</span> <span class="variable">money</span> <span class="operator">=</span> Double.parseDouble(money_str);  <span class="comment">// String转double</span></span><br></pre></td></tr></table></figure>
+
+<p>只读变量，不能修改，例如：</p>
+<p>String a &#x3D; “Hello “;</p>
+<p>a +&#x3D; “World”;  &#x2F;&#x2F; 会构造一个新的字符串</p>
+<p>访问String中的字符：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; str.length(); i ++ ) &#123;</span><br><span class="line">    System.out.print(str.charAt(i));  <span class="comment">// 只能读取，不能写入</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>常用API：</p>
+<ul>
+<li><p>length()：返回长度</p>
+</li>
+<li><p>split(String regex)：分割字符串</p>
+</li>
+<li><p>indexOf(char c)、indexOf(String str)：查找，找不到返回-1</p>
+</li>
+<li><p>equals()：判断两个字符串是否相等，注意不能直接用&#x3D;&#x3D;</p>
+</li>
+<li><p>compareTo()：判断两个字符串的字典序大小，负数表示小于，0表示相等，正数表示大于</p>
+</li>
+<li><p>startsWith()：判断是否以某个前缀开头</p>
+</li>
+<li><p>endsWith()：判断是否以某个后缀结尾</p>
+</li>
+<li><p>trim()：去掉首尾的空白字符</p>
+</li>
+<li><p>toLowerCase()：全部用小写字符</p>
+</li>
+<li><p>toUpperCase()：全部用大写字符</p>
+</li>
+<li><p>replace(char oldChar, char newChar)：替换字符</p>
+</li>
+<li><p>replace(String oldRegex, String newRegex)：替换字符串</p>
+</li>
+<li><p>substring(int beginIndex, int endIndex)：返回[beginIndex, endIndex)中的子串</p>
+</li>
+</ul>
+<ol start="2">
+<li>StringBuilder、StringBuffer</li>
+</ol>
+<p>String不能被修改，如果打算修改字符串，可以使用StringBuilder和StringBuffer。</p>
+<p>StringBuffer线程安全，速度较慢；StringBuilder线程不安全，速度较快。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello &quot;</span>);  <span class="comment">// 初始化</span></span><br><span class="line"></span><br><span class="line">sb.append(<span class="string">&quot;World&quot;</span>);  <span class="comment">// 拼接字符串</span></span><br><span class="line"></span><br><span class="line">System.out.println(sb);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; sb.length(); i ++ ) &#123;</span><br><span class="line">    sb.setCharAt(i, (<span class="type">char</span>)(sb.charAt(i) + <span class="number">1</span>));  <span class="comment">// 读取和写入字符</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println(sb);</span><br></pre></td></tr></table></figure>
+<p>常用API：</p>
+<p>reverse()：翻转字符串</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1341,121 +1456,6 @@
 </ul>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-Java-String%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/15/2024-04-15-Java-String%E7%B1%BB/" class="post-title-link" itemprop="url">Java String类</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-04-15 00:00:00 / Modified: 06:12:54" itemprop="dateCreated datePublished" datetime="2024-04-15T00:00:00+08:00">2024-04-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><ol>
-<li>初始化：</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;My name is&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">x</span> <span class="operator">=</span> b;  <span class="comment">// 存储到了相同地址</span></span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> b + <span class="string">&quot;yxc&quot;</span>;  <span class="comment">// String可以通过加号拼接</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> <span class="string">&quot;My age is &quot;</span> + <span class="number">18</span>;  <span class="comment">// int会被隐式转化成字符串&quot;18&quot;</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> String.format(<span class="string">&quot;My age is %d&quot;</span>, <span class="number">18</span>);  <span class="comment">// 格式化字符串，类似于C++中的sprintf</span></span><br><span class="line"><span class="type">String</span> <span class="variable">money_str</span> <span class="operator">=</span> <span class="string">&quot;123.45&quot;</span>;</span><br><span class="line"><span class="type">double</span> <span class="variable">money</span> <span class="operator">=</span> Double.parseDouble(money_str);  <span class="comment">// String转double</span></span><br></pre></td></tr></table></figure>
-
-<p>只读变量，不能修改，例如：</p>
-<p>String a &#x3D; “Hello “;</p>
-<p>a +&#x3D; “World”;  &#x2F;&#x2F; 会构造一个新的字符串</p>
-<p>访问String中的字符：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; str.length(); i ++ ) &#123;</span><br><span class="line">    System.out.print(str.charAt(i));  <span class="comment">// 只能读取，不能写入</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>常用API：</p>
-<ul>
-<li><p>length()：返回长度</p>
-</li>
-<li><p>split(String regex)：分割字符串</p>
-</li>
-<li><p>indexOf(char c)、indexOf(String str)：查找，找不到返回-1</p>
-</li>
-<li><p>equals()：判断两个字符串是否相等，注意不能直接用&#x3D;&#x3D;</p>
-</li>
-<li><p>compareTo()：判断两个字符串的字典序大小，负数表示小于，0表示相等，正数表示大于</p>
-</li>
-<li><p>startsWith()：判断是否以某个前缀开头</p>
-</li>
-<li><p>endsWith()：判断是否以某个后缀结尾</p>
-</li>
-<li><p>trim()：去掉首尾的空白字符</p>
-</li>
-<li><p>toLowerCase()：全部用小写字符</p>
-</li>
-<li><p>toUpperCase()：全部用大写字符</p>
-</li>
-<li><p>replace(char oldChar, char newChar)：替换字符</p>
-</li>
-<li><p>replace(String oldRegex, String newRegex)：替换字符串</p>
-</li>
-<li><p>substring(int beginIndex, int endIndex)：返回[beginIndex, endIndex)中的子串</p>
-</li>
-</ul>
-<ol start="2">
-<li>StringBuilder、StringBuffer</li>
-</ol>
-<p>String不能被修改，如果打算修改字符串，可以使用StringBuilder和StringBuffer。</p>
-<p>StringBuffer线程安全，速度较慢；StringBuilder线程不安全，速度较快。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello &quot;</span>);  <span class="comment">// 初始化</span></span><br><span class="line"></span><br><span class="line">sb.append(<span class="string">&quot;World&quot;</span>);  <span class="comment">// 拼接字符串</span></span><br><span class="line"></span><br><span class="line">System.out.println(sb);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; sb.length(); i ++ ) &#123;</span><br><span class="line">    sb.setCharAt(i, (<span class="type">char</span>)(sb.charAt(i) + <span class="number">1</span>));  <span class="comment">// 读取和写入字符</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println(sb);</span><br></pre></td></tr></table></figure>
-<p>常用API：</p>
-<p>reverse()：翻转字符串</p>
 
       
     </div>
