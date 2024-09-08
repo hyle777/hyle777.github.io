@@ -4,14 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>贪吃蛇对战系统项目总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://hyle777.github.io/archives/index.html">
+  <meta name="description" content="实现用户注册登录功能 注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据  登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。  获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪吃蛇对战系统项目总结">
+<meta property="og:url" content="https://hyle777.github.io/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="实现用户注册登录功能 注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据  登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。  获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-25T11:24:49.206Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="kob">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -67,210 +73,113 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-08T15:56:24.074Z" itemprop="datePublished">Sep 8</time>
+        <section id="main"><article id="post-2024-03-25-贪吃蛇对战系统项目总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" class="article-date">
+  <time class="dt-published" datetime="2024-03-24T16:00:00.000Z" itemprop="datePublished">2024-03-25</time>
 </a>
-      
-    </header>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/">SpringBoot项目</a>
   </div>
-</article>
-  
+
+  </div>
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/08/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-08T15:34:45.902Z" itemprop="datePublished">Sep 8</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/08/hello-world/">Hello World</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      贪吃蛇对战系统项目总结
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-06T16:00:00.000Z" itemprop="datePublished">Sep 7</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/07/2024-09-07-MyBatisPlus/">MyBatisPlus</a>
-    </h1>
-  
+        <h2 id="实现用户注册登录功能"><a href="#实现用户注册登录功能" class="headerlink" title="实现用户注册登录功能"></a>实现用户注册登录功能</h2><ul>
+<li><p>注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据</p>
+</li>
+<li><p>登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。</p>
+</li>
+<li><p>获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。</p>
+</li>
+<li><p>使用 Spring Security 配置JWT认证机制，使用JWT来进行用户认证，后端实现JWT的token的生成与验证，根据token获取用户信息，最后实现登录和开发的业务。</p>
+</li>
+</ul>
+<h2 id="游戏动画的实现："><a href="#游戏动画的实现：" class="headerlink" title="游戏动画的实现："></a>游戏动画的实现：</h2><p>游戏动画在前端实现，通过js的requestAnimationFrame函数在浏览器实现动画，实现一个游戏对象递归调用该函数，在该函数调用前实现一些游戏的逻辑，游戏的逻辑涉及随机地图的生成，蛇的移动，地图和蛇的位置的数据存储在数组中，之后使用绘画标签canvas将地图和蛇渲染在页面上。</p>
+<h2 id="游戏同步："><a href="#游戏同步：" class="headerlink" title="游戏同步："></a>游戏同步：</h2><p>使用websocket实现前后端实时相互通信，使用WebSocketServer这个类来维护websocket连接。前端用户通过websocket向后端传输操作数据。后端要将游戏开始产生的地图数据以及游戏双方操作后两条蛇的坐标数据通过webserver实时通信到两个客户端，然后客户端将数据渲染到浏览器。</p>
+<h2 id="游戏逻辑的实现："><a href="#游戏逻辑的实现：" class="headerlink" title="游戏逻辑的实现："></a>游戏逻辑的实现：</h2><ul>
+<li>随机地图的生成：</li>
+</ul>
+<p>使用一个二维数组来存储地图信息，把空地设置为0，把障碍设置为1，地图的四周设置为1，每次生成障碍时生成两个随机数表示行号和列号，把它设置为1,要保证地图是公平的，使用障碍坐标中心对称后的坐标也设置为1，要保证两条蛇有交互性，则保证地图是连通的，可以使用bfs算法来判断地图是否连通。</p>
+<ul>
+<li>蛇移动的逻辑：</li>
+</ul>
+<p>使用一个动态数组来存储蛇身的坐标，使用dx，dy两个数组来表示蛇上下左右移动的偏移量，由于蛇每次移动所有坐标都要变换的逻辑过于复杂，我们可以将它理解成头和尾在移动，每次蛇移动时，在动态数组前面插入一个蛇头的新坐标即可，然后判断当前回合蛇是否增长，如果不增长，则将蛇尾坐标在数组中删除，如果增长，则保持不变。从而实现了蛇移动的逻辑。</p>
+<ul>
+<li>游戏流程：</li>
+</ul>
+<p>为了保证游戏不会阻塞其他的玩家的匹配，游戏等业务，游戏整个逻辑需要使用多线程来实现。</p>
+<p>在两名玩家匹配成功后，会启动游戏线程，初始化会生成地图数据和两条蛇的初始坐标。</p>
+<p>使用一个status变量来表示游戏的状态，一个loser变量来记录胜负。</p>
+<p>游戏循环n个回合，n是游戏最大的回合数，每个回合，先判断游戏是否结束，如果结束，将游戏结果返回给前端，否则等待两个玩家的输入，5s则视为超时，判负处理，游戏状态改为结束；若两名玩家都有输入，判断操作是否合理，操作不合理判负，游戏状态改成结束，操作合理则会存储蛇移动的数据并进入下一回合。</p>
+<h2 id="匹配系统的实现："><a href="#匹配系统的实现：" class="headerlink" title="匹配系统的实现："></a>匹配系统的实现：</h2><p>匹配的逻辑额外使用另一个微服务来实现。</p>
+<p>前端通过websocket向后端传输匹配者的信息，后端再把信息传输给匹配系统的微服务，匹配系统把匹配成功后的消息在传输给后端，后端再调用游戏的逻辑开始一局游戏，后端和匹配系统之间的数据传输通过RestTemplate来实现。</p>
+<ul>
+<li><p>匹配流程：</p>
+<p>为了保证匹配不会阻塞其他玩家的匹配，匹配功能需要使用多线程来实现。</p>
+<p>使用一个列表来存储所有玩家，称做匹配池。每次后端发来一个请求时，如果请求匹配，把玩家的数据加入到匹配池中；如果请求取消匹配时，在匹配池删去该玩家。</p>
+<p>每个玩家会有一个分数变量，我们根据分数差距来匹配，随着匹配时间的增长，每增长一秒，允许玩家分数差距增加10。</p>
+<p>写一个死循环，每次线程sleep 1s，然后扫描匹配池所有玩家，将玩家匹配时间的变量加1，然后循环每一个玩家，去和其他玩家判断是否符合匹配条件，符合条件，将两个玩家的数据返回给后端，退出循环，否则进入下一次循环。</p>
+</li>
+</ul>
+<h2 id="我的Bot的实现："><a href="#我的Bot的实现：" class="headerlink" title="我的Bot的实现："></a>我的Bot的实现：</h2><p>实现Bot数据的CRUD接口，Bot数据主要有id，标题，代码等。</p>
+<h2 id="执行Bot代码："><a href="#执行Bot代码：" class="headerlink" title="执行Bot代码："></a>执行Bot代码：</h2><p>执行Bot代码产生蛇的下一步操作通过另一个微服务来实现。前端匹配时发了一个bot_id表示通过bot操作，后端在执行游戏流程时，不会从前端等待用户输入，而是向Bot微服务发送一个请求。</p>
+<ul>
+<li>Bot执行代码的流程：</li>
+</ul>
+<p>维护一个存储 <code>Bot</code> 对象的队列 <code>bots</code>，后端发来请求时，往队列加入一个bot对象，使用一个consumer类来消费bot对象，获取bot的代码，使用反射来动态编译代码，最后利用反射获取编译后的Bot实例，调用它的nextMove获取蛇下一步移动方向，最后把数据返回给后端。</p>
+<h2 id="排行榜和录像功能："><a href="#排行榜和录像功能：" class="headerlink" title="排行榜和录像功能："></a>排行榜和录像功能：</h2><p>排行榜：根据用户的分数来进行排行，后端实现列表查询接口，包含分页查询的逻辑；</p>
+<p>录像功能：每一次游戏会将地图数据，两条蛇的移动数据存成字符串到数据库，从数据库获取数据传到前端并模拟一遍即可。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/07/2024-09-03-SpringBoot/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-06T16:00:00.000Z" itemprop="datePublished">Sep 7</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/07/2024-09-03-SpringBoot/">SpringBoot</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/04/2024-09-03-Spring/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-03T16:00:00.000Z" itemprop="datePublished">Sep 4</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hyle777.github.io/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" data-id="cm0trdjeq000qz0uf7sq99ebk" data-title="贪吃蛇对战系统项目总结" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/04/2024-09-03-Spring/">Spring</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/03/2024-09-03-Docker/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-02T16:00:00.000Z" itemprop="datePublished">Sep 3</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/03/2024-09-03-Docker/">Docker</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-01T16:00:00.000Z" itemprop="datePublished">Sep 2</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kob/" rel="tag">kob</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SpringBoot项目打包到腾讯云
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">javadoc注释格式</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/15/2024-04-15-Java-String%E7%B1%BB/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-04-14T16:00:00.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/04/15/2024-04-15-Java-String%E7%B1%BB/">Java String类</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/15/2024-04-15-Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-04-14T16:00:00.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/04/15/2024-04-15-Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-04-14T16:00:00.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/">反射和注解</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

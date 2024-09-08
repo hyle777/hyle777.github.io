@@ -4,15 +4,23 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>MyBatisPlus | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://hyle777.github.io/archives/index.html">
+  <meta name="description" content="MyBatis PlusMapper 和数据库表映射@TableName(&quot;xxx&quot;)：类和表名映射 @TableFiled(&quot;xxx&quot;)：字段的映射 DQL查询接口：  分页查询 设置分页拦截器，AOP 思想，查询后进行 limit 12345678910@Configurationpublic class MpCongfig&#123;    @Bean">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatisPlus">
+<meta property="og:url" content="https://hyle777.github.io/2024/09/07/2024-09-07-MyBatisPlus/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MyBatis PlusMapper 和数据库表映射@TableName(&quot;xxx&quot;)：类和表名映射 @TableFiled(&quot;xxx&quot;)：字段的映射 DQL查询接口：  分页查询 设置分页拦截器，AOP 思想，查询后进行 limit 12345678910@Configurationpublic class MpCongfig&#123;    @Bean">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907184702964.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907180422816.png">
+<meta property="article:published_time" content="2024-09-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-08T14:55:03.266Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -67,210 +75,91 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-08T15:56:24.074Z" itemprop="datePublished">Sep 8</time>
+        <section id="main"><article id="post-2024-09-07-MyBatisPlus" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="article-date">
+  <time class="dt-published" datetime="2024-09-06T16:00:00.000Z" itemprop="datePublished">2024-09-07</time>
 </a>
-      
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/08/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-08T15:34:45.902Z" itemprop="datePublished">Sep 8</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/08/hello-world/">Hello World</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      MyBatisPlus
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-06T16:00:00.000Z" itemprop="datePublished">Sep 7</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/07/2024-09-07-MyBatisPlus/">MyBatisPlus</a>
-    </h1>
-  
+        <h1 id="MyBatis-Plus"><a href="#MyBatis-Plus" class="headerlink" title="MyBatis Plus"></a>MyBatis Plus</h1><h2 id="Mapper-和数据库表映射"><a href="#Mapper-和数据库表映射" class="headerlink" title="Mapper 和数据库表映射"></a>Mapper 和数据库表映射</h2><p><code>@TableName(&quot;xxx&quot;)</code>：类和表名映射</p>
+<p><code>@TableFiled(&quot;xxx&quot;)</code>：字段的映射</p>
+<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><p>查询接口：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png" alt="image-20240907182943968"></p>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><ol>
+<li><p>设置分页拦截器，AOP 思想，查询后进行 limit</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MpCongfig</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">pageInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行分页查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPage page <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">userDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">System.out.printIn(<span class="string">&quot;当前页码：&quot;</span>+page.getCurrent());</span><br><span class="line">System.out.println(<span class="string">&quot;每页数据总量：&quot;</span>+page.getSize());</span><br><span class="line">System.out.println(<span class="string">&quot;总页数：&quot;</span>+page.getPages));</span><br><span class="line">System.out.println(<span class="string">&quot;数据总量：&quot;</span>+page.getTotal());</span><br><span class="line">System.out.println(<span class="string">&quot;当前页数据：&quot;</span>+page.getRecords());</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907184702964.png" alt="image-20240907184702964"></p>
+<p><code>QueryWrapper</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QueryWrapper&lt;User&gt; qw = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">qw.1t(<span class="string">&quot;age&quot;</span>,<span class="number">65</span>);</span><br><span class="line">  .ge(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/07/2024-09-03-SpringBoot/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-06T16:00:00.000Z" itemprop="datePublished">Sep 7</time>
-</a>
+<p><code>Lambda格式</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">1qw.1t(User:getAge,<span class="number">65</span>).ge(User:getAge,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;null 值处理&#x3D;&#x3D;：字段为 null 就不要这个判断条件</p>
+<p>手动 if 或 lambda 条件参数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line">1qw.ge(<span class="literal">null</span> !userQuery.getAge(),User:getAge,userQuery.getAge())</span><br><span class="line">   .1t(<span class="literal">null</span> !userQuery.getAge2(),User:getAge,userQuery.getAge2());</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询投影："><a href="#查询投影：" class="headerlink" title="查询投影："></a>查询投影：</h3><p><code>lqw.select(User::getName,User::getAge)</code>或<code>qw.select(&quot;name&quot;,&quot;age&quot;)</code>：选择查询的字段</p>
+<p><code>qw.select(&quot;count(*) as count&quot;)</code>：把 sql 中 select 后面的部分进行替换</p>
+<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><p><code>@TableId(type = IdType.AUTO)</code>：指定 Id 生成策略</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907180422816.png" alt="image-20240907180422816"></p>
+<p><code>@TableLogic(value = &quot;0&quot;, delval = &quot;1&quot;)</code>：把字段标记为逻辑删除字段</p>
+<p><code>@Version</code>：乐观锁</p>
+<p>以上可以在<code>.yml</code>进行全局配置</p>
+<h2 id="代码生成器"><a href="#代码生成器" class="headerlink" title="代码生成器"></a>代码生成器</h2>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/07/2024-09-03-SpringBoot/">SpringBoot</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/04/2024-09-03-Spring/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-03T16:00:00.000Z" itemprop="datePublished">Sep 4</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hyle777.github.io/2024/09/07/2024-09-07-MyBatisPlus/" data-id="cm0trdjfe0031z0uf74pr2ilw" data-title="MyBatisPlus" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/04/2024-09-03-Spring/">Spring</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/03/2024-09-03-Docker/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-02T16:00:00.000Z" itemprop="datePublished">Sep 3</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/03/2024-09-03-Docker/">Docker</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-09-01T16:00:00.000Z" itemprop="datePublished">Sep 2</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/09/08/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/09/07/2024-09-03-SpringBoot/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SpringBoot</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/15/2024-04-15-Java-String%E7%B1%BB/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-04-14T16:00:00.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/04/15/2024-04-15-Java-String%E7%B1%BB/">Java String类</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/15/2024-04-15-Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-04-14T16:00:00.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/04/15/2024-04-15-Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-04-14T16:00:00.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/">反射和注解</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

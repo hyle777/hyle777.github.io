@@ -4,19 +4,25 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | Hexo</title>
+  <title>Docker | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Docker简介 build，run，share只需配置一次适用不同环境（开发，测试，实际生产）  和虚拟机的区别：使用宿主机的系统，不需要运行另一个操作系统 容器：运行的实例，一个应用程序     基本原理 **镜像（image）和容器(container)**：模板和实例，Java 类和对象 Docker 仓库：存储和管理 Docker 镜像 daemon:守护进程   应用容器化和Docke">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://hyle777.github.io/2024/09/08/hello-world/index.html">
+<meta property="og:title" content="Docker">
+<meta property="og:url" content="https://hyle777.github.io/2024/09/03/2024-09-03-Docker/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Docker简介 build，run，share只需配置一次适用不同环境（开发，测试，实际生产）  和虚拟机的区别：使用宿主机的系统，不需要运行另一个操作系统 容器：运行的实例，一个应用程序     基本原理 **镜像（image）和容器(container)**：模板和实例，Java 类和对象 Docker 仓库：存储和管理 Docker 镜像 daemon:守护进程   应用容器化和Docke">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-09-08T15:34:45.902Z">
-<meta property="article:modified_time" content="2024-09-08T15:34:45.902Z">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205031746.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205559674.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205911563.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903211253344.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903210908070.png">
+<meta property="article:published_time" content="2024-09-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-08T14:55:03.267Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205031746.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -71,10 +77,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2024-09-03-Docker" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/09/08/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-09-08T15:34:45.902Z" itemprop="datePublished">2024-09-08</time>
+    <a href="/2024/09/03/2024-09-03-Docker/" class="article-date">
+  <time class="dt-published" datetime="2024-09-02T16:00:00.000Z" itemprop="datePublished">2024-09-03</time>
 </a>
     
   </div>
@@ -85,7 +91,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      Docker
     </h1>
   
 
@@ -93,24 +99,89 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
+<li><p>build，run，share<strong>只需配置一次适用不同环境</strong>（开发，测试，实际生产）</p>
+</li>
+<li><p>和虚拟机的区别：使用宿主机的系统，<strong>不需要运行另一个操作系统</strong></p>
+<p><strong>容器</strong>：运行的实例，一个应用程序</p>
+</li>
+</ol>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205031746.png" alt="image-20240903205031746"></p>
+<ol start="3">
+<li><p>基本原理</p>
+<p>**镜像（image）和容器(container)**：模板和实例，Java 类和对象</p>
+<p>Docker 仓库：存储和管理 Docker 镜像</p>
+<p>daemon:守护进程</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205559674.png" alt="image-20240903205559674"></p>
+</li>
+<li><p>应用<strong>容器化</strong>和<strong>DockerFile</strong></p>
+<p>容器化：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205911563.png" alt="image-20240903205911563"></p>
+<p>DockerFile：一堆命令的文件,构建镜像</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903211253344.png" alt="image-20240903211253344"></p>
+<p>没有镜像文件？镜像存储比较特殊，<code>docker save [fileName].tar [imageName]</code>导出镜像文件（.tar）,<code>docker load [fileName].tar</code>导入</p>
+</li>
+<li><p>Docker 每次关闭文件数据会消失，<strong>逻辑卷</strong>进行持久化，目录映射到宿主机</p>
+</li>
+<li><p>docker-compose.yml：配置文件，将相关联的容器<strong>组合</strong>起来</p>
+<p><code>docker compose up</code>:自动安装依赖和配置环境</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903210908070.png" alt="image-20240903210908070"></p>
+</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>(根据操作系统版本上网搜索安装，配置 Docker，Yum<strong>仓库镜像</strong>)</p>
+<p>Centos 系统：Yum 安装</p>
+<p>Ubuntu 系统：Apt 安装</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#显示运行的容器</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示所有容器</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动容器</span></span><br><span class="line">docker start [ctnId]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="CentOs"><a href="#CentOs" class="headerlink" title="CentOs"></a>CentOs</h2><ol>
+<li>启动和检验</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动Docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止Docker</span></span><br><span class="line">systemctl stop docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置开机自启</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行docker ps命令，如果不报错，说明安装启动成功</span></span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="Docker-命令（Ubuntu）"><a href="#Docker-命令（Ubuntu）" class="headerlink" title="Docker 命令（Ubuntu）"></a>Docker 命令（Ubuntu）</h2><h3 id="将当前用户添加到-docker-用户组"><a href="#将当前用户添加到-docker-用户组" class="headerlink" title="将当前用户添加到 docker 用户组"></a>将当前用户添加到 docker 用户组</h3><p>为了避免每次使用 docker 命令都需要加上 sudo 权限，可以将当前用户加入安装中自动创建的 docker 用户组(可以参考官方文档)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>执行完此操作后，需要退出服务器，再重新登录回来，才可以省去 sudo 权限。</p>
+<h3 id="镜像（images）"><a href="#镜像（images）" class="headerlink" title="镜像（images）"></a>镜像（images）</h3><ol>
+<li><code>docker pull ubuntu:20.04</code>：拉取一个镜像</li>
+<li><code>docker images</code>：列出本地所有镜像</li>
+<li><code>docker image rm ubuntu:20.04</code> 或 <code>docker rmi ubuntu:20.04</code>：删除镜像<code>ubuntu:20.04</code></li>
+<li><code>docker [container] commit CONTAINER IMAGE_NAME:TAG</code>：创建某个 container 的镜像</li>
+<li><code>docker save -o ubuntu_20_04.tar ubuntu:20.04</code>：将镜像 ubuntu:20.04 导出到本地文件 ubuntu_20_04.tar 中</li>
+<li><code>docker load -i ubuntu_20_04.tar</code>：将镜像 ubuntu:20.04 从本地文件 ubuntu_20_04.tar 中加载出来</li>
+</ol>
+<h3 id="容器-container"><a href="#容器-container" class="headerlink" title="容器(container)"></a>容器(container)</h3><ol>
+<li><code>docker [container] create -it ubuntu:20.04</code>：利用镜像 ubuntu:20.04 创建一个容器。</li>
+<li><code>docker ps -a</code>：查看本地的所有容器</li>
+<li><code>docker [container] start CONTAINER</code>：启动容器</li>
+<li><code>docker [container] stop CONTAINER</code>：停止容器</li>
+<li><code>docker [container] restart CONTAINER</code>：重启容器</li>
+<li><code>docker [contaienr] run -itd ubuntu:20.04</code>：创建并启动一个容器</li>
+<li><code>docker [container] attach CONTAINER</code>：进入容器<ul>
+<li>先按 Ctrl-p，再按 Ctrl-q 可以挂起容器</li>
+</ul>
+</li>
+<li><code>docker [container] exec CONTAINER COMMAND</code>：在容器中执行命令</li>
+<li><code>docker [container] rm CONTAINER</code>：删除容器</li>
+<li><code>docker container prune</code>：删除所有已停止的容器</li>
+<li><code>docker export -o xxx.tar CONTAINER</code>：将容器 CONTAINER 导出到本地文件 xxx.tar 中</li>
+<li><code>docker import xxx.tar image_name:tag</code>：将本地文件 xxx.tar 导入成镜像，并将镜像命名为 image_name:tag</li>
+<li><code>docker export/import</code>与<code>docker save/load</code>的区别：<ul>
+<li><code>export/import</code>会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</li>
+<li><code>save/load</code>会保存完整记录，体积更大</li>
+</ul>
+</li>
+<li><code>docker top CONTAINER</code>：查看某个容器内的所有进程</li>
+<li><code>docker stats</code>：查看所有容器的统计信息，包括 CPU、内存、存储、网络等信息</li>
+<li><code>docker cp xxx CONTAINER:xxx 或 docker cp CONTAINER:xxx xxx</code>：在本地和容器间复制文件</li>
+<li><code>docker rename CONTAINER1 CONTAINER2</code>：重命名容器</li>
+<li><code>docker update CONTAINER --memory 500MB</code>：修改容器限制</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2024/09/08/hello-world/" data-id="cm0trdjff0032z0uf02ul3l8s" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://hyle777.github.io/2024/09/03/2024-09-03-Docker/" data-id="cm0trdjfe002zz0ufcdqnhukh" data-title="Docker" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -120,19 +191,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/09/04/2024-09-03-Spring/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          Spring
         
       </div>
     </a>
   
   
-    <a href="/2024/09/07/2024-09-07-MyBatisPlus/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MyBatisPlus</div>
+      <div class="article-nav-title">虚拟机</div>
     </a>
   
 </nav>

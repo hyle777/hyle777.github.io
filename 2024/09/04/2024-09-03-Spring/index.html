@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Spring | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Spring一些 JavaWeb 知识Tomcat 服务器Web 服务器：封装 http 协议，提供 web 服务，部署 web 应用。 Servlet 容器：管理和配置 Servlet。 ServletJava 编写的服务端程序。 处理请求和生成响应，会话管理。 IOC 控制反转概念：通过 Spring 容器来创建 bean 对象。 BeanFactory 和 ApplicationFactor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring">
+<meta property="og:url" content="https://hyle777.github.io/2024/09/04/2024-09-03-Spring/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Spring一些 JavaWeb 知识Tomcat 服务器Web 服务器：封装 http 协议，提供 web 服务，部署 web 应用。 Servlet 容器：管理和配置 Servlet。 ServletJava 编写的服务端程序。 处理请求和生成响应，会话管理。 IOC 控制反转概念：通过 Spring 容器来创建 bean 对象。 BeanFactory 和 ApplicationFactor">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907144055880.png">
+<meta property="og:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/2024051517157138890462855.jpg">
+<meta property="article:published_time" content="2024-09-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-08T14:55:02.912Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907144055880.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://hyle777.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2024-09-03-Spring" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/09/04/2024-09-03-Spring/" class="article-date">
+  <time class="dt-published" datetime="2024-09-03T16:00:00.000Z" itemprop="datePublished">2024-09-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Spring
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="一些-JavaWeb-知识"><a href="#一些-JavaWeb-知识" class="headerlink" title="一些 JavaWeb 知识"></a>一些 JavaWeb 知识</h2><h3 id="Tomcat-服务器"><a href="#Tomcat-服务器" class="headerlink" title="Tomcat 服务器"></a>Tomcat 服务器</h3><p>Web 服务器：封装 http 协议，提供 web 服务，部署 web 应用。</p>
+<p>Servlet 容器：管理和配置 Servlet。</p>
+<h3 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h3><p>Java 编写的服务端程序。</p>
+<p>处理请求和生成响应，会话管理。</p>
+<h2 id="IOC-控制反转"><a href="#IOC-控制反转" class="headerlink" title="IOC 控制反转"></a>IOC 控制反转</h2><p>概念：通过 Spring 容器来创建 bean 对象。</p>
+<p>BeanFactory 和 ApplicationFactory</p>
+<p>DI 依赖注入（Spring）</p>
+<p>Spring 的依赖注入</p>
+<ol>
+<li><p>通过 xml（配置文件）来注册 bean：属性注入，构造器注入</p>
+</li>
+<li><p>通过注解注册 bean:</p>
+</li>
+</ol>
+<p><strong>配置类</strong>：</p>
+<p>@Configuration：类前，把一个类变成配置文件</p>
+<p>@Bean：方法前，返回注入的 bean 对象</p>
+<p>@ComponentScan(basePackgaes &#x3D; “pojo”)：扫描组件，注册为 bean</p>
+<p><strong>POJO 类</strong>：<br>@Component：类前，标记为组件</p>
+<p><strong>业务类</strong>(使用 bean 的类)：</p>
+<p>@ContextConfiguration ：类前，指定获取 bean 的配置文件或配置类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ContextConfiguration</span> = (classes = ConfigFile.class)</span><br><span class="line"></span><br><span class="line"><span class="meta">@ContextConfiguration</span> = (&#123;<span class="string">&quot;classpath:spring-config.xml&quot;</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>@Autowired 或@Resource 注入 bean</p>
+<h2 id="DI-依赖注入（SpringBoot）"><a href="#DI-依赖注入（SpringBoot）" class="headerlink" title="DI 依赖注入（SpringBoot）"></a>DI 依赖注入（SpringBoot）</h2><p>概念：类 A 依赖类 B，创建 A 的 bean 时，需要注入 B 的 bean。Spring 使用@Autowired 来实现自动注入。</p>
+<h3 id="Resource-和-Autowired"><a href="#Resource-和-Autowired" class="headerlink" title="@Resource 和@Autowired"></a>@Resource 和@Autowired</h3><p><code>@Resource</code>：默认按名称，然后按类型</p>
+<ul>
+<li>不是 Spring 提供的</li>
+</ul>
+<p><code>@Autowired</code>：默认按类型，多个类型则使用<code>@Qualifier</code>来指定</p>
+<ul>
+<li>多个实现类，可以在某个实现类前加<code>@Primary</code>标记为默认实现类</li>
+</ul>
+<p>几种注入方式：</p>
+<ol>
+<li><p>使用构造器注入：</p>
+<p><strong>注意字段标记为 final</strong></p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> MyService myService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyComponent</span><span class="params">(<span class="meta">@Qualifier(&quot;specificService&quot;)</span> MyService myService)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.myService = myService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">useService</span><span class="params">()</span> &#123;</span><br><span class="line">        myService.performService();  <span class="comment">// Will print &quot;SpecificService&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Setter 方法注入</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> MyService myService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="meta">@Qualifier(&quot;specificService&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setMyService</span><span class="params">(MyService myService)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.myService = myService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">useService</span><span class="params">()</span> &#123;</span><br><span class="line">        myService.performService();  <span class="comment">// Will print &quot;SpecificService&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>字段注入</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="meta">@Qualifier(&quot;specificService&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> MyService myService;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">useService</span><span class="params">()</span> &#123;</span><br><span class="line">        myService.performService();  <span class="comment">// Will print &quot;SpecificService&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>配置类方法</p>
+<p>配置类使用<code>@Bean</code>来定义 bean</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AppConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Qualifier(&quot;specificService&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> MyService <span class="title function_">specificService</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">SpecificService</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MyComponent <span class="title function_">myComponent</span><span class="params">(<span class="meta">@Qualifier(&quot;specificService&quot;)</span> MyService myService)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">MyComponent</span>(myService);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Bean-和-Autowired"><a href="#Bean-和-Autowired" class="headerlink" title="@Bean 和@Autowired:"></a>@Bean 和@Autowired:</h3><p>@Bean：方法级别，返回一个 bean 对象，注册到容器，从无到有</p>
+<p>@Autowired：已经有了，从容器中拿</p>
+<h3 id="Autowired-一般注入接口"><a href="#Autowired-一般注入接口" class="headerlink" title="@Autowired 一般注入接口"></a>@Autowired 一般注入接口</h3><p>如果有不同实现类，怎么切换不同 bean?(支付：Paypal 和信用卡支付)</p>
+<p>使用工厂模式：实现工厂类，@Autowired 注入所有实现类</p>
+<ol>
+<li><strong>定义接口和实现类</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">PaymentService</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">processPayment</span><span class="params">(<span class="type">double</span> amount)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CreditCardPaymentService</span> <span class="keyword">implements</span> <span class="title class_">PaymentService</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">processPayment</span><span class="params">(<span class="type">double</span> amount)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Processing credit card payment of &quot;</span> + amount);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PayPalPaymentService</span> <span class="keyword">implements</span> <span class="title class_">PaymentService</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">processPayment</span><span class="params">(<span class="type">double</span> amount)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Processing PayPal payment of &quot;</span> + amount);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>创建一个工厂类来选择实现类</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PaymentServiceFactory</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, PaymentService&gt; paymentServices;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PaymentServiceFactory</span><span class="params">(List&lt;PaymentService&gt; paymentServices)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.paymentServices = paymentServices.stream()</span><br><span class="line">                .collect(Collectors.toMap(</span><br><span class="line">                        service -&gt; service.getClass().getSimpleName(),</span><br><span class="line">                        service -&gt; service</span><br><span class="line">                ));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> PaymentService <span class="title function_">getPaymentService</span><span class="params">(String paymentType)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> paymentServices.get(paymentType);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里，我们将所有 <code>PaymentService</code> 实现类注入到 <code>PaymentServiceFactory</code> 中，并使用 <code>Map</code> 存储它们，其中键是类的简单名称（如 <code>&quot;PayPalPaymentService&quot;</code>）。</p>
+<ol start="3">
+<li><strong>在业务类中使用工厂选择实现类</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PaymentProcessor</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> PaymentServiceFactory paymentServiceFactory;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PaymentProcessor</span><span class="params">(PaymentServiceFactory paymentServiceFactory)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.paymentServiceFactory = paymentServiceFactory;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makePayment</span><span class="params">(<span class="type">double</span> amount, String paymentType)</span> &#123;</span><br><span class="line">        <span class="type">PaymentService</span> <span class="variable">paymentService</span> <span class="operator">=</span> paymentServiceFactory.getPaymentService(paymentType);</span><br><span class="line">        <span class="keyword">if</span> (paymentService != <span class="literal">null</span>) &#123;</span><br><span class="line">            paymentService.processPayment(amount);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;Invalid payment type: &quot;</span> + paymentType);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>在控制器中调用</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PaymentController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> PaymentProcessor paymentProcessor;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PaymentController</span><span class="params">(PaymentProcessor paymentProcessor)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.paymentProcessor = paymentProcessor;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/pay&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> ResponseEntity&lt;String&gt; <span class="title function_">pay</span><span class="params">(<span class="meta">@RequestParam</span> <span class="type">double</span> amount, <span class="meta">@RequestParam</span> String paymentType)</span> &#123;</span><br><span class="line">        paymentProcessor.makePayment(amount, paymentType);</span><br><span class="line">        <span class="keyword">return</span> ResponseEntity.ok(<span class="string">&quot;Payment processed using &quot;</span> + paymentType);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="AOP-面向切面"><a href="#AOP-面向切面" class="headerlink" title="AOP 面向切面"></a>AOP 面向切面</h2><p>事务，日志</p>
+<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><h2 id="请求："><a href="#请求：" class="headerlink" title="请求："></a>请求：</h2><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>@RequestMapping(“&#x2F;xx&#x2F;xx”)：请求路径映射，方法前是路径，类前是前缀</p>
+<h3 id="动作："><a href="#动作：" class="headerlink" title="动作："></a>动作：</h3><p>GET：查询</p>
+<p>POST：修改（增删改）</p>
+<h3 id="参数类型"><a href="#参数类型" class="headerlink" title="参数类型"></a>参数类型</h3><ol>
+<li><p><strong>查询参数</strong>：加在 URL 后面，以 <code>?</code> 开头，多个参数之间使用 <code>&amp;</code> 分隔。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /user?name=Tom&amp;age=22</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表单参数：请求体，</p>
+<p>默认提交方式：application&#x2F;x-www-form-urlencoded。文件上传：multipart&#x2F;form-data。</p>
+<p>数据格式：键值对</p>
+</li>
+<li><p>JSON 数据：请求体，</p>
+<p>数据格式：JSON 格式，数组[]或对象{}</p>
+</li>
+</ol>
+<h3 id="获取参数"><a href="#获取参数" class="headerlink" title="获取参数"></a>获取参数</h3><ol>
+<li><p>获取查询参数和表单参数：</p>
+<p><code>@RequestParam</code>：基本类型和 String</p>
+<p><code>@ModelAttribute</code>：集合，列表，对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /users?name=Tom&amp;age=22</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/users&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">getUser</span><span class="params">(<span class="meta">@RequestParam(&quot;name&quot;)</span> String name,<span class="meta">@RequestParam(&quot;age&quot;)</span> Integer age)</span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Class UserQuery&#123;</span><br><span class="line">    String name;</span><br><span class="line">    Integer query;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@GetMapping(&quot;/users&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">getUser</span><span class="params">(<span class="meta">@ModelAttribute</span> UserQuery query)</span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取 JSON 数据</p>
+<p><code>@RequestBody</code>：数组[]&#x3D;&gt;List，字典{}&#x3D;&gt;Map，对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/users&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">getUser</span><span class="params">(<span class="meta">@RequestBody</span> UserQuery query)</span>&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>补充：接受日期参数</p>
+<p><code>@DateTimeFormat</code>：指定日期格式字符串。”yyyy-MM-dd HH:mm:ss”。Date 接收。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">setDate</span><span class="params">(<span class="meta">@DateTimeFormat(patten=&quot;yyyy-MM-dd&quot;)</span> Date date)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="响应："><a href="#响应：" class="headerlink" title="响应："></a>响应：</h2><h3 id="返回数据"><a href="#返回数据" class="headerlink" title="返回数据"></a>返回数据</h3><p>返回文本数据或 JSON 数据（&#x3D;&#x3D;本质都是字符串&#x3D;&#x3D;）</p>
+<p><code>@Controller</code>：控制器 Bean</p>
+<p><code>@ResponseBody</code>：Controller 方法前加，把返回的&#x3D;&#x3D;对象，列表，集合&#x3D;&#x3D;转换成 JSON 数据</p>
+<p><code>@RestController</code>：上面两个的整合</p>
+<h3 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//统一返回结果类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AjaxResult</span>&#123;</span><br><span class="line">    <span class="comment">//数据</span></span><br><span class="line">    <span class="keyword">private</span> Object data;</span><br><span class="line">    <span class="comment">//编码，执行什么操作</span></span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line">    <span class="comment">//消息，给用户信息</span></span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//统一编码类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Code</span> &#123;</span><br><span class="line"> 	<span class="comment">//末尾为1表示成功</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">SAVE_OK</span> <span class="operator">=</span> <span class="number">20011</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">DELETE_OK</span> <span class="operator">=</span> <span class="number">20021</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">UPDATE_OK</span> <span class="operator">=</span> <span class="number">20031</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">GET_OK</span> <span class="operator">=</span> <span class="number">20041</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//末尾为0表示失败</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">SAVE_ERR</span> <span class="operator">=</span> <span class="number">20010</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">DELETE_ERR</span> <span class="operator">=</span> <span class="number">20020</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">UPDATE_ERR</span> <span class="operator">=</span> <span class="number">20030</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">GET_ERR</span> <span class="operator">=</span> <span class="number">20040</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//异常</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">UNKNOWN_ERR</span> <span class="operator">=</span> <span class="number">50001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">SYS_ERR</span> <span class="operator">=</span> <span class="number">60001</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Integer</span> <span class="variable">BUS_ERR</span> <span class="operator">=</span> <span class="number">60002</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>遇到异常往上抛，在 controller 层集中处理。</p>
+<p>AOP 思想&#x3D;&gt;异常处理器（<code>@ControllerAdvice</code>和<code>@RestControllerAdvice</code>：类注解）。</p>
+<p><code>@ExceptionHandler(Class &lt;?&gt;)</code>：方法注解，处理哪种异常。</p>
+<ol>
+<li><p>异常分类：</p>
+<ul>
+<li><p>业务异常：BusinessException：用户不规范操作</p>
+</li>
+<li><p>系统异常：SystemException：代码逻辑错误</p>
+</li>
+<li><p>其他异常：Exception：未知异常</p>
+</li>
+</ul>
+</li>
+<li><p>自定义异常类：</p>
+<p>继承<code>RuntimeException</code></p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SystemException</span> <span class="keyword">extends</span> <span class="title class_">RuntimeException</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line"></span><br><span class="line">    SystemException(Integer code, String message)&#123;</span><br><span class="line">		<span class="built_in">super</span>(message);</span><br><span class="line">        <span class="built_in">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    SystemException(Integer code, String message, Throwable cause)&#123;</span><br><span class="line">		<span class="built_in">super</span>(message,cause);</span><br><span class="line">        <span class="built_in">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BusinessException</span> <span class="keyword">extends</span> <span class="title class_">RuntimeException</span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>捕获异常，抛出自定义的异常：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//可能造成异常的代码</span></span><br><span class="line">&#125; <span class="keyword">catch</span>(e)&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">SystemException</span>(Code.SYS_ERR, <span class="string">&quot;系统异常&quot;</span>);</span><br><span class="line">    <span class="comment">//throw new BusinessException(Code.BUS_ERR, &quot;用户操作不规范&quot;);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>异常处理器，统一处理：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProjectExceptionAdvice</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(BusinessException.class)</span></span><br><span class="line">	<span class="keyword">public</span> Result <span class="title function_">doBusinessException</span><span class="params">(BusinessException ex)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(ex.getCode(),<span class="literal">null</span>,ex.getMessage());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ExceptionHandler(SystemException.class)</span></span><br><span class="line">	<span class="keyword">public</span> Result <span class="title function_">doSystemException</span><span class="params">(SystemException ex)</span>&#123;</span><br><span class="line">        <span class="comment">//记录日志（错误堆饯）</span></span><br><span class="line">        <span class="comment">//发送邮件给开发人员</span></span><br><span class="line">        <span class="comment">//发送短信给运维人员</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(ex.getCode(),<span class="literal">null</span>,ex.getMessage());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(Exception.class)</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">doException</span><span class="params">(Exception ex)</span>&#123;</span><br><span class="line">        <span class="comment">//记录日志（错误堆栈》</span></span><br><span class="line">        <span class="comment">//发送邮件给开发人员</span></span><br><span class="line">        <span class="comment">//发送短信给运维人员</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(Code.UNKNOW ERR,<span class="literal">null</span>,<span class="string">&quot;系统繁忙，请联系管理员！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="REST-风格"><a href="#REST-风格" class="headerlink" title="REST 风格"></a>REST 风格</h2><p>GET：查询</p>
+<p>POST：修改</p>
+<p>PUT：新增</p>
+<p>DELETE：删除</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907144055880.png" alt="image-20240907144055880"></p>
+<p><code>@PathVariable</code>：接受路径参数，user&#x2F;{id}。参数过多使用 JSON 传输，@RequestBody 接受。</p>
+<h2 id="拦截器和过滤器的区别"><a href="#拦截器和过滤器的区别" class="headerlink" title="拦截器和过滤器的区别"></a>拦截器和过滤器的区别</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/2024051517157138890462855.jpg"></p>
+<h2 id="拦截器-Interceptor"><a href="#拦截器-Interceptor" class="headerlink" title="拦截器 Interceptor"></a>拦截器 Interceptor</h2><p>自定义拦截器：实现 HandlerInterceptor 接口</p>
+<ol>
+<li>实现接口：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//AOP思想</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyInterceptor</span> <span class="keyword">implements</span> <span class="title class_">HandlerInterceptor</span>&#123;</span><br><span class="line">    <span class="comment">//return true 放行，执行下个拦截器</span></span><br><span class="line">    <span class="comment">//return false 不继续执行</span></span><br><span class="line">    <span class="comment">//处理前</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">preHandle</span><span class="params">()</span>&#123;...&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//处理后</span></span><br><span class="line">    postHandle()&#123;...&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//清理</span></span><br><span class="line">    afterCompletion()&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.配置文件或配置类：注入拦截器，配置拦截路径和放行路径</p>
+<h2 id="过滤器-Filter"><a href="#过滤器-Filter" class="headerlink" title="过滤器 Filter"></a>过滤器 Filter</h2><p>JavaWeb 三大组件（Servlet，Filter，Listener）,目前唯一使用比较多的</p>
+<p>一般完成通用操作：<strong>登录校验</strong>，统一编码处理，敏感字符处理。</p>
+<p>在 SpringBoot 中使用 Filter：</p>
+<p>实现 Filter 接口，类前加<code>@WebFilter(urlPatterns=&quot;/*&quot;)</code></p>
+<p>在启动类加<code>@ServletComponentScan</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginFilter</span> <span class="keyword">implements</span> <span class="title class_">Filter</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span><span class="comment">//拦截到请求之后调用，调用多次</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(ServletRequest request,ServletResponse response,FilterChain chain)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;拦截到了请求&quot;</span>);</span><br><span class="line">        <span class="comment">//放行</span></span><br><span class="line">        chain.doFilter (request,response);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件上传和下载"><a href="#文件上传和下载" class="headerlink" title="文件上传和下载"></a>文件上传和下载</h2><p>把前端传输的文件用 CommonMultipartFile file 接收；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file.getInputStrean() <span class="comment">//获取输入流</span></span><br><span class="line"></span><br><span class="line">file.transferTo() <span class="comment">//保存文件</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hyle777.github.io/2024/09/04/2024-09-03-Spring/" data-id="cm0trdjfc002vz0ufeu9ygbdi" data-title="Spring" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/09/07/2024-09-03-SpringBoot/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SpringBoot
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/09/03/2024-09-03-Docker/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Docker</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/">SpringBoot项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BootStrap/" rel="tag">BootStrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kob/" rel="tag">kob</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag">二分 - 前缀和 - 双指针 - 位运算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">云服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E5%B1%82/" rel="tag">分层</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" rel="tag">区间合并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag">平衡树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" rel="tag">异步编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E8%A7%A3/" rel="tag">注解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" rel="tag">状态压缩 - 背包问题 - 记忆化搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag">离散化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%80%A7dp/" rel="tag">线性dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" rel="tag">组件库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag">腾讯云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BootStrap/" style="font-size: 10px;">BootStrap</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/kob/" style="font-size: 10px;">kob</a> <a href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 10px;">二分 - 前缀和 - 双指针 - 位运算</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">云服务器</a> <a href="/tags/%E5%88%86%E5%B1%82/" style="font-size: 10px;">分层</a> <a href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" style="font-size: 10px;">区间合并</a> <a href="/tags/%E5%9B%BE/" style="font-size: 10px;">图</a> <a href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" style="font-size: 10px;">平衡树</a> <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" style="font-size: 10px;">异步编程</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%B3%A8%E8%A7%A3/" style="font-size: 10px;">注解</a> <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">状态压缩 - 背包问题 - 记忆化搜索</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 10px;">离散化</a> <a href="/tags/%E7%BA%BF%E6%80%A7dp/" style="font-size: 10px;">线性dp</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" style="font-size: 10px;">组件库</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 10px;">规范</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">项目</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/07/2024-09-07-MyBatisPlus/">MyBatisPlus</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/07/2024-09-03-SpringBoot/">SpringBoot</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/04/2024-09-03-Spring/">Spring</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
