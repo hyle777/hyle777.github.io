@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hyle777.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://hyle777.github.io/page/2/index.html">
@@ -13,85 +27,208 @@
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
+<link rel="canonical" href="https://hyle777.github.io/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Hexo</title>
   
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://hyle777.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-2024-04-12-Java多线程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="article-date">
-  <time class="dt-published" datetime="2024-04-11T16:00:00.000Z" itemprop="datePublished">2024-04-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">Java多线程</a>
-    </h1>
-  
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
 
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">Java多线程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-12 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-12T00:00:00+08:00">2024-04-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h2><h3 id="1-创建新线程"><a href="#1-创建新线程" class="headerlink" title="1. 创建新线程"></a>1. 创建新线程</h3><ul>
+          <h2 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h2><h3 id="1-创建新线程"><a href="#1-创建新线程" class="headerlink" title="1. 创建新线程"></a>1. 创建新线程</h3><ul>
 <li><p>MyThread 继承 Thread，重写 run()。</p>
 </li>
 <li><p>MyRunnable 实现 Runnable 接口，重写 run()</p>
@@ -206,46 +343,77 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-id="cm0trmqp1000x2wuf394m2x4s" data-title="Java多线程" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-    <article id="post-2024-04-12-Javs设计模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/04/12/2024-04-12-Javs%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2024-04-11T16:00:00.000Z" itemprop="datePublished">2024-04-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/04/12/2024-04-12-Javs%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">Javs设计模式</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/12/2024-04-12-Javs%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/12/2024-04-12-Javs%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Javs设计模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-12 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-12T00:00:00+08:00">2024-04-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h2><ul>
+          <h2 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h2><ul>
 <li>开闭原则：类对扩展开放，对修改关闭</li>
 <li>里氏替换原则：类扩展时，子类对象替换父类对象，不改变调用方法预期结果</li>
 <li>接口隔离原则：客户端不应该强迫接口实现不适用的方法</li>
@@ -613,46 +781,77 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2024/04/12/2024-04-12-Javs%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" data-id="cm0trmqp200102wuf7hfp5h4d" data-title="Javs设计模式" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-    <article id="post-2024-04-05-平衡树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/" class="article-date">
-  <time class="dt-published" datetime="2024-04-04T16:00:00.000Z" itemprop="datePublished">2024-04-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/">平衡树</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/" class="post-title-link" itemprop="url">平衡树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-05 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-05T00:00:00+08:00">2024-04-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="二叉查找树-BST"><a href="#二叉查找树-BST" class="headerlink" title="二叉查找树 BST"></a>二叉查找树 BST</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/aee812361adf18538d3261b0325a10d.png" alt="aee812361adf18538d3261b0325a10d"></p>
+          <h2 id="二叉查找树-BST"><a href="#二叉查找树-BST" class="headerlink" title="二叉查找树 BST"></a>二叉查找树 BST</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/aee812361adf18538d3261b0325a10d.png" alt="aee812361adf18538d3261b0325a10d"></p>
 <h2 id="Treep"><a href="#Treep" class="headerlink" title="Treep"></a>Treep</h2><p>左旋右旋不会影响中序遍历的顺序</p>
 <p>右旋：新根的右子树成为旧根的左子树</p>
 <p>左旋：新根的左子树成为旧根的右子树</p>
@@ -660,48 +859,189 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/" data-id="cm0trmqp300142wufc8jzfnlv" data-title="平衡树" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag">平衡树</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2024-03-05-项目上线" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/" class="article-date">
-  <time class="dt-published" datetime="2024-03-24T16:00:00.000Z" itemprop="datePublished">2024-03-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">SpringBoot项目打包到腾讯云</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">贪吃蛇对战系统项目总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-03-25 00:00:00 / Modified: 19:24:49" itemprop="dateCreated datePublished" datetime="2024-03-25T00:00:00+08:00">2024-03-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">SpringBoot项目</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>远程登录服务器：</p>
+          <h2 id="实现用户注册登录功能"><a href="#实现用户注册登录功能" class="headerlink" title="实现用户注册登录功能"></a>实现用户注册登录功能</h2><ul>
+<li><p>注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据</p>
+</li>
+<li><p>登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。</p>
+</li>
+<li><p>获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。</p>
+</li>
+<li><p>使用 Spring Security 配置JWT认证机制，使用JWT来进行用户认证，后端实现JWT的token的生成与验证，根据token获取用户信息，最后实现登录和开发的业务。</p>
+</li>
+</ul>
+<h2 id="游戏动画的实现："><a href="#游戏动画的实现：" class="headerlink" title="游戏动画的实现："></a>游戏动画的实现：</h2><p>游戏动画在前端实现，通过js的requestAnimationFrame函数在浏览器实现动画，实现一个游戏对象递归调用该函数，在该函数调用前实现一些游戏的逻辑，游戏的逻辑涉及随机地图的生成，蛇的移动，地图和蛇的位置的数据存储在数组中，之后使用绘画标签canvas将地图和蛇渲染在页面上。</p>
+<h2 id="游戏同步："><a href="#游戏同步：" class="headerlink" title="游戏同步："></a>游戏同步：</h2><p>使用websocket实现前后端实时相互通信，使用WebSocketServer这个类来维护websocket连接。前端用户通过websocket向后端传输操作数据。后端要将游戏开始产生的地图数据以及游戏双方操作后两条蛇的坐标数据通过webserver实时通信到两个客户端，然后客户端将数据渲染到浏览器。</p>
+<h2 id="游戏逻辑的实现："><a href="#游戏逻辑的实现：" class="headerlink" title="游戏逻辑的实现："></a>游戏逻辑的实现：</h2><ul>
+<li>随机地图的生成：</li>
+</ul>
+<p>使用一个二维数组来存储地图信息，把空地设置为0，把障碍设置为1，地图的四周设置为1，每次生成障碍时生成两个随机数表示行号和列号，把它设置为1,要保证地图是公平的，使用障碍坐标中心对称后的坐标也设置为1，要保证两条蛇有交互性，则保证地图是连通的，可以使用bfs算法来判断地图是否连通。</p>
+<ul>
+<li>蛇移动的逻辑：</li>
+</ul>
+<p>使用一个动态数组来存储蛇身的坐标，使用dx，dy两个数组来表示蛇上下左右移动的偏移量，由于蛇每次移动所有坐标都要变换的逻辑过于复杂，我们可以将它理解成头和尾在移动，每次蛇移动时，在动态数组前面插入一个蛇头的新坐标即可，然后判断当前回合蛇是否增长，如果不增长，则将蛇尾坐标在数组中删除，如果增长，则保持不变。从而实现了蛇移动的逻辑。</p>
+<ul>
+<li>游戏流程：</li>
+</ul>
+<p>为了保证游戏不会阻塞其他的玩家的匹配，游戏等业务，游戏整个逻辑需要使用多线程来实现。</p>
+<p>在两名玩家匹配成功后，会启动游戏线程，初始化会生成地图数据和两条蛇的初始坐标。</p>
+<p>使用一个status变量来表示游戏的状态，一个loser变量来记录胜负。</p>
+<p>游戏循环n个回合，n是游戏最大的回合数，每个回合，先判断游戏是否结束，如果结束，将游戏结果返回给前端，否则等待两个玩家的输入，5s则视为超时，判负处理，游戏状态改为结束；若两名玩家都有输入，判断操作是否合理，操作不合理判负，游戏状态改成结束，操作合理则会存储蛇移动的数据并进入下一回合。</p>
+<h2 id="匹配系统的实现："><a href="#匹配系统的实现：" class="headerlink" title="匹配系统的实现："></a>匹配系统的实现：</h2><p>匹配的逻辑额外使用另一个微服务来实现。</p>
+<p>前端通过websocket向后端传输匹配者的信息，后端再把信息传输给匹配系统的微服务，匹配系统把匹配成功后的消息在传输给后端，后端再调用游戏的逻辑开始一局游戏，后端和匹配系统之间的数据传输通过RestTemplate来实现。</p>
+<ul>
+<li><p>匹配流程：</p>
+<p>为了保证匹配不会阻塞其他玩家的匹配，匹配功能需要使用多线程来实现。</p>
+<p>使用一个列表来存储所有玩家，称做匹配池。每次后端发来一个请求时，如果请求匹配，把玩家的数据加入到匹配池中；如果请求取消匹配时，在匹配池删去该玩家。</p>
+<p>每个玩家会有一个分数变量，我们根据分数差距来匹配，随着匹配时间的增长，每增长一秒，允许玩家分数差距增加10。</p>
+<p>写一个死循环，每次线程sleep 1s，然后扫描匹配池所有玩家，将玩家匹配时间的变量加1，然后循环每一个玩家，去和其他玩家判断是否符合匹配条件，符合条件，将两个玩家的数据返回给后端，退出循环，否则进入下一次循环。</p>
+</li>
+</ul>
+<h2 id="我的Bot的实现："><a href="#我的Bot的实现：" class="headerlink" title="我的Bot的实现："></a>我的Bot的实现：</h2><p>实现Bot数据的CRUD接口，Bot数据主要有id，标题，代码等。</p>
+<h2 id="执行Bot代码："><a href="#执行Bot代码：" class="headerlink" title="执行Bot代码："></a>执行Bot代码：</h2><p>执行Bot代码产生蛇的下一步操作通过另一个微服务来实现。前端匹配时发了一个bot_id表示通过bot操作，后端在执行游戏流程时，不会从前端等待用户输入，而是向Bot微服务发送一个请求。</p>
+<ul>
+<li>Bot执行代码的流程：</li>
+</ul>
+<p>维护一个存储 <code>Bot</code> 对象的队列 <code>bots</code>，后端发来请求时，往队列加入一个bot对象，使用一个consumer类来消费bot对象，获取bot的代码，使用反射来动态编译代码，最后利用反射获取编译后的Bot实例，调用它的nextMove获取蛇下一步移动方向，最后把数据返回给后端。</p>
+<h2 id="排行榜和录像功能："><a href="#排行榜和录像功能：" class="headerlink" title="排行榜和录像功能："></a>排行榜和录像功能：</h2><p>排行榜：根据用户的分数来进行排行，后端实现列表查询接口，包含分页查询的逻辑；</p>
+<p>录像功能：每一次游戏会将地图数据，两条蛇的移动数据存成字符串到数据库，从数据库获取数据传到前端并模拟一遍即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/" class="post-title-link" itemprop="url">SpringBoot项目打包到腾讯云</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-03-25 00:00:00" itemprop="dateCreated datePublished" datetime="2024-03-25T00:00:00+08:00">2024-03-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:02" itemprop="dateModified" datetime="2024-09-08T22:55:02+08:00">2024-09-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>远程登录服务器：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh user@hostname</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -870,137 +1210,77 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/" data-id="cm0trmqoz000q2wuf3o5uevup" data-title="SpringBoot项目打包到腾讯云" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">云服务器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag">腾讯云</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2024-03-25-贪吃蛇对战系统项目总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" class="article-date">
-  <time class="dt-published" datetime="2024-03-24T16:00:00.000Z" itemprop="datePublished">2024-03-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/">SpringBoot项目</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">贪吃蛇对战系统项目总结</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/" class="post-title-link" itemprop="url">javadoc注释格式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-10-11 00:00:00" itemprop="dateCreated datePublished" datetime="2023-10-11T00:00:00+08:00">2023-10-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-03-25 13:13:50" itemprop="dateModified" datetime="2024-03-25T13:13:50+08:00">2024-03-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" itemprop="url" rel="index"><span itemprop="name">代码规范</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="实现用户注册登录功能"><a href="#实现用户注册登录功能" class="headerlink" title="实现用户注册登录功能"></a>实现用户注册登录功能</h2><ul>
-<li><p>注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据</p>
-</li>
-<li><p>登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。</p>
-</li>
-<li><p>获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。</p>
-</li>
-<li><p>使用 Spring Security 配置JWT认证机制，使用JWT来进行用户认证，后端实现JWT的token的生成与验证，根据token获取用户信息，最后实现登录和开发的业务。</p>
-</li>
-</ul>
-<h2 id="游戏动画的实现："><a href="#游戏动画的实现：" class="headerlink" title="游戏动画的实现："></a>游戏动画的实现：</h2><p>游戏动画在前端实现，通过js的requestAnimationFrame函数在浏览器实现动画，实现一个游戏对象递归调用该函数，在该函数调用前实现一些游戏的逻辑，游戏的逻辑涉及随机地图的生成，蛇的移动，地图和蛇的位置的数据存储在数组中，之后使用绘画标签canvas将地图和蛇渲染在页面上。</p>
-<h2 id="游戏同步："><a href="#游戏同步：" class="headerlink" title="游戏同步："></a>游戏同步：</h2><p>使用websocket实现前后端实时相互通信，使用WebSocketServer这个类来维护websocket连接。前端用户通过websocket向后端传输操作数据。后端要将游戏开始产生的地图数据以及游戏双方操作后两条蛇的坐标数据通过webserver实时通信到两个客户端，然后客户端将数据渲染到浏览器。</p>
-<h2 id="游戏逻辑的实现："><a href="#游戏逻辑的实现：" class="headerlink" title="游戏逻辑的实现："></a>游戏逻辑的实现：</h2><ul>
-<li>随机地图的生成：</li>
-</ul>
-<p>使用一个二维数组来存储地图信息，把空地设置为0，把障碍设置为1，地图的四周设置为1，每次生成障碍时生成两个随机数表示行号和列号，把它设置为1,要保证地图是公平的，使用障碍坐标中心对称后的坐标也设置为1，要保证两条蛇有交互性，则保证地图是连通的，可以使用bfs算法来判断地图是否连通。</p>
-<ul>
-<li>蛇移动的逻辑：</li>
-</ul>
-<p>使用一个动态数组来存储蛇身的坐标，使用dx，dy两个数组来表示蛇上下左右移动的偏移量，由于蛇每次移动所有坐标都要变换的逻辑过于复杂，我们可以将它理解成头和尾在移动，每次蛇移动时，在动态数组前面插入一个蛇头的新坐标即可，然后判断当前回合蛇是否增长，如果不增长，则将蛇尾坐标在数组中删除，如果增长，则保持不变。从而实现了蛇移动的逻辑。</p>
-<ul>
-<li>游戏流程：</li>
-</ul>
-<p>为了保证游戏不会阻塞其他的玩家的匹配，游戏等业务，游戏整个逻辑需要使用多线程来实现。</p>
-<p>在两名玩家匹配成功后，会启动游戏线程，初始化会生成地图数据和两条蛇的初始坐标。</p>
-<p>使用一个status变量来表示游戏的状态，一个loser变量来记录胜负。</p>
-<p>游戏循环n个回合，n是游戏最大的回合数，每个回合，先判断游戏是否结束，如果结束，将游戏结果返回给前端，否则等待两个玩家的输入，5s则视为超时，判负处理，游戏状态改为结束；若两名玩家都有输入，判断操作是否合理，操作不合理判负，游戏状态改成结束，操作合理则会存储蛇移动的数据并进入下一回合。</p>
-<h2 id="匹配系统的实现："><a href="#匹配系统的实现：" class="headerlink" title="匹配系统的实现："></a>匹配系统的实现：</h2><p>匹配的逻辑额外使用另一个微服务来实现。</p>
-<p>前端通过websocket向后端传输匹配者的信息，后端再把信息传输给匹配系统的微服务，匹配系统把匹配成功后的消息在传输给后端，后端再调用游戏的逻辑开始一局游戏，后端和匹配系统之间的数据传输通过RestTemplate来实现。</p>
-<ul>
-<li><p>匹配流程：</p>
-<p>为了保证匹配不会阻塞其他玩家的匹配，匹配功能需要使用多线程来实现。</p>
-<p>使用一个列表来存储所有玩家，称做匹配池。每次后端发来一个请求时，如果请求匹配，把玩家的数据加入到匹配池中；如果请求取消匹配时，在匹配池删去该玩家。</p>
-<p>每个玩家会有一个分数变量，我们根据分数差距来匹配，随着匹配时间的增长，每增长一秒，允许玩家分数差距增加10。</p>
-<p>写一个死循环，每次线程sleep 1s，然后扫描匹配池所有玩家，将玩家匹配时间的变量加1，然后循环每一个玩家，去和其他玩家判断是否符合匹配条件，符合条件，将两个玩家的数据返回给后端，退出循环，否则进入下一次循环。</p>
-</li>
-</ul>
-<h2 id="我的Bot的实现："><a href="#我的Bot的实现：" class="headerlink" title="我的Bot的实现："></a>我的Bot的实现：</h2><p>实现Bot数据的CRUD接口，Bot数据主要有id，标题，代码等。</p>
-<h2 id="执行Bot代码："><a href="#执行Bot代码：" class="headerlink" title="执行Bot代码："></a>执行Bot代码：</h2><p>执行Bot代码产生蛇的下一步操作通过另一个微服务来实现。前端匹配时发了一个bot_id表示通过bot操作，后端在执行游戏流程时，不会从前端等待用户输入，而是向Bot微服务发送一个请求。</p>
-<ul>
-<li>Bot执行代码的流程：</li>
-</ul>
-<p>维护一个存储 <code>Bot</code> 对象的队列 <code>bots</code>，后端发来请求时，往队列加入一个bot对象，使用一个consumer类来消费bot对象，获取bot的代码，使用反射来动态编译代码，最后利用反射获取编译后的Bot实例，调用它的nextMove获取蛇下一步移动方向，最后把数据返回给后端。</p>
-<h2 id="排行榜和录像功能："><a href="#排行榜和录像功能：" class="headerlink" title="排行榜和录像功能："></a>排行榜和录像功能：</h2><p>排行榜：根据用户的分数来进行排行，后端实现列表查询接口，包含分页查询的逻辑；</p>
-<p>录像功能：每一次游戏会将地图数据，两条蛇的移动数据存成字符串到数据库，从数据库获取数据传到前端并模拟一遍即可。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" data-id="cm0trmqp0000r2wuf8hah7y2o" data-title="贪吃蛇对战系统项目总结" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kob/" rel="tag">kob</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-03-21-javadoc注释格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2023-10-10T16:00:00.000Z" itemprop="datePublished">2023-10-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/">javadoc注释格式</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="Javadoc注释格式"><a href="#Javadoc注释格式" class="headerlink" title="Javadoc注释格式"></a>Javadoc注释格式</h2><ol>
+          <h2 id="Javadoc注释格式"><a href="#Javadoc注释格式" class="headerlink" title="Javadoc注释格式"></a>Javadoc注释格式</h2><ol>
 <li>类和接口的注释：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例类/接口的描述。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 作者</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 版本号</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line">    <span class="comment">// 类/接口的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1024,48 +1304,77 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/" data-id="cm0trmqov000f2wuffcft62ud" data-title="javadoc注释格式" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-03-25-SpringBoot分层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/" class="article-date">
-  <time class="dt-published" datetime="2023-03-24T16:00:00.000Z" itemprop="datePublished">2023-03-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/">SpringBoot分层</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/" class="post-title-link" itemprop="url">SpringBoot分层</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-25 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-25T00:00:00+08:00">2023-03-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="应用分层"><a href="#应用分层" class="headerlink" title="应用分层"></a>应用分层</h2><ul>
+          <h2 id="应用分层"><a href="#应用分层" class="headerlink" title="应用分层"></a>应用分层</h2><ul>
 <li><p>Controller 层：主要是对访问控制进行转发，各类基本参数校验，或者不复用的业务简单处理等。</p>
 </li>
 <li><p>Service 层：相对具体的业务逻辑服务层。</p>
@@ -1089,138 +1398,77 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2023/03/25/2023-03-25-SpringBoot%E5%88%86%E5%B1%82/" data-id="cm0trmqoy000m2wuf7c5t8uiu" data-title="SpringBoot分层" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E5%B1%82/" rel="tag">分层</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-03-21-SpringBoot中常见的注解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/" class="article-date">
-  <time class="dt-published" datetime="2023-03-20T16:00:00.000Z" itemprop="datePublished">2023-03-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/">SpringBoot中常见的注解</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/" class="post-title-link" itemprop="url">JavaScript常用数据结构和api</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-21 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-21T00:00:00+08:00">2023-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-03-25 12:48:25" itemprop="dateModified" datetime="2024-03-25T12:48:25+08:00">2024-03-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="类前面加注解"><a href="#类前面加注解" class="headerlink" title="类前面加注解"></a>类前面加注解</h2><p>@Mapper：&#x2F;mapper，映射层</p>
-<p>@Service：&#x2F;service&#x2F;impl，业务层</p>
-<p>@RestController：&#x2F;controller，控制器层</p>
-<p>实体层常用的注解：</p>
-<blockquote>
-<p> Lombok 库提供的注解，可以自动生成一些常见的代码。</p>
-<ol>
-<li><strong>@Data</strong>:</li>
-</ol>
-<ul>
-<li>@Data 会为类中的所有属性自动生成 getter、setter 方法、equals、hashCode 和 toString 方法。</li>
-</ul>
-<ol start="2">
-<li><strong>@NoArgsConstructor</strong>:</li>
-</ol>
-<ul>
-<li>@NoArgsConstructor 为类生成一个无参构造方法。</li>
-</ul>
-<ol start="3">
-<li><strong>@AllArgsConstructor</strong>:</li>
-</ol>
-<ul>
-<li>@AllArgsConstructor 会为类生成一个包含所有参数的构造方法。</li>
-</ul>
-</blockquote>
-<h2 id="函数前加注解"><a href="#函数前加注解" class="headerlink" title="函数前加注解"></a>函数前加注解</h2><p>@RequestMapping: 映射所有请求类型</p>
-<p>@GetMapping：映射Get请求</p>
-<p>@PostMapping：映射Post请求</p>
-<h2 id="函数参数注解"><a href="#函数参数注解" class="headerlink" title="函数参数注解"></a>函数参数注解</h2><p>@PathVariable：get请求的路径变量</p>
-<p>@RequestParam：</p>
-<ul>
-<li>用于从请求 URL 中获取参数值。</li>
-<li>通常用于获取 GET 方法的参数或 POST 方法中以表单形式提交的参数。</li>
-<li>参数传递方式：通过 URL 查询参数或表单数据。</li>
-<li>适用于简单数据类型，如字符串、数字等。</li>
-</ul>
-<p> @RequestBody：</p>
-<ul>
-<li>通常用于处理 POST 请求中发送的复杂对象或数据。</li>
-<li>参数传递方式：请求体中传递数据，通常是 JSON 格式。</li>
-<li>适用于复杂对象类型，如实体类、集合等。</li>
-</ul>
-<p>@ModelAttribute：把请求参数自动绑定到一个对象上</p>
-<p>@Param(“problemQuery”)：可以在映射文件引用该参数</p>
-<h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><h2 id="接口文档-Swagger"><a href="#接口文档-Swagger" class="headerlink" title="接口文档(Swagger)"></a>接口文档(Swagger)</h2><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>@SpringBootTest：类注解</p>
-<p>@Test：方法注解</p>
-<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/" data-id="cm0trmqot000b2wuf82dv756d" data-title="SpringBoot中常见的注解" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B3%A8%E8%A7%A3/" rel="tag">注解</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-03-21-JavaScript常用数据结构和api" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/" class="article-date">
-  <time class="dt-published" datetime="2023-03-20T16:00:00.000Z" itemprop="datePublished">2023-03-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/">JavaScript常用数据结构和api</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a>js对象</h1><ul>
+          <h1 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a>js对象</h1><ul>
 <li><p>键是字符串类型，平时写对象的时候把键的单引号或双引号省略了。</p>
 </li>
 <li><p>合并对象</p>
@@ -1350,48 +1598,196 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/" data-id="cm0trmqox000k2wuf3qnlb9m1" data-title="JavaScript常用数据结构和api" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-03-18-git教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/" class="article-date">
-  <time class="dt-published" datetime="2023-03-17T16:00:00.000Z" itemprop="datePublished">2023-03-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/git/">git</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/">git教程</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/" class="post-title-link" itemprop="url">SpringBoot中常见的注解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-21 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-21T00:00:00+08:00">2023-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-07 20:31:45" itemprop="dateModified" datetime="2024-09-07T20:31:45+08:00">2024-09-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h1><p><code>git init</code>：将目录初始化为git仓库</p>
+          <h2 id="类前面加注解"><a href="#类前面加注解" class="headerlink" title="类前面加注解"></a>类前面加注解</h2><p>@Mapper：&#x2F;mapper，映射层</p>
+<p>@Service：&#x2F;service&#x2F;impl，业务层</p>
+<p>@RestController：&#x2F;controller，控制器层</p>
+<p>实体层常用的注解：</p>
+<blockquote>
+<p> Lombok 库提供的注解，可以自动生成一些常见的代码。</p>
+<ol>
+<li><strong>@Data</strong>:</li>
+</ol>
+<ul>
+<li>@Data 会为类中的所有属性自动生成 getter、setter 方法、equals、hashCode 和 toString 方法。</li>
+</ul>
+<ol start="2">
+<li><strong>@NoArgsConstructor</strong>:</li>
+</ol>
+<ul>
+<li>@NoArgsConstructor 为类生成一个无参构造方法。</li>
+</ul>
+<ol start="3">
+<li><strong>@AllArgsConstructor</strong>:</li>
+</ol>
+<ul>
+<li>@AllArgsConstructor 会为类生成一个包含所有参数的构造方法。</li>
+</ul>
+</blockquote>
+<h2 id="函数前加注解"><a href="#函数前加注解" class="headerlink" title="函数前加注解"></a>函数前加注解</h2><p>@RequestMapping: 映射所有请求类型</p>
+<p>@GetMapping：映射Get请求</p>
+<p>@PostMapping：映射Post请求</p>
+<h2 id="函数参数注解"><a href="#函数参数注解" class="headerlink" title="函数参数注解"></a>函数参数注解</h2><p>@PathVariable：get请求的路径变量</p>
+<p>@RequestParam：</p>
+<ul>
+<li>用于从请求 URL 中获取参数值。</li>
+<li>通常用于获取 GET 方法的参数或 POST 方法中以表单形式提交的参数。</li>
+<li>参数传递方式：通过 URL 查询参数或表单数据。</li>
+<li>适用于简单数据类型，如字符串、数字等。</li>
+</ul>
+<p> @RequestBody：</p>
+<ul>
+<li>通常用于处理 POST 请求中发送的复杂对象或数据。</li>
+<li>参数传递方式：请求体中传递数据，通常是 JSON 格式。</li>
+<li>适用于复杂对象类型，如实体类、集合等。</li>
+</ul>
+<p>@ModelAttribute：把请求参数自动绑定到一个对象上</p>
+<p>@Param(“problemQuery”)：可以在映射文件引用该参数</p>
+<h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><h2 id="接口文档-Swagger"><a href="#接口文档-Swagger" class="headerlink" title="接口文档(Swagger)"></a>接口文档(Swagger)</h2><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>@SpringBootTest：类注解</p>
+<p>@Test：方法注解</p>
+<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">git教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-18 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-18T00:00:00+08:00">2023-03-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-04-19 00:07:23" itemprop="dateModified" datetime="2024-04-19T00:07:23+08:00">2024-04-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h1><p><code>git init</code>：将目录初始化为git仓库</p>
 <p><code>git status</code>：查看工作区状态</p>
 <p><code>git diff &lt;file&gt;</code>：查看某个文件的修改内容</p>
 <p><code>git add &lt;file&gt;</code>：添加某个文件到暂存区 </p>
@@ -1447,7 +1843,7 @@
 <h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><blockquote>
 <p>要关联一个远程库，使用命令<code>git remote add origin git@&lt;server-name:path/repo-name.git&gt;</code>；</p>
 <blockquote>
-<p>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:hyle777&#x2F;git_learn</p>
+<p>git remote add origin <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a>:hyle777&#x2F;git_learn</p>
 </blockquote>
 <p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
 <p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
@@ -1461,7 +1857,7 @@
 <h3 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h3><blockquote>
 <p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</p>
 <p>Git支持多种协议，包括<code>https</code>，但<code>ssh</code>协议速度最快。</p>
-<p>git clone <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a>:hyle777.github.io</p>
+<p>git clone <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:hyle777.github.io</p>
 <p>GitHub给出的地址不止一个，还可以用<code>https://github.com/hyle777/hyle777.github.io</code>这样的地址。</p>
 </blockquote>
 <h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h3><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即<code>master</code>分支(github中主分支为main)。<code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的，所以，<code>HEAD</code>指向的就是当前分支。</p>
@@ -1496,141 +1892,188 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://hyle777.github.io/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/" data-id="cm0trmqow000g2wuf285thus7" data-title="git教程" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
-</section>
-        
-          <aside id="sidebar">
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/">SpringBoot项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></li></ul>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BootStrap/" rel="tag">BootStrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kob/" rel="tag">kob</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag">二分 - 前缀和 - 双指针 - 位运算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">云服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E5%B1%82/" rel="tag">分层</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" rel="tag">区间合并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag">平衡树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" rel="tag">异步编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E8%A7%A3/" rel="tag">注解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" rel="tag">状态压缩 - 背包问题 - 记忆化搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag">离散化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%80%A7dp/" rel="tag">线性dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" rel="tag">组件库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag">腾讯云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">规范</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/BootStrap/" style="font-size: 10px;">BootStrap</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/kob/" style="font-size: 10px;">kob</a> <a href="/tags/%E4%BA%8C%E5%88%86-%E5%89%8D%E7%BC%80%E5%92%8C-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 10px;">二分 - 前缀和 - 双指针 - 位运算</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">云服务器</a> <a href="/tags/%E5%88%86%E5%B1%82/" style="font-size: 10px;">分层</a> <a href="/tags/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/" style="font-size: 10px;">区间合并</a> <a href="/tags/%E5%9B%BE/" style="font-size: 10px;">图</a> <a href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" style="font-size: 10px;">平衡树</a> <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" style="font-size: 10px;">异步编程</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%B3%A8%E8%A7%A3/" style="font-size: 10px;">注解</a> <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">状态压缩 - 背包问题 - 记忆化搜索</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" style="font-size: 10px;">离散化</a> <a href="/tags/%E7%BA%BF%E6%80%A7dp/" style="font-size: 10px;">线性dp</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/" style="font-size: 10px;">组件库</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%84%E8%8C%83/" style="font-size: 10px;">规范</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">项目</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/08/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/07/2024-09-07-MyBatisPlus/">MyBatisPlus</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/07/2024-09-03-SpringBoot/">SpringBoot</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/04/2024-09-03-Spring/">Spring</a>
-          </li>
-        
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
       </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
 
     </div>
-    <nav id="mobile-nav">
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+<!--
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
+-->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
