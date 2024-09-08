@@ -106,66 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux</title>
-    <url>/2022/07/05/2022-07-05-Linux/</url>
-    <content><![CDATA[<h1 id="第一讲-文件管理指令"><a href="#第一讲-文件管理指令" class="headerlink" title="第一讲 文件管理指令"></a>第一讲 文件管理指令</h1><p><img src="C:\Users\huyulian\AppData\Roaming\Typora\typora-user-images\image-20220704152936179.png" alt="image-20220704152936179"></p>
-<p><img src="C:\Users\huyulian\AppData\Roaming\Typora\typora-user-images\image-20220704152954458.png" alt="image-20220704152954458"></p>
-<p>Linux版本： ubuntu centos</p>
-<p><a href="https://zhuanlan.zhihu.com/p/351675403">Linux文件系统的层次结构 - 知乎 (zhihu.com)</a></p>
-<p>acs目录:ACWing Server</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td><img src="file:///C:/Users/huyulian/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></td>
-</tr>
-</tbody></table>
-<p><img src="file:///C:/Users/huyulian/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg" alt="img"></p>
-<h2 id="2-目录"><a href="#2-目录" class="headerlink" title="2.目录"></a>2.目录</h2><p>1.绝对路径 从根目录&#x2F;开始</p>
-<p>2.相对路径 从当前目录开始</p>
-<p>&#x2F;根目录</p>
-<p>. <strong>当前目录</strong></p>
-<p>.. <strong>上级目录</strong></p>
-<p>~&#x2F;  <strong>当前用户的家目录</strong> 等价于&#x2F;home&#x2F;acs (一个home目录有多个用户 stuA stuB)</p>
-<h2 id="3-文件管理常用指令"><a href="#3-文件管理常用指令" class="headerlink" title="3.文件管理常用指令"></a>3.文件管理常用指令</h2><p>**ctrl c:**取消命令,并且换行</p>
-<p>ctrl u:清空本行命令</p>
-<p><strong>tab键</strong>:可以补全命令和文件名,如果补全不了快速按两下tab键,可以显示备选选项</p>
-<p>ls:列出当前目录下所有文件,蓝色的是文件夹,日色的是普通文件,绿色的是可执行文件</p>
-<p>ls </p>
-<p><strong>-l(long) 输出文件长信息</strong></p>
-<p><strong>-h(humanization)人性化输出 -lh</strong></p>
-<p><strong>-a()显示隐藏文件</strong></p>
-<p>pwd:显示当前路径</p>
-<p>**cd( xxxchange dir)**：</p>
-<p>进入xxx目录下, </p>
-<p>cd.. ：返回上层目录</p>
-<p>cp xxx YYY（复制粘贴重名）：将xxx文件复制成YYY, xxx和YYY可以是一个路径,比如..&#x2F;dir_c&#x2F;a.txt,表示上层目录下的dir_c文件夹下的文件a.txt</p>
-<p>mkdir XXX:创建目录XXX</p>
-<p>rm XXX（remove）：删除普通文件; </p>
-<p>rm XXX -r：删除文件夹</p>
-<p>mv XXX YYY（move剪切粘贴重名）:将XXX文件移动到YYY,和cp命令一样,XXX和YYY可以是一个路径;重命名也是用这个命令</p>
-<p>touch XXX:创建一个文件</p>
-<p><strong>cat XXX</strong>：展示文件XXX中的内容</p>
-<h1 id="第二讲"><a href="#第二讲" class="headerlink" title="第二讲"></a>第二讲</h1><p><img src="C:\Users\huyulian\AppData\Roaming\Typora\typora-user-images\image-20220704154853115.png" alt="image-20220704154853115"></p>
-<h2 id="1-tmux教程"><a href="#1-tmux教程" class="headerlink" title="1.tmux教程"></a>1.tmux教程</h2><h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><p> (1) 分屏。<br> (2) 允许断开Terminal连接后，继续运行进程。</p>
-<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3><p> 一个tmux可以包含多个session，一个session可以包含多个window，一个window可以包含多个pane。<br> 实例：<br>     tmux:<br>         session 0:<br>             window 0:<br>                 pane 0<br>                 pane 1<br>                 pane 2<br>                 …<br>             window 1<br>             window 2<br>             …<br>         session 1<br>         session 2<br>         …</p>
-<h3 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h3><p> (1) tmux：新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。<br> (2) 按下Ctrl + a后手指松开，然后按**%<strong>：将当前pane</strong>左右平分<strong>成两个pane。<br> (3) 按下Ctrl + a后手指松开，然后按”（注意是</strong>双引号”<strong>）：将当前pane</strong>上下平分<strong>成两个pane。<br> (4) Ctrl + d：</strong>关闭当前pane<strong>；如果当前window的所有pane均已关闭，则自动关闭window；如果当前session的所有window均已关闭，则自动关闭session。<br> (5) 鼠标点击可以选pane。<br> (6) 按下ctrl + a后手指松开，然后按</strong>方向键<strong>：选择相邻的pane。<br> (7) 鼠标拖动pane之间的分割线，可以调整分割线的位置。<br> (8) 按住ctrl + a的同时按方向键，可以调整pane之间分割线的位置。<br> (9) 按下ctrl + a后手指松开，然后按z：将当前pane全屏&#x2F;取消全屏。<br> (10) 按下ctrl + a后手指松开，然后按d：挂起当前session。<br> (11) tmux a：打开之前挂起的session。<br> (12) 按下ctrl + a后手指松开，然后按s：选择其它session。<br>     方向键 —— 上：选择上一项 session&#x2F;window&#x2F;pane<br>     方向键 —— 下：选择下一项 session&#x2F;window&#x2F;pane<br>     方向键 —— 右：展开当前项 session&#x2F;window<br>     方向键 —— 左：闭合当前项 session&#x2F;window<br> (13) 按下Ctrl + a后手指松开，然后按</strong>c<strong>：在当前session中</strong>创建一个新的window<strong>。<br> (14) 按下Ctrl + a后手指松开，然后按</strong>w**：选择其他window，操作方法与(12)完全相同。<br> (15) 按下Ctrl + a后手指松开，然后按PageUp：翻阅当前pane内的内容。<br> (16) 鼠标滚轮：翻阅当前pane内的内容。<br> (17) 在tmux中选中文本时，需要按住shift键。（仅支持Windows和Linux，不支持Mac，不过该操作并不是必须的，因此影响不大）</p>
-<p> (18) tmux中复制&#x2F;粘贴文本的通用方式：<br>     (1) 按下Ctrl + a后松开手指，然后按[<br>     (2) 用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板<br>     (3) 按下Ctrl + a后松开手指，然后按]，会将剪贴板中的内容粘贴到光标处</p>
-<p>ctrl insert 复制 shift insert 粘贴</p>
-<h2 id="2-vim教程"><a href="#2-vim教程" class="headerlink" title="2.vim教程"></a>2.vim教程</h2><h3 id="功能：-1"><a href="#功能：-1" class="headerlink" title="功能："></a>功能：</h3><p> (1) 命令行模式下的文本编辑器。<br> (2) 根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。<br> (3) 使用方式：vim filename<br>     如果已有该文件，则打开它。<br>     如果没有该文件，则打开个一个新的文件，并命名为filename<br>模式：<br> (1) 一般命令模式<br>     默认模式。命令输入方式：类似于打游戏放技能，按不同字符，即可进行不同操作。可以复制、粘贴、删除文本等。<br> (2) 编辑模式<br>     在一般命令模式里按下i，会进入编辑模式。<br>     按下ESC会退出编辑模式，返回到一般命令模式。<br> (3) 命令行模式<br>     在一般命令模式里按下:&#x2F;?三个字母中的任意一个，会进入命令行模式。命令行在最下面。<br>     可以查找、替换、保存、退出、配置编辑器等。</p>
-<h3 id="操作：-1"><a href="#操作：-1" class="headerlink" title="操作："></a>操作：</h3><p> (1) i：进入编辑模式<br> (2) ESC：进入一般命令模式<br> (3) h 或 左箭头键：光标向左移动一个字符<br> (4) j 或 向下箭头：光标向下移动一个字符<br> (5) k 或 向上箭头：光标向上移动一个字符<br> (6) l 或 向右箭头：光标向右移动一个字符<br> (7) n<Space>：n表示数字，按下数字后再按空格，光标会向右移动这一行的n个字符<br> (8) 0 或 功能键[Home]：光标移动到本行开头<br> (9) $ 或 功能键[End]：光标移动到本行末尾<br> (10) G：光标移动到最后一行<br> (11) :n 或 nG：n为数字，光标移动到第n行<br> (12) gg：光标移动到第一行，相当于1G<br> (13) n<Enter>：n为数字，光标向下移动n行<br> (14) &#x2F;word：向光标之下寻找第一个值为word的字符串。<br> (15) ?word：向光标之上寻找第一个值为word的字符串。<br> (16) n：重复前一个查找操作<br> (17) N：反向重复前一个查找操作<br> (18) :n1,n2s&#x2F;word1&#x2F;word2&#x2F;g：n1与n2为数字，在第n1行与n2行之间寻找word1这个字符串，并将该字符串替换为word2<br> (19) :1,$s&#x2F;word1&#x2F;word2&#x2F;g：将全文的word1替换为word2<br> (20) :1,$s&#x2F;word1&#x2F;word2&#x2F;gc：将全文的word1替换为word2，且在替换前要求用户确认。<br> (21) v：选中文本<br> (22) d：删除选中的文本<br> (23) dd: 删除当前行<br> (24) y：复制选中的文本<br> (25) yy: 复制当前行<br> (26) p: 将复制的数据在光标的下一行&#x2F;下一个位置粘贴<br> (27) u：撤销<br> (28) Ctrl + r：取消撤销<br> (29) 大于号 &gt;：将选中的文本整体向右缩进一次<br> (30) 小于号 &lt;：将选中的文本整体向左缩进一次<br> (31) :w 保存<br> (32) :w! 强制保存<br> (33) :q 退出<br> (34) :q! 强制退出<br> (35) :wq 保存并退出<br> (36) :set paste 设置成粘贴模式，取消代码自动缩进<br> (37) :set nopaste 取消粘贴模式，开启代码自动缩进<br> (38) :set nu 显示行号<br> (39) :set nonu 隐藏行号<br> (40) gg&#x3D;G：将全文代码格式化<br> (41) :noh 关闭查找关键词高亮<br> (42) Ctrl + q：当vim卡死时，可以取消当前正在执行的命令<br>异常处理：<br> 每次用vim编辑文件时，会自动创建一个.filename.swp的临时文件。<br> 如果打开某个文件时，该文件的swp文件已存在，则会报错。此时解决办法有两种：<br>     (1) 找到正在打开该文件的程序，并退出<br>     (2) 直接删掉该swp文件即可</p>
-<h2 id="3-创建作业-测试作业的正确性"><a href="#3-创建作业-测试作业的正确性" class="headerlink" title="3.创建作业 &amp; 测试作业的正确性"></a>3.创建作业 &amp; 测试作业的正确性</h2><p>homework 2 create 可以重新创建所有lesson_2的作业。<br>homework 2 create id 可以单独创建lesson_2的第id个作业. e.g.<br> homework 2 create 0 可以只重新创建lesson_2的第0个作业<br>homework 2 test 可以评测lesson_2的所有作业</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
     <title>基础算法</title>
     <url>/2021/07/17/2021-07-17-%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="1-排序算法"><a href="#1-排序算法" class="headerlink" title="1.排序算法"></a>1.排序算法</h1><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>1.分治思想</p>
@@ -579,6 +519,267 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux</title>
+    <url>/2022/07/05/2022-07-05-Linux/</url>
+    <content><![CDATA[<h1 id="第一讲-文件管理指令"><a href="#第一讲-文件管理指令" class="headerlink" title="第一讲 文件管理指令"></a>第一讲 文件管理指令</h1><p><img src="C:\Users\huyulian\AppData\Roaming\Typora\typora-user-images\image-20220704152936179.png" alt="image-20220704152936179"></p>
+<p><img src="C:\Users\huyulian\AppData\Roaming\Typora\typora-user-images\image-20220704152954458.png" alt="image-20220704152954458"></p>
+<p>Linux版本： ubuntu centos</p>
+<p><a href="https://zhuanlan.zhihu.com/p/351675403">Linux文件系统的层次结构 - 知乎 (zhihu.com)</a></p>
+<p>acs目录:ACWing Server</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td><img src="file:///C:/Users/huyulian/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></td>
+</tr>
+</tbody></table>
+<p><img src="file:///C:/Users/huyulian/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg" alt="img"></p>
+<h2 id="2-目录"><a href="#2-目录" class="headerlink" title="2.目录"></a>2.目录</h2><p>1.绝对路径 从根目录&#x2F;开始</p>
+<p>2.相对路径 从当前目录开始</p>
+<p>&#x2F;根目录</p>
+<p>. <strong>当前目录</strong></p>
+<p>.. <strong>上级目录</strong></p>
+<p>~&#x2F;  <strong>当前用户的家目录</strong> 等价于&#x2F;home&#x2F;acs (一个home目录有多个用户 stuA stuB)</p>
+<h2 id="3-文件管理常用指令"><a href="#3-文件管理常用指令" class="headerlink" title="3.文件管理常用指令"></a>3.文件管理常用指令</h2><p>**ctrl c:**取消命令,并且换行</p>
+<p>ctrl u:清空本行命令</p>
+<p><strong>tab键</strong>:可以补全命令和文件名,如果补全不了快速按两下tab键,可以显示备选选项</p>
+<p>ls:列出当前目录下所有文件,蓝色的是文件夹,日色的是普通文件,绿色的是可执行文件</p>
+<p>ls </p>
+<p><strong>-l(long) 输出文件长信息</strong></p>
+<p><strong>-h(humanization)人性化输出 -lh</strong></p>
+<p><strong>-a()显示隐藏文件</strong></p>
+<p>pwd:显示当前路径</p>
+<p>**cd( xxxchange dir)**：</p>
+<p>进入xxx目录下, </p>
+<p>cd.. ：返回上层目录</p>
+<p>cp xxx YYY（复制粘贴重名）：将xxx文件复制成YYY, xxx和YYY可以是一个路径,比如..&#x2F;dir_c&#x2F;a.txt,表示上层目录下的dir_c文件夹下的文件a.txt</p>
+<p>mkdir XXX:创建目录XXX</p>
+<p>rm XXX（remove）：删除普通文件; </p>
+<p>rm XXX -r：删除文件夹</p>
+<p>mv XXX YYY（move剪切粘贴重名）:将XXX文件移动到YYY,和cp命令一样,XXX和YYY可以是一个路径;重命名也是用这个命令</p>
+<p>touch XXX:创建一个文件</p>
+<p><strong>cat XXX</strong>：展示文件XXX中的内容</p>
+<h1 id="第二讲"><a href="#第二讲" class="headerlink" title="第二讲"></a>第二讲</h1><p><img src="C:\Users\huyulian\AppData\Roaming\Typora\typora-user-images\image-20220704154853115.png" alt="image-20220704154853115"></p>
+<h2 id="1-tmux教程"><a href="#1-tmux教程" class="headerlink" title="1.tmux教程"></a>1.tmux教程</h2><h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><p> (1) 分屏。<br> (2) 允许断开Terminal连接后，继续运行进程。</p>
+<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3><p> 一个tmux可以包含多个session，一个session可以包含多个window，一个window可以包含多个pane。<br> 实例：<br>     tmux:<br>         session 0:<br>             window 0:<br>                 pane 0<br>                 pane 1<br>                 pane 2<br>                 …<br>             window 1<br>             window 2<br>             …<br>         session 1<br>         session 2<br>         …</p>
+<h3 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h3><p> (1) tmux：新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。<br> (2) 按下Ctrl + a后手指松开，然后按**%<strong>：将当前pane</strong>左右平分<strong>成两个pane。<br> (3) 按下Ctrl + a后手指松开，然后按”（注意是</strong>双引号”<strong>）：将当前pane</strong>上下平分<strong>成两个pane。<br> (4) Ctrl + d：</strong>关闭当前pane<strong>；如果当前window的所有pane均已关闭，则自动关闭window；如果当前session的所有window均已关闭，则自动关闭session。<br> (5) 鼠标点击可以选pane。<br> (6) 按下ctrl + a后手指松开，然后按</strong>方向键<strong>：选择相邻的pane。<br> (7) 鼠标拖动pane之间的分割线，可以调整分割线的位置。<br> (8) 按住ctrl + a的同时按方向键，可以调整pane之间分割线的位置。<br> (9) 按下ctrl + a后手指松开，然后按z：将当前pane全屏&#x2F;取消全屏。<br> (10) 按下ctrl + a后手指松开，然后按d：挂起当前session。<br> (11) tmux a：打开之前挂起的session。<br> (12) 按下ctrl + a后手指松开，然后按s：选择其它session。<br>     方向键 —— 上：选择上一项 session&#x2F;window&#x2F;pane<br>     方向键 —— 下：选择下一项 session&#x2F;window&#x2F;pane<br>     方向键 —— 右：展开当前项 session&#x2F;window<br>     方向键 —— 左：闭合当前项 session&#x2F;window<br> (13) 按下Ctrl + a后手指松开，然后按</strong>c<strong>：在当前session中</strong>创建一个新的window<strong>。<br> (14) 按下Ctrl + a后手指松开，然后按</strong>w**：选择其他window，操作方法与(12)完全相同。<br> (15) 按下Ctrl + a后手指松开，然后按PageUp：翻阅当前pane内的内容。<br> (16) 鼠标滚轮：翻阅当前pane内的内容。<br> (17) 在tmux中选中文本时，需要按住shift键。（仅支持Windows和Linux，不支持Mac，不过该操作并不是必须的，因此影响不大）</p>
+<p> (18) tmux中复制&#x2F;粘贴文本的通用方式：<br>     (1) 按下Ctrl + a后松开手指，然后按[<br>     (2) 用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板<br>     (3) 按下Ctrl + a后松开手指，然后按]，会将剪贴板中的内容粘贴到光标处</p>
+<p>ctrl insert 复制 shift insert 粘贴</p>
+<h2 id="2-vim教程"><a href="#2-vim教程" class="headerlink" title="2.vim教程"></a>2.vim教程</h2><h3 id="功能：-1"><a href="#功能：-1" class="headerlink" title="功能："></a>功能：</h3><p> (1) 命令行模式下的文本编辑器。<br> (2) 根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。<br> (3) 使用方式：vim filename<br>     如果已有该文件，则打开它。<br>     如果没有该文件，则打开个一个新的文件，并命名为filename<br>模式：<br> (1) 一般命令模式<br>     默认模式。命令输入方式：类似于打游戏放技能，按不同字符，即可进行不同操作。可以复制、粘贴、删除文本等。<br> (2) 编辑模式<br>     在一般命令模式里按下i，会进入编辑模式。<br>     按下ESC会退出编辑模式，返回到一般命令模式。<br> (3) 命令行模式<br>     在一般命令模式里按下:&#x2F;?三个字母中的任意一个，会进入命令行模式。命令行在最下面。<br>     可以查找、替换、保存、退出、配置编辑器等。</p>
+<h3 id="操作：-1"><a href="#操作：-1" class="headerlink" title="操作："></a>操作：</h3><p> (1) i：进入编辑模式<br> (2) ESC：进入一般命令模式<br> (3) h 或 左箭头键：光标向左移动一个字符<br> (4) j 或 向下箭头：光标向下移动一个字符<br> (5) k 或 向上箭头：光标向上移动一个字符<br> (6) l 或 向右箭头：光标向右移动一个字符<br> (7) n<Space>：n表示数字，按下数字后再按空格，光标会向右移动这一行的n个字符<br> (8) 0 或 功能键[Home]：光标移动到本行开头<br> (9) $ 或 功能键[End]：光标移动到本行末尾<br> (10) G：光标移动到最后一行<br> (11) :n 或 nG：n为数字，光标移动到第n行<br> (12) gg：光标移动到第一行，相当于1G<br> (13) n<Enter>：n为数字，光标向下移动n行<br> (14) &#x2F;word：向光标之下寻找第一个值为word的字符串。<br> (15) ?word：向光标之上寻找第一个值为word的字符串。<br> (16) n：重复前一个查找操作<br> (17) N：反向重复前一个查找操作<br> (18) :n1,n2s&#x2F;word1&#x2F;word2&#x2F;g：n1与n2为数字，在第n1行与n2行之间寻找word1这个字符串，并将该字符串替换为word2<br> (19) :1,$s&#x2F;word1&#x2F;word2&#x2F;g：将全文的word1替换为word2<br> (20) :1,$s&#x2F;word1&#x2F;word2&#x2F;gc：将全文的word1替换为word2，且在替换前要求用户确认。<br> (21) v：选中文本<br> (22) d：删除选中的文本<br> (23) dd: 删除当前行<br> (24) y：复制选中的文本<br> (25) yy: 复制当前行<br> (26) p: 将复制的数据在光标的下一行&#x2F;下一个位置粘贴<br> (27) u：撤销<br> (28) Ctrl + r：取消撤销<br> (29) 大于号 &gt;：将选中的文本整体向右缩进一次<br> (30) 小于号 &lt;：将选中的文本整体向左缩进一次<br> (31) :w 保存<br> (32) :w! 强制保存<br> (33) :q 退出<br> (34) :q! 强制退出<br> (35) :wq 保存并退出<br> (36) :set paste 设置成粘贴模式，取消代码自动缩进<br> (37) :set nopaste 取消粘贴模式，开启代码自动缩进<br> (38) :set nu 显示行号<br> (39) :set nonu 隐藏行号<br> (40) gg&#x3D;G：将全文代码格式化<br> (41) :noh 关闭查找关键词高亮<br> (42) Ctrl + q：当vim卡死时，可以取消当前正在执行的命令<br>异常处理：<br> 每次用vim编辑文件时，会自动创建一个.filename.swp的临时文件。<br> 如果打开某个文件时，该文件的swp文件已存在，则会报错。此时解决办法有两种：<br>     (1) 找到正在打开该文件的程序，并退出<br>     (2) 直接删掉该swp文件即可</p>
+<h2 id="3-创建作业-测试作业的正确性"><a href="#3-创建作业-测试作业的正确性" class="headerlink" title="3.创建作业 &amp; 测试作业的正确性"></a>3.创建作业 &amp; 测试作业的正确性</h2><p>homework 2 create 可以重新创建所有lesson_2的作业。<br>homework 2 create id 可以单独创建lesson_2的第id个作业. e.g.<br> homework 2 create 0 可以只重新创建lesson_2的第0个作业<br>homework 2 test 可以评测lesson_2的所有作业</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>git教程</title>
+    <url>/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h1><p><code>git init</code>：将目录初始化为git仓库</p>
+<p><code>git status</code>：查看工作区状态</p>
+<p><code>git diff &lt;file&gt;</code>：查看某个文件的修改内容</p>
+<p><code>git add &lt;file&gt;</code>：添加某个文件到暂存区 </p>
+<p><code>git add .</code>  把所有文件添加到暂存区</p>
+<p><code>git commit -m &quot;提交说明&quot;</code>  提交所有文件</p>
+<p><strong>远程仓库</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;YL H&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;1074747648@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>git remote add origin git@server-name:path/repo-name.git</code> 关联一个远程仓库，<code>origin</code>是远程仓库默认习惯命名</p>
+<p><code>git push -u origin master</code>第一次推送master分支的所有内容</p>
+<p><code>git push origin master</code>推送最新修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin git@git.acwing.com:hyle/kob.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
+<h2 id="时空机穿梭"><a href="#时空机穿梭" class="headerlink" title="时空机穿梭"></a>时空机穿梭</h2><ul>
+<li><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
+</li>
+<li><p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff &lt;file&gt;</code>可以查看修改内容。</p>
+</li>
+</ul>
+<h3 id="版本库回退"><a href="#版本库回退" class="headerlink" title="版本库回退"></a>版本库回退</h3><ul>
+<li><p><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard &lt;commit_id&gt;</code>。</p>
+</li>
+<li><p>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</p>
+</li>
+<li><p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
+<blockquote>
+<p>Git必须知道当前版本是哪个版本，在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>1094adb...</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><p>工作区：电脑里能看到的目录</p>
+<p>版本库(repository)：工作区的一个隐藏目录.git是git的版本库。</p>
+<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322222552238.png" alt="image-20230322222552238"></p>
+<p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<p>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
+<p>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+<p>可以简单理解为，需要 &#x3D;&#x3D;提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改&#x3D;&#x3D; 。</p>
+<h3 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h3><p>git管理的是修改而不是文件，每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>git commit</code>中，即修改不会提交到本地仓库。</p>
+<p>如果修改文件后无法提交到本地仓库，需要检查将修改后的文件是不是没有<code>git add</code>加入到暂存区。</p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- &lt;file&gt;</code>。（checkout 检验更新）</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+<blockquote>
+<p>一种情况是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code></p>
+<p>另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git checkout -- test.txt</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;<code>git checkout</code>其实是用版本库里的版本替换工作区的版本&#x3D;&#x3D;，无论工作区是修改还是删除，都可以“一键还原”</p>
+</blockquote>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><blockquote>
+<p>要关联一个远程库，使用命令<code>git remote add origin git@&lt;server-name:path/repo-name.git&gt;</code>；</p>
+<blockquote>
+<p>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a>:hyle777&#x2F;git_learn</p>
+</blockquote>
+<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
+<p><em>补充</em>：</p>
+<p>列出所有远程仓库信息：<code>git remote -v</code></p>
+<p>在本地仓库删除远程仓库(解除关联)：<code>git remote rm origin</code></p>
+<p>仓库地址可以用http协议(添加关联)：<code>git remote add origin https://github.com/hyle777/git_learn</code></p>
+</blockquote>
+<h3 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h3><blockquote>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</p>
+<p>Git支持多种协议，包括<code>https</code>，但<code>ssh</code>协议速度最快。</p>
+<p>git clone <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:hyle777.github.io</p>
+<p>GitHub给出的地址不止一个，还可以用<code>https://github.com/hyle777/hyle777.github.io</code>这样的地址。</p>
+</blockquote>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h3><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即<code>master</code>分支(github中主分支为main)。<code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的，所以，<code>HEAD</code>指向的就是当前分支。</p>
+<p><code>git merge</code>命令用于合并指定分支到当前分支。合并后，再查看<code>readme.txt</code>的内容，就可以看到，和<code>dev</code>分支的最新提交是完全一样的。注意到上面的<code>Fast-forward</code>信息，Git告诉我们，这次合并是“快进模式”，也就是直接把<code>master</code>指向<code>dev</code>的当前提交，所以合并速度非常快。当然，也不是每次合并都能<code>Fast-forward</code>，我们后面会讲其他方式的合并。</p>
+<p>因为创建、合并和删除分支非常快，所以<strong>Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在<code>master</code>分支上工作效果是一样的，但过程更安全。</strong></p>
+<p>合并完成后，就可以放心地删除<code>dev</code>分支了：</p>
+<blockquote>
+<p>Git鼓励大量使用分支：</p>
+<p>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）</p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+</blockquote>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p>
+<p>解决冲突就是把Git<strong>合并失败的文件手动编辑</strong>为我们希望的内容，再提交。</p>
+<p>用<code>git log --graph</code>命令可以看到分支合并图。</p>
+<h3 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h3><p>Git分支十分强大，在团队开发中应该充分应用。</p>
+<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+<h4 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h4><p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
+<p>首先，<code>master</code>分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
+<p>那在哪干活呢？干活都在<code>dev</code>分支上，也就是说，<code>dev</code>分支是不稳定的，到某个时候，比如1.0版本发布时，再把<code>dev</code>分支合并到<code>master</code>上，在<code>master</code>分支发布1.0版本；</p>
+<p>你和你的小伙伴们每个人都在<code>dev</code>分支上干活，每个人都有自己的分支，时不时地往<code>dev</code>分支上合并就可以了。</p>
+<p>所以，团队合作的分支看起来就像这样：</p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/0" alt="git-br-policy"></p>
+<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>当你从远程仓库克隆时，实际上Git自动把本地的<code>master</code>分支和远程的<code>master</code>分支对应起来了，并且，远程仓库的默认名称是<code>origin</code>。</p>
+<p>在本地仓库创建dev分支，将工作区的文件提交到dev分支，再推送到远程仓库的dev分支。</p>
+<blockquote>
+<p>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）<br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>javadoc注释格式</title>
+    <url>/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="Javadoc注释格式"><a href="#Javadoc注释格式" class="headerlink" title="Javadoc注释格式"></a>Javadoc注释格式</h2><ol>
+<li>类和接口的注释：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例类/接口的描述。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 作者</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 版本号</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line">    <span class="comment">// 类/接口的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>方法的注释：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例方法的描述。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> 参数1 描述参数1的含义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> 参数2 描述参数2的含义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 描述返回值的含义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> 异常类型 描述可能抛出的异常</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">exampleMethod</span><span class="params">(<span class="type">int</span> param1, String param2)</span> <span class="keyword">throws</span> SomeException &#123;</span><br><span class="line">    <span class="comment">// 方法的实现</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>字段和变量的注释：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例字段/变量的描述。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> exampleField;</span><br></pre></td></tr></table></figure>
+
+<p>注意事项：</p>
+<ul>
+<li>注释以 <code>/**</code> 开始，以 <code>*/</code> 结束，使用多行注释。</li>
+<li><code>@param</code>、<code>@return</code>、<code>@throws</code> 等标签后应该紧跟描述信息。</li>
+<li>类和接口需要使用 <code>@author</code> 和 <code>@version</code> 标签。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>代码规范</category>
+      </categories>
+      <tags>
+        <tag>规范</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SpringBoot中常见的注解</title>
+    <url>/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/</url>
+    <content><![CDATA[<h2 id="类前面加注解"><a href="#类前面加注解" class="headerlink" title="类前面加注解"></a>类前面加注解</h2><p>@Mapper：&#x2F;mapper，映射层</p>
+<p>@Service：&#x2F;service&#x2F;impl，业务层</p>
+<p>@RestController：&#x2F;controller，控制器层</p>
+<p>实体层常用的注解：</p>
+<blockquote>
+<p> Lombok 库提供的注解，可以自动生成一些常见的代码。</p>
+<ol>
+<li><strong>@Data</strong>:</li>
+</ol>
+<ul>
+<li>@Data 会为类中的所有属性自动生成 getter、setter 方法、equals、hashCode 和 toString 方法。</li>
+</ul>
+<ol start="2">
+<li><strong>@NoArgsConstructor</strong>:</li>
+</ol>
+<ul>
+<li>@NoArgsConstructor 为类生成一个无参构造方法。</li>
+</ul>
+<ol start="3">
+<li><strong>@AllArgsConstructor</strong>:</li>
+</ol>
+<ul>
+<li>@AllArgsConstructor 会为类生成一个包含所有参数的构造方法。</li>
+</ul>
+</blockquote>
+<h2 id="函数前加注解"><a href="#函数前加注解" class="headerlink" title="函数前加注解"></a>函数前加注解</h2><p>@RequestMapping: 映射所有请求类型</p>
+<p>@GetMapping：映射Get请求</p>
+<p>@PostMapping：映射Post请求</p>
+<h2 id="函数参数注解"><a href="#函数参数注解" class="headerlink" title="函数参数注解"></a>函数参数注解</h2><p>@PathVariable：get请求的路径变量</p>
+<p>@RequestParam：</p>
+<ul>
+<li>用于从请求 URL 中获取参数值。</li>
+<li>通常用于获取 GET 方法的参数或 POST 方法中以表单形式提交的参数。</li>
+<li>参数传递方式：通过 URL 查询参数或表单数据。</li>
+<li>适用于简单数据类型，如字符串、数字等。</li>
+</ul>
+<p> @RequestBody：</p>
+<ul>
+<li>通常用于处理 POST 请求中发送的复杂对象或数据。</li>
+<li>参数传递方式：请求体中传递数据，通常是 JSON 格式。</li>
+<li>适用于复杂对象类型，如实体类、集合等。</li>
+</ul>
+<p>@ModelAttribute：把请求参数自动绑定到一个对象上</p>
+<p>@Param(“problemQuery”)：可以在映射文件引用该参数</p>
+<h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><h2 id="接口文档-Swagger"><a href="#接口文档-Swagger" class="headerlink" title="接口文档(Swagger)"></a>接口文档(Swagger)</h2><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>@SpringBootTest：类注解</p>
+<p>@Test：方法注解</p>
+<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2>]]></content>
+      <categories>
+        <category>SpringBoot</category>
+      </categories>
+      <tags>
+        <tag>SpringBoot</tag>
+        <tag>注解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript常用数据结构和api</title>
     <url>/2023/03/21/2023-03-21-JavaScript%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8Capi/</url>
     <content><![CDATA[<h1 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a>js对象</h1><ul>
@@ -717,205 +918,20 @@
       </tags>
   </entry>
   <entry>
-    <title>SpringBoot中常见的注解</title>
-    <url>/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/</url>
-    <content><![CDATA[<h2 id="类前面加注解"><a href="#类前面加注解" class="headerlink" title="类前面加注解"></a>类前面加注解</h2><p>@Mapper：&#x2F;mapper，映射层</p>
-<p>@Service：&#x2F;service&#x2F;impl，业务层</p>
-<p>@RestController：&#x2F;controller，控制器层</p>
-<p>实体层常用的注解：</p>
-<blockquote>
-<p> Lombok 库提供的注解，可以自动生成一些常见的代码。</p>
-<ol>
-<li><strong>@Data</strong>:</li>
-</ol>
-<ul>
-<li>@Data 会为类中的所有属性自动生成 getter、setter 方法、equals、hashCode 和 toString 方法。</li>
-</ul>
-<ol start="2">
-<li><strong>@NoArgsConstructor</strong>:</li>
-</ol>
-<ul>
-<li>@NoArgsConstructor 为类生成一个无参构造方法。</li>
-</ul>
-<ol start="3">
-<li><strong>@AllArgsConstructor</strong>:</li>
-</ol>
-<ul>
-<li>@AllArgsConstructor 会为类生成一个包含所有参数的构造方法。</li>
-</ul>
-</blockquote>
-<h2 id="函数前加注解"><a href="#函数前加注解" class="headerlink" title="函数前加注解"></a>函数前加注解</h2><p>@RequestMapping: 映射所有请求类型</p>
-<p>@GetMapping：映射Get请求</p>
-<p>@PostMapping：映射Post请求</p>
-<h2 id="函数参数注解"><a href="#函数参数注解" class="headerlink" title="函数参数注解"></a>函数参数注解</h2><p>@PathVariable：get请求的路径变量</p>
-<p>@RequestParam：</p>
-<ul>
-<li>用于从请求 URL 中获取参数值。</li>
-<li>通常用于获取 GET 方法的参数或 POST 方法中以表单形式提交的参数。</li>
-<li>参数传递方式：通过 URL 查询参数或表单数据。</li>
-<li>适用于简单数据类型，如字符串、数字等。</li>
-</ul>
-<p> @RequestBody：</p>
-<ul>
-<li>通常用于处理 POST 请求中发送的复杂对象或数据。</li>
-<li>参数传递方式：请求体中传递数据，通常是 JSON 格式。</li>
-<li>适用于复杂对象类型，如实体类、集合等。</li>
-</ul>
-<p>@ModelAttribute：把请求参数自动绑定到一个对象上</p>
-<p>@Param(“problemQuery”)：可以在映射文件引用该参数</p>
-<h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><h2 id="接口文档-Swagger"><a href="#接口文档-Swagger" class="headerlink" title="接口文档(Swagger)"></a>接口文档(Swagger)</h2><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>@SpringBootTest：类注解</p>
-<p>@Test：方法注解</p>
-<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2>]]></content>
-      <categories>
-        <category>SpringBoot</category>
-      </categories>
-      <tags>
-        <tag>SpringBoot</tag>
-        <tag>注解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>javadoc注释格式</title>
-    <url>/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="Javadoc注释格式"><a href="#Javadoc注释格式" class="headerlink" title="Javadoc注释格式"></a>Javadoc注释格式</h2><ol>
-<li>类和接口的注释：</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例类/接口的描述。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 作者</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 版本号</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line">    <span class="comment">// 类/接口的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>方法的注释：</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例方法的描述。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> 参数1 描述参数1的含义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> 参数2 描述参数2的含义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 描述返回值的含义</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> 异常类型 描述可能抛出的异常</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">exampleMethod</span><span class="params">(<span class="type">int</span> param1, String param2)</span> <span class="keyword">throws</span> SomeException &#123;</span><br><span class="line">    <span class="comment">// 方法的实现</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>字段和变量的注释：</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这是一个示例字段/变量的描述。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> exampleField;</span><br></pre></td></tr></table></figure>
-
-<p>注意事项：</p>
-<ul>
-<li>注释以 <code>/**</code> 开始，以 <code>*/</code> 结束，使用多行注释。</li>
-<li><code>@param</code>、<code>@return</code>、<code>@throws</code> 等标签后应该紧跟描述信息。</li>
-<li>类和接口需要使用 <code>@author</code> 和 <code>@version</code> 标签。</li>
-</ul>
+    <title>平衡树</title>
+    <url>/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/</url>
+    <content><![CDATA[<h2 id="二叉查找树-BST"><a href="#二叉查找树-BST" class="headerlink" title="二叉查找树 BST"></a>二叉查找树 BST</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/aee812361adf18538d3261b0325a10d.png" alt="aee812361adf18538d3261b0325a10d"></p>
+<h2 id="Treep"><a href="#Treep" class="headerlink" title="Treep"></a>Treep</h2><p>左旋右旋不会影响中序遍历的顺序</p>
+<p>右旋：新根的右子树成为旧根的左子树</p>
+<p>左旋：新根的左子树成为旧根的右子树</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405192453728.png" alt="image-20240405192453728"></p>
 ]]></content>
       <categories>
-        <category>代码规范</category>
+        <category>数据结构</category>
       </categories>
       <tags>
-        <tag>规范</tag>
-        <tag>Java</tag>
+        <tag>平衡树</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>git教程</title>
-    <url>/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h1><p><code>git init</code>：将目录初始化为git仓库</p>
-<p><code>git status</code>：查看工作区状态</p>
-<p><code>git diff &lt;file&gt;</code>：查看某个文件的修改内容</p>
-<p><code>git add &lt;file&gt;</code>：添加某个文件到暂存区 </p>
-<p><code>git add .</code>  把所有文件添加到暂存区</p>
-<p><code>git commit -m &quot;提交说明&quot;</code>  提交所有文件</p>
-<p><strong>远程仓库</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;YL H&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;1074747648@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>git remote add origin git@server-name:path/repo-name.git</code> 关联一个远程仓库，<code>origin</code>是远程仓库默认习惯命名</p>
-<p><code>git push -u origin master</code>第一次推送master分支的所有内容</p>
-<p><code>git push origin master</code>推送最新修改</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin git@git.acwing.com:hyle/kob.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
-<h2 id="时空机穿梭"><a href="#时空机穿梭" class="headerlink" title="时空机穿梭"></a>时空机穿梭</h2><ul>
-<li><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
-</li>
-<li><p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff &lt;file&gt;</code>可以查看修改内容。</p>
-</li>
-</ul>
-<h3 id="版本库回退"><a href="#版本库回退" class="headerlink" title="版本库回退"></a>版本库回退</h3><ul>
-<li><p><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard &lt;commit_id&gt;</code>。</p>
-</li>
-<li><p>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</p>
-</li>
-<li><p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
-<blockquote>
-<p>Git必须知道当前版本是哪个版本，在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>1094adb...</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><p>工作区：电脑里能看到的目录</p>
-<p>版本库(repository)：工作区的一个隐藏目录.git是git的版本库。</p>
-<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
-<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322222552238.png" alt="image-20230322222552238"></p>
-<p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
-<p>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
-<p>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
-<p>可以简单理解为，需要 &#x3D;&#x3D;提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改&#x3D;&#x3D; 。</p>
-<h3 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h3><p>git管理的是修改而不是文件，每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>git commit</code>中，即修改不会提交到本地仓库。</p>
-<p>如果修改文件后无法提交到本地仓库，需要检查将修改后的文件是不是没有<code>git add</code>加入到暂存区。</p>
-<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- &lt;file&gt;</code>。（checkout 检验更新）</p>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
-<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
-<blockquote>
-<p>一种情况是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code></p>
-<p>另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git checkout -- test.txt</span><br></pre></td></tr></table></figure>
-
-<p>&#x3D;&#x3D;<code>git checkout</code>其实是用版本库里的版本替换工作区的版本&#x3D;&#x3D;，无论工作区是修改还是删除，都可以“一键还原”</p>
-</blockquote>
-<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><blockquote>
-<p>要关联一个远程库，使用命令<code>git remote add origin git@&lt;server-name:path/repo-name.git&gt;</code>；</p>
-<blockquote>
-<p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a>:hyle777&#x2F;git_learn</p>
-</blockquote>
-<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
-<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
-<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
-<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
-<p><em>补充</em>：</p>
-<p>列出所有远程仓库信息：<code>git remote -v</code></p>
-<p>在本地仓库删除远程仓库(解除关联)：<code>git remote rm origin</code></p>
-<p>仓库地址可以用http协议(添加关联)：<code>git remote add origin https://github.com/hyle777/git_learn</code></p>
-</blockquote>
-<h3 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h3><blockquote>
-<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</p>
-<p>Git支持多种协议，包括<code>https</code>，但<code>ssh</code>协议速度最快。</p>
-<p>git clone <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:hyle777.github.io</p>
-<p>GitHub给出的地址不止一个，还可以用<code>https://github.com/hyle777/hyle777.github.io</code>这样的地址。</p>
-</blockquote>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h3><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即<code>master</code>分支(github中主分支为main)。<code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的，所以，<code>HEAD</code>指向的就是当前分支。</p>
-<p><code>git merge</code>命令用于合并指定分支到当前分支。合并后，再查看<code>readme.txt</code>的内容，就可以看到，和<code>dev</code>分支的最新提交是完全一样的。注意到上面的<code>Fast-forward</code>信息，Git告诉我们，这次合并是“快进模式”，也就是直接把<code>master</code>指向<code>dev</code>的当前提交，所以合并速度非常快。当然，也不是每次合并都能<code>Fast-forward</code>，我们后面会讲其他方式的合并。</p>
-<p>因为创建、合并和删除分支非常快，所以<strong>Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在<code>master</code>分支上工作效果是一样的，但过程更安全。</strong></p>
-<p>合并完成后，就可以放心地删除<code>dev</code>分支了：</p>
-<blockquote>
-<p>Git鼓励大量使用分支：</p>
-<p>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）</p>
-<p>创建分支：<code>git branch &lt;name&gt;</code></p>
-<p>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></p>
-<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></p>
-<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
-<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
-</blockquote>
-<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p>
-<p>解决冲突就是把Git<strong>合并失败的文件手动编辑</strong>为我们希望的内容，再提交。</p>
-<p>用<code>git log --graph</code>命令可以看到分支合并图。</p>
-<h3 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h3><p>Git分支十分强大，在团队开发中应该充分应用。</p>
-<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
-<h4 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h4><p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
-<p>首先，<code>master</code>分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
-<p>那在哪干活呢？干活都在<code>dev</code>分支上，也就是说，<code>dev</code>分支是不稳定的，到某个时候，比如1.0版本发布时，再把<code>dev</code>分支合并到<code>master</code>上，在<code>master</code>分支发布1.0版本；</p>
-<p>你和你的小伙伴们每个人都在<code>dev</code>分支上干活，每个人都有自己的分支，时不时地往<code>dev</code>分支上合并就可以了。</p>
-<p>所以，团队合作的分支看起来就像这样：</p>
-<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/0" alt="git-br-policy"></p>
-<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>当你从远程仓库克隆时，实际上Git自动把本地的<code>master</code>分支和远程的<code>master</code>分支对应起来了，并且，远程仓库的默认名称是<code>origin</code>。</p>
-<p>在本地仓库创建dev分支，将工作区的文件提交到dev分支，再推送到远程仓库的dev分支。</p>
-<blockquote>
-<p>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）<br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
   </entry>
   <entry>
     <title>SpringBoot分层</title>
@@ -1008,137 +1024,184 @@
       </tags>
   </entry>
   <entry>
-    <title>平衡树</title>
-    <url>/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/</url>
-    <content><![CDATA[<h2 id="二叉查找树-BST"><a href="#二叉查找树-BST" class="headerlink" title="二叉查找树 BST"></a>二叉查找树 BST</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/aee812361adf18538d3261b0325a10d.png" alt="aee812361adf18538d3261b0325a10d"></p>
-<h2 id="Treep"><a href="#Treep" class="headerlink" title="Treep"></a>Treep</h2><p>左旋右旋不会影响中序遍历的顺序</p>
-<p>右旋：新根的右子树成为旧根的左子树</p>
-<p>左旋：新根的左子树成为旧根的右子树</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405192453728.png" alt="image-20240405192453728"></p>
+    <title>SpringBoot项目打包到腾讯云</title>
+    <url>/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>远程登录服务器：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@hostname</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>user: 用户名</p>
+</li>
+<li><p>hostname: IP 地址或域名</p>
+</li>
+</ul>
+<p>第一次登录时会提示：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">The authenticity of host <span class="string">&#x27;123.57.47.211 (123.57.47.211)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">ECDSA key fingerprint is SHA256:iy237yysfCe013/l+kpDGfEG9xxHxm0dnxnAbJTPpG8.</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></span><br></pre></td></tr></table></figure>
+
+<p>输入 yes，然后回车即可。<br>这样会将该服务器的信息记录在~&#x2F;.ssh&#x2F;known_hosts 文件中。</p>
+<p>然后输入密码即可登录到远程服务器中。</p>
+<p>默认登录端口号为 22。如果想登录某一特定端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@hostname -p 22</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>创建文件 ~&#x2F;.ssh&#x2F;config。</p>
+<p>然后在文件中输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host myserver1</span><br><span class="line">    HostName IP地址或域名</span><br><span class="line">    User 用户名</span><br><span class="line"></span><br><span class="line">Host myserver2</span><br><span class="line">    HostName IP地址或域名</span><br><span class="line">    User 用户名</span><br></pre></td></tr></table></figure>
+
+<p>之后再使用服务器时，可以直接使用别名 myserver1、myserver2。</p>
+<h2 id="密钥登录"><a href="#密钥登录" class="headerlink" title="密钥登录"></a>密钥登录</h2><ul>
+<li><p>创建密钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+<p>然后一直回车即可。</p>
+</li>
+<li><p>免密登录</p>
+<p>执行结束后，~&#x2F;.ssh&#x2F;目录下会多两个文件：</p>
+<ul>
+<li><p>id_rsa：私钥</p>
+</li>
+<li><p>id_rsa.pub：公钥</p>
+</li>
+</ul>
+<p>之后想免密码登录哪个服务器，就将公钥传给哪个服务器即可。</p>
+<p>例如，想免密登录 myserver 服务器。则将公钥中的内容，复制到 myserver 中的~&#x2F;.ssh&#x2F;authorized_keys 文件里即可。</p>
+<p>也可以使用如下命令一键添加公钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id myserver</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><p>命令格式：</p>
+<p>ssh user@hostname command</p>
+<p>例如：</p>
+<p>ssh user@hostname ls -a</p>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 单引号中的$i可以求值</span></span><br><span class="line">ssh myserver <span class="string">&#x27;for ((i = 0; i &lt; 10; i ++ )) do echo $i; done&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 双引号中的$i不可以求值</span></span><br><span class="line">ssh myserver <span class="string">&quot;for ((i = 0; i &lt; 10; i ++ )) do echo <span class="variable">$i</span>; done&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="项目上线"><a href="#项目上线" class="headerlink" title="项目上线"></a>项目上线</h1><h2 id="租服务器和服务器配置"><a href="#租服务器和服务器配置" class="headerlink" title="租服务器和服务器配置"></a>租服务器和服务器配置</h2><p>服务器公网 ip: 175.178.0.156 实例密码：M^h:T94uDG)?-JVa</p>
+<ul>
+<li><p>登录到新服务器。打开 AC Terminal，然后：</p>
+<p>阿里云</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@xxx.xxx.xxx.xxx  <span class="comment"># xxx.xxx.xxx.xxx替换成新服务器的公网IP</span></span><br></pre></td></tr></table></figure>
+
+<p>腾讯云(&#x3D;&#x3D;默认用户名是 ubuntu&#x3D;&#x3D;)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh ubuntu@xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建 acs 用户：</p>
+<p>阿里云</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adduser acs  <span class="comment"># 创建用户acs</span></span><br><span class="line">usermod -aG <span class="built_in">sudo</span> acs  <span class="comment"># 给用户acs分配sudo权限</span></span><br></pre></td></tr></table></figure>
+
+<p>腾讯云</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> adduser acs</span><br><span class="line"><span class="built_in">sudo</span> usermod -aG <span class="built_in">sudo</span> acs</span><br></pre></td></tr></table></figure>
+
+<p>新密码：asd123</p>
+</li>
+<li><p>退回 AC Terminal</p>
+</li>
+<li><p>配置别名(<code>acs</code>用户的 ssh 免密登录)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .ssh/</span><br><span class="line">vim config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host Springboot_server</span><br><span class="line">HostName 175.178.0.156</span><br><span class="line">User acs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置新服务器的工作环境<br>将 AC Terminal 的配置传到新服务器上：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf server_name:  <span class="comment"># server_name需要换成自己配置的别名</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 tmux 和 docker<br>登录自己的服务器，然后安装 tmux：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install tmux</span><br></pre></td></tr></table></figure>
+
+<p>打开 tmux。（养成好习惯，所有工作都在 tmux 里进行，防止意外关闭终端后，工作进度丢失）</p>
+<p>然后在 tmux 中根据 docker 安装教程安装 docker 即可。</p>
+</li>
+</ul>
+<h2 id="将-docker-镜像上传到服务器"><a href="#将-docker-镜像上传到服务器" class="headerlink" title="将 docker 镜像上传到服务器"></a>将 docker 镜像上传到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//AC Terminal中</span><br><span class="line"><span class="built_in">cd</span> /var/lib/acwing/docker/images/</span><br><span class="line">//scp传输</span><br><span class="line">scp django_lession_1_0.tar springboot_server:</span><br><span class="line"></span><br><span class="line">//连接服务器</span><br><span class="line">ssh springboot_server</span><br><span class="line">//解压</span><br><span class="line">docker load -i django_lession_1_0.tar</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h2><p><code>docker run -p &lt;host_port&gt;:&lt;container_port&gt;</code> : 将容器的端口映射到主机的端口</p>
+<p>80:http 端口 443：https 端口 3000,3001,3002：微服务</p>
+<p>docker 也需要 22 端口进行 ssh 通信，但是 22 端口主机已占用，所以映射到 20000 端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -p 20000:22 -p 443:443 -p 80:80 -p 3000:3000 -p 3001:3001 -p 3002:3002 -itd --name kob_server django_lesson:1.0</span><br></pre></td></tr></table></figure>
+
+<p>进入容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker attach kob_server</span><br></pre></td></tr></table></figure>
+
+<p>赋予权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line">adduser acs</span><br><span class="line">usermod -aG <span class="built_in">sudo</span> ace</span><br></pre></td></tr></table></figure>
+
+<p>ctrl P+ ctrl Q 挂载容器</p>
+<p>配置安全组（防火墙？），添加 20000 端口</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240324165717160.png" alt="image-20240324165717160"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240324165903289.png" alt="image-20240324165903289"></p>
+<p>ACTerminal 配置容器 ssh 免密登录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim .ssh/config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> vim</span><br><span class="line">Host springboot</span><br><span class="line">HostName 175.178.0.156</span><br><span class="line">User acs</span><br><span class="line">Port 20000</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id springboot</span><br><span class="line">ssh springboot</span><br></pre></td></tr></table></figure>
+
+<p>向 springboot 服务器传配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf springboot:</span><br></pre></td></tr></table></figure>
+
+<p>在本地 gitbash 配置容器的免密登录</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240324172734731.png" alt="image-20240324172734731"></p>
+<h2 id="安装、配置-mysql"><a href="#安装、配置-mysql" class="headerlink" title="安装、配置 mysql"></a>安装、配置 mysql</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install mysql-server</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> service mysql start</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置-root-用户的密码："><a href="#设置-root-用户的密码：" class="headerlink" title="设置 root 用户的密码："></a>设置 root 用户的密码：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH caching_sha2_password BY <span class="string">&#x27;asd123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><p>1.4 mysql 服务的关闭与启动（默认开机自动启动，如果想手动操作，可以参考如下命令）</p>
+<p>关闭：net stop mysql80<br>启动：net start mysql80<br>1.5 mysql 的常用操作</p>
+<ul>
+<li><p>连接用户名为 root，密码为 123456 的数据库服务：mysql -uroot -p123456</p>
+</li>
+<li><p>show databases;：列出所有数据库</p>
+</li>
+<li><p>create database kob;：创建数据库</p>
+</li>
+<li><p>drop database kob;：删除数据库</p>
+</li>
+<li><p>use kob;：使用数据库 kob</p>
+</li>
+<li><p>show tables;：列出当前数据库的所有表</p>
+</li>
+<li><p>create table user(id int, username varchar(100))：创建名称为 user 的表，表中包含 id 和 username 两个属性。</p>
+</li>
+<li><p>drop table user;：删除表</p>
+</li>
+<li><p>insert into user values(1, ‘yxc’);：在表中插入数据</p>
+</li>
+<li><p>select * from user;：查询表中所有数据</p>
+</li>
+<li><p>delete from user where id &#x3D; 2;：删除某行数据</p>
+</li>
+</ul>
+<h3 id="运行建表脚本"><a href="#运行建表脚本" class="headerlink" title="运行建表脚本"></a>运行建表脚本</h3><p>创建 create_table.sql</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /home/acs/create_table.sql</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-Java8"><a href="#安装-Java8" class="headerlink" title="安装 Java8"></a>安装 Java8</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-nginx"><a href="#配置-nginx" class="headerlink" title="配置 nginx"></a>配置 nginx</h2><ul>
+<li>添加的配置文件：</li>
+</ul>
+<p>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
+<p>&#x2F;etc&#x2F;nginx&#x2F;cert&#x2F;acapp.key</p>
+<p>&#x2F;etc&#x2F;nginx&#x2F;cert&#x2F;acapp.pem</p>
+<ul>
+<li>启动 nginx:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> /etc/init.d/nginx start</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>最后的项目地址：<a href="https://app6715.acapp.acwing.com.cn/">https://app6715.acapp.acwing.com.cn</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>SpringBoot</category>
       </categories>
       <tags>
-        <tag>平衡树</tag>
+        <tag>SpringBoot</tag>
+        <tag>项目</tag>
+        <tag>云服务器</tag>
+        <tag>腾讯云</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Java多线程</title>
-    <url>/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h2><h3 id="1-创建新线程"><a href="#1-创建新线程" class="headerlink" title="1. 创建新线程"></a>1. 创建新线程</h3><ul>
-<li><p>MyThread 继承 Thread，重写 run()。</p>
-</li>
-<li><p>MyRunnable 实现 Runnable 接口，重写 run()</p>
-</li>
-</ul>
-<p>创建 Thread 对象：</p>
-<ul>
-<li>Thread t &#x3D; new MyThread();</li>
-<li>Thread t &#x3D; new Thread(MyRunnable);</li>
-</ul>
-<p>使用 lambda 语法 ：</p>
-<pre><code>    Thread t = new Thread(() -&gt; &#123;
-        System.out.println(&quot;start new thread!&quot;);
-    &#125;);
-</code></pre>
-<p><code>t.start()</code>启动线程：一个线程只能调用一次</p>
-<h3 id="2-线程状态"><a href="#2-线程状态" class="headerlink" title="2. 线程状态"></a>2. 线程状态</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515220327648.png" alt="image-20240515220327648"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515220745047.png" alt="image-20240515220745047"></p>
-<h3 id="3-中断线程"><a href="#3-中断线程" class="headerlink" title="3.中断线程"></a>3.中断线程</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515221630886.png" alt="image-20240515221630886"></p>
-<h3 id="4-守护线程"><a href="#4-守护线程" class="headerlink" title="4.守护线程"></a>4.守护线程</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515221859460.png" alt="image-20240515221859460"></p>
-<h3 id="5-线程池"><a href="#5-线程池" class="headerlink" title="5.线程池"></a>5.线程池</h3><ol>
-<li><code>ExecutorService</code>只是接口，Java 标准库提供的几个常用实现类有：</li>
-</ol>
-<ul>
-<li>FixedThreadPool：线程数固定的线程池；</li>
-<li>CachedThreadPool：线程数根据任务动态调整的线程池；</li>
-<li>SingleThreadExecutor：仅单线程执行的线程池。</li>
-</ul>
-<ol start="2">
-<li><code>Executors</code>提供了静态方法创建不同类型的<code>ExecutorService</code>：</li>
-</ol>
-<ul>
-<li><p>Executors.newFixedThreadPool(4)、Executors.newFixedThreadPool(4)、Executors.newFixedThreadPool(4)</p>
-</li>
-<li><p>submit()、shutdowm()</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个固定大小的线程池:</span></span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">es</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">4</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">            es.submit(<span class="keyword">new</span> <span class="title class_">Task</span>(<span class="string">&quot;&quot;</span> + i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 关闭线程池:</span></span><br><span class="line">        es.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 创建指定动态范围的线程池，可以这么写：</span></span><br><span class="line"><span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> <span class="number">4</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">ExecutorService</span> <span class="variable">es</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">4</span>)(min, max,</span><br><span class="line">        <span class="number">60L</span>, TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">SynchronousQueue</span>&lt;Runnable&gt;());</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ExecutorService</span> <span class="variable">es</span> <span class="operator">=</span> Executors.newCachedThreadPool()</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><code>ScheduledThreadPool</code>可以定期调度多个任务。</li>
-</ol>
-<h2 id="JUC"><a href="#JUC" class="headerlink" title="JUC"></a>JUC</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240412094216719.png" alt="image-20240412094216719"></p>
-<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>进程：一个程序，QQ.exe Music.exe</p>
-<p>线程:：进程的一个执行单元。开了一个进程 Typora，写字，自动保存(线程负责的)</p>
-<p>程序的集合：一个进程往往可以包含多个线程，至少包含一个!</p>
-<p>Java 默认有几个线程?2 个 mian、GC（垃圾回收，守护线程）</p>
-<h2 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h2><ul>
-<li><p>并发：CPU 一核，模拟出来多条线程，快速交替</p>
-</li>
-<li><p>并行：CPU 多核，多个线程可以同时执行;线程池</p>
-<p>提高 CPU 利用率</p>
-</li>
-</ul>
-<h2 id="wait-和-sleep"><a href="#wait-和-sleep" class="headerlink" title="wait 和 sleep"></a>wait 和 sleep</h2><ol>
-<li><p>来自不同类</p>
-<p>wait&#x3D;&gt;Object</p>
-<p>sleep&#x3D;&gt;Thread</p>
-</li>
-<li><p>wait 会释放锁，sleep 不会释放锁</p>
-</li>
-<li><p>使用范围：</p>
-</li>
-</ol>
-<p>wait 写在同步代码块中，sleep 任何范围</p>
-<ol start="4">
-<li><p>是否捕获异常</p>
-<p>wait 不需要捕获</p>
-</li>
-</ol>
-<h2 id="Lock-锁-SS"><a href="#Lock-锁-SS" class="headerlink" title="Lock 锁 SS"></a>Lock 锁 SS</h2><p>线程实现 run 接口</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101434256.png" alt="image-20240416101434256"></p>
-<p>实际开发对资源类操作</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101522429.png" alt="image-20240416101522429"></p>
-<p>使用 lambda 表达式：</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101646551.png" alt="image-20240416101646551"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101833281.png" alt="image-20240416101833281"></p>
-<h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><p>使用：</p>
-<ol>
-<li>找出修改共享变量的线程代码块；</li>
-<li>选择一个共享实例作为锁；</li>
-<li>使用<code>synchronized(lockObject) &#123; ... &#125;</code>。</li>
-</ol>
-<h3 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h3><ul>
-<li><p>lock()：加锁</p>
-</li>
-<li><p>unlock()：解锁</p>
-</li>
-</ul>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416102449007.png" alt="image-20240416102449007"></p>
-<p>默认非公平</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416102603498.png" alt="image-20240416102603498"></p>
-<h3 id="synchronized-和-reentrant-的区别"><a href="#synchronized-和-reentrant-的区别" class="headerlink" title="synchronized 和 reentrant 的区别"></a>synchronized 和 reentrant 的区别</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416102718612.png" alt="image-20240416102718612"></p>
-<h2 id="生产者消费者模型"><a href="#生产者消费者模型" class="headerlink" title="生产者消费者模型"></a>生产者消费者模型</h2><h3 id="synchronized-1"><a href="#synchronized-1" class="headerlink" title="synchronized"></a>synchronized</h3><p>过程：判断等待、业务、通知</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103034524.png" alt="image-20240416103034524"></p>
-<p>虚假唤醒问题：把 if 判断改成 while</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103200169.png" alt="image-20240416103200169"></p>
-<h3 id="ReentrantLock-1"><a href="#ReentrantLock-1" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h3><h3 id="使用-Condition-来实现-await-和-signal-、signalAll"><a href="#使用-Condition-来实现-await-和-signal-、signalAll" class="headerlink" title="使用 Condition 来实现 await()和 signal()、signalAll()"></a>使用 Condition 来实现 await()和 signal()、signalAll()</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103304394.png" alt="image-20240416103304394"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103409808.png" alt="image-20240416103409808"></p>
-<h3 id="Condition-优势：唤醒指定线程，保证线程按顺序进行"><a href="#Condition-优势：唤醒指定线程，保证线程按顺序进行" class="headerlink" title="Condition 优势：唤醒指定线程，保证线程按顺序进行"></a>Condition 优势：唤醒指定线程，保证线程按顺序进行</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103511826.png" alt="image-20240416103511826"></p>
-<h2 id="Callable"><a href="#Callable" class="headerlink" title="Callable"></a>Callable</h2><p>对比 Runable:</p>
-<ul>
-<li>可以返回结果，并且可以抛出异常。</li>
-</ul>
-<p>Callable 实现类通过 FutureTask 传给 Thread</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103834257.png" alt="image-20240416103834257"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103926883.png" alt="image-20240416103926883"></p>
-]]></content>
   </entry>
   <entry>
     <title>MySQL面试</title>
@@ -1368,184 +1431,121 @@
       </categories>
   </entry>
   <entry>
-    <title>SpringBoot项目打包到腾讯云</title>
-    <url>/2024/03/25/2024-03-05-%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>远程登录服务器：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@hostname</span><br></pre></td></tr></table></figure>
-
+    <title>Java多线程</title>
+    <url>/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h2><h3 id="1-创建新线程"><a href="#1-创建新线程" class="headerlink" title="1. 创建新线程"></a>1. 创建新线程</h3><ul>
+<li><p>MyThread 继承 Thread，重写 run()。</p>
+</li>
+<li><p>MyRunnable 实现 Runnable 接口，重写 run()</p>
+</li>
+</ul>
+<p>创建 Thread 对象：</p>
 <ul>
-<li><p>user: 用户名</p>
-</li>
-<li><p>hostname: IP 地址或域名</p>
-</li>
+<li>Thread t &#x3D; new MyThread();</li>
+<li>Thread t &#x3D; new Thread(MyRunnable);</li>
 </ul>
-<p>第一次登录时会提示：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">The authenticity of host <span class="string">&#x27;123.57.47.211 (123.57.47.211)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">ECDSA key fingerprint is SHA256:iy237yysfCe013/l+kpDGfEG9xxHxm0dnxnAbJTPpG8.</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span></span><br></pre></td></tr></table></figure>
-
-<p>输入 yes，然后回车即可。<br>这样会将该服务器的信息记录在~&#x2F;.ssh&#x2F;known_hosts 文件中。</p>
-<p>然后输入密码即可登录到远程服务器中。</p>
-<p>默认登录端口号为 22。如果想登录某一特定端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@hostname -p 22</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>创建文件 ~&#x2F;.ssh&#x2F;config。</p>
-<p>然后在文件中输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host myserver1</span><br><span class="line">    HostName IP地址或域名</span><br><span class="line">    User 用户名</span><br><span class="line"></span><br><span class="line">Host myserver2</span><br><span class="line">    HostName IP地址或域名</span><br><span class="line">    User 用户名</span><br></pre></td></tr></table></figure>
-
-<p>之后再使用服务器时，可以直接使用别名 myserver1、myserver2。</p>
-<h2 id="密钥登录"><a href="#密钥登录" class="headerlink" title="密钥登录"></a>密钥登录</h2><ul>
-<li><p>创建密钥：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
-
-<p>然后一直回车即可。</p>
-</li>
-<li><p>免密登录</p>
-<p>执行结束后，~&#x2F;.ssh&#x2F;目录下会多两个文件：</p>
+<p>使用 lambda 语法 ：</p>
+<pre><code>    Thread t = new Thread(() -&gt; &#123;
+        System.out.println(&quot;start new thread!&quot;);
+    &#125;);
+</code></pre>
+<p><code>t.start()</code>启动线程：一个线程只能调用一次</p>
+<h3 id="2-线程状态"><a href="#2-线程状态" class="headerlink" title="2. 线程状态"></a>2. 线程状态</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515220327648.png" alt="image-20240515220327648"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515220745047.png" alt="image-20240515220745047"></p>
+<h3 id="3-中断线程"><a href="#3-中断线程" class="headerlink" title="3.中断线程"></a>3.中断线程</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515221630886.png" alt="image-20240515221630886"></p>
+<h3 id="4-守护线程"><a href="#4-守护线程" class="headerlink" title="4.守护线程"></a>4.守护线程</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515221859460.png" alt="image-20240515221859460"></p>
+<h3 id="5-线程池"><a href="#5-线程池" class="headerlink" title="5.线程池"></a>5.线程池</h3><ol>
+<li><code>ExecutorService</code>只是接口，Java 标准库提供的几个常用实现类有：</li>
+</ol>
 <ul>
-<li><p>id_rsa：私钥</p>
-</li>
-<li><p>id_rsa.pub：公钥</p>
-</li>
+<li>FixedThreadPool：线程数固定的线程池；</li>
+<li>CachedThreadPool：线程数根据任务动态调整的线程池；</li>
+<li>SingleThreadExecutor：仅单线程执行的线程池。</li>
 </ul>
-<p>之后想免密码登录哪个服务器，就将公钥传给哪个服务器即可。</p>
-<p>例如，想免密登录 myserver 服务器。则将公钥中的内容，复制到 myserver 中的~&#x2F;.ssh&#x2F;authorized_keys 文件里即可。</p>
-<p>也可以使用如下命令一键添加公钥：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id myserver</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><p>命令格式：</p>
-<p>ssh user@hostname command</p>
-<p>例如：</p>
-<p>ssh user@hostname ls -a</p>
-<p>或者</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 单引号中的$i可以求值</span></span><br><span class="line">ssh myserver <span class="string">&#x27;for ((i = 0; i &lt; 10; i ++ )) do echo $i; done&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 双引号中的$i不可以求值</span></span><br><span class="line">ssh myserver <span class="string">&quot;for ((i = 0; i &lt; 10; i ++ )) do echo <span class="variable">$i</span>; done&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="项目上线"><a href="#项目上线" class="headerlink" title="项目上线"></a>项目上线</h1><h2 id="租服务器和服务器配置"><a href="#租服务器和服务器配置" class="headerlink" title="租服务器和服务器配置"></a>租服务器和服务器配置</h2><p>服务器公网 ip: 175.178.0.156 实例密码：M^h:T94uDG)?-JVa</p>
+<ol start="2">
+<li><code>Executors</code>提供了静态方法创建不同类型的<code>ExecutorService</code>：</li>
+</ol>
 <ul>
-<li><p>登录到新服务器。打开 AC Terminal，然后：</p>
-<p>阿里云</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@xxx.xxx.xxx.xxx  <span class="comment"># xxx.xxx.xxx.xxx替换成新服务器的公网IP</span></span><br></pre></td></tr></table></figure>
-
-<p>腾讯云(&#x3D;&#x3D;默认用户名是 ubuntu&#x3D;&#x3D;)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh ubuntu@xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+<li><p>Executors.newFixedThreadPool(4)、Executors.newFixedThreadPool(4)、Executors.newFixedThreadPool(4)</p>
 </li>
-<li><p>创建 acs 用户：</p>
-<p>阿里云</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adduser acs  <span class="comment"># 创建用户acs</span></span><br><span class="line">usermod -aG <span class="built_in">sudo</span> acs  <span class="comment"># 给用户acs分配sudo权限</span></span><br></pre></td></tr></table></figure>
-
-<p>腾讯云</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> adduser acs</span><br><span class="line"><span class="built_in">sudo</span> usermod -aG <span class="built_in">sudo</span> acs</span><br></pre></td></tr></table></figure>
-
-<p>新密码：asd123</p>
-</li>
-<li><p>退回 AC Terminal</p>
-</li>
-<li><p>配置别名(<code>acs</code>用户的 ssh 免密登录)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .ssh/</span><br><span class="line">vim config</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host Springboot_server</span><br><span class="line">HostName 175.178.0.156</span><br><span class="line">User acs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置新服务器的工作环境<br>将 AC Terminal 的配置传到新服务器上：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf server_name:  <span class="comment"># server_name需要换成自己配置的别名</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 tmux 和 docker<br>登录自己的服务器，然后安装 tmux：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install tmux</span><br></pre></td></tr></table></figure>
-
-<p>打开 tmux。（养成好习惯，所有工作都在 tmux 里进行，防止意外关闭终端后，工作进度丢失）</p>
-<p>然后在 tmux 中根据 docker 安装教程安装 docker 即可。</p>
+<li><p>submit()、shutdowm()</p>
 </li>
 </ul>
-<h2 id="将-docker-镜像上传到服务器"><a href="#将-docker-镜像上传到服务器" class="headerlink" title="将 docker 镜像上传到服务器"></a>将 docker 镜像上传到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//AC Terminal中</span><br><span class="line"><span class="built_in">cd</span> /var/lib/acwing/docker/images/</span><br><span class="line">//scp传输</span><br><span class="line">scp django_lession_1_0.tar springboot_server:</span><br><span class="line"></span><br><span class="line">//连接服务器</span><br><span class="line">ssh springboot_server</span><br><span class="line">//解压</span><br><span class="line">docker load -i django_lession_1_0.tar</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个固定大小的线程池:</span></span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">es</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">4</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">            es.submit(<span class="keyword">new</span> <span class="title class_">Task</span>(<span class="string">&quot;&quot;</span> + i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 关闭线程池:</span></span><br><span class="line">        es.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h2><p><code>docker run -p &lt;host_port&gt;:&lt;container_port&gt;</code> : 将容器的端口映射到主机的端口</p>
-<p>80:http 端口 443：https 端口 3000,3001,3002：微服务</p>
-<p>docker 也需要 22 端口进行 ssh 通信，但是 22 端口主机已占用，所以映射到 20000 端口</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -p 20000:22 -p 443:443 -p 80:80 -p 3000:3000 -p 3001:3001 -p 3002:3002 -itd --name kob_server django_lesson:1.0</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 创建指定动态范围的线程池，可以这么写：</span></span><br><span class="line"><span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> <span class="number">4</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">ExecutorService</span> <span class="variable">es</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">4</span>)(min, max,</span><br><span class="line">        <span class="number">60L</span>, TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">SynchronousQueue</span>&lt;Runnable&gt;());</span><br></pre></td></tr></table></figure>
 
-<p>进入容器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker attach kob_server</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ExecutorService</span> <span class="variable">es</span> <span class="operator">=</span> Executors.newCachedThreadPool()</span><br></pre></td></tr></table></figure>
 
-<p>赋予权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line">adduser acs</span><br><span class="line">usermod -aG <span class="built_in">sudo</span> ace</span><br></pre></td></tr></table></figure>
-
-<p>ctrl P+ ctrl Q 挂载容器</p>
-<p>配置安全组（防火墙？），添加 20000 端口</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240324165717160.png" alt="image-20240324165717160"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240324165903289.png" alt="image-20240324165903289"></p>
-<p>ACTerminal 配置容器 ssh 免密登录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim .ssh/config</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> vim</span><br><span class="line">Host springboot</span><br><span class="line">HostName 175.178.0.156</span><br><span class="line">User acs</span><br><span class="line">Port 20000</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id springboot</span><br><span class="line">ssh springboot</span><br></pre></td></tr></table></figure>
-
-<p>向 springboot 服务器传配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf springboot:</span><br></pre></td></tr></table></figure>
-
-<p>在本地 gitbash 配置容器的免密登录</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240324172734731.png" alt="image-20240324172734731"></p>
-<h2 id="安装、配置-mysql"><a href="#安装、配置-mysql" class="headerlink" title="安装、配置 mysql"></a>安装、配置 mysql</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install mysql-server</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> service mysql start</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置-root-用户的密码："><a href="#设置-root-用户的密码：" class="headerlink" title="设置 root 用户的密码："></a>设置 root 用户的密码：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH caching_sha2_password BY <span class="string">&#x27;asd123&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><p>1.4 mysql 服务的关闭与启动（默认开机自动启动，如果想手动操作，可以参考如下命令）</p>
-<p>关闭：net stop mysql80<br>启动：net start mysql80<br>1.5 mysql 的常用操作</p>
+<ol start="3">
+<li><code>ScheduledThreadPool</code>可以定期调度多个任务。</li>
+</ol>
+<h2 id="JUC"><a href="#JUC" class="headerlink" title="JUC"></a>JUC</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240412094216719.png" alt="image-20240412094216719"></p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>进程：一个程序，QQ.exe Music.exe</p>
+<p>线程:：进程的一个执行单元。开了一个进程 Typora，写字，自动保存(线程负责的)</p>
+<p>程序的集合：一个进程往往可以包含多个线程，至少包含一个!</p>
+<p>Java 默认有几个线程?2 个 mian、GC（垃圾回收，守护线程）</p>
+<h2 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h2><ul>
+<li><p>并发：CPU 一核，模拟出来多条线程，快速交替</p>
+</li>
+<li><p>并行：CPU 多核，多个线程可以同时执行;线程池</p>
+<p>提高 CPU 利用率</p>
+</li>
+</ul>
+<h2 id="wait-和-sleep"><a href="#wait-和-sleep" class="headerlink" title="wait 和 sleep"></a>wait 和 sleep</h2><ol>
+<li><p>来自不同类</p>
+<p>wait&#x3D;&gt;Object</p>
+<p>sleep&#x3D;&gt;Thread</p>
+</li>
+<li><p>wait 会释放锁，sleep 不会释放锁</p>
+</li>
+<li><p>使用范围：</p>
+</li>
+</ol>
+<p>wait 写在同步代码块中，sleep 任何范围</p>
+<ol start="4">
+<li><p>是否捕获异常</p>
+<p>wait 不需要捕获</p>
+</li>
+</ol>
+<h2 id="Lock-锁-SS"><a href="#Lock-锁-SS" class="headerlink" title="Lock 锁 SS"></a>Lock 锁 SS</h2><p>线程实现 run 接口</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101434256.png" alt="image-20240416101434256"></p>
+<p>实际开发对资源类操作</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101522429.png" alt="image-20240416101522429"></p>
+<p>使用 lambda 表达式：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101646551.png" alt="image-20240416101646551"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416101833281.png" alt="image-20240416101833281"></p>
+<h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><p>使用：</p>
+<ol>
+<li>找出修改共享变量的线程代码块；</li>
+<li>选择一个共享实例作为锁；</li>
+<li>使用<code>synchronized(lockObject) &#123; ... &#125;</code>。</li>
+</ol>
+<h3 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h3><ul>
+<li><p>lock()：加锁</p>
+</li>
+<li><p>unlock()：解锁</p>
+</li>
+</ul>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416102449007.png" alt="image-20240416102449007"></p>
+<p>默认非公平</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416102603498.png" alt="image-20240416102603498"></p>
+<h3 id="synchronized-和-reentrant-的区别"><a href="#synchronized-和-reentrant-的区别" class="headerlink" title="synchronized 和 reentrant 的区别"></a>synchronized 和 reentrant 的区别</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416102718612.png" alt="image-20240416102718612"></p>
+<h2 id="生产者消费者模型"><a href="#生产者消费者模型" class="headerlink" title="生产者消费者模型"></a>生产者消费者模型</h2><h3 id="synchronized-1"><a href="#synchronized-1" class="headerlink" title="synchronized"></a>synchronized</h3><p>过程：判断等待、业务、通知</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103034524.png" alt="image-20240416103034524"></p>
+<p>虚假唤醒问题：把 if 判断改成 while</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103200169.png" alt="image-20240416103200169"></p>
+<h3 id="ReentrantLock-1"><a href="#ReentrantLock-1" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h3><h3 id="使用-Condition-来实现-await-和-signal-、signalAll"><a href="#使用-Condition-来实现-await-和-signal-、signalAll" class="headerlink" title="使用 Condition 来实现 await()和 signal()、signalAll()"></a>使用 Condition 来实现 await()和 signal()、signalAll()</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103304394.png" alt="image-20240416103304394"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103409808.png" alt="image-20240416103409808"></p>
+<h3 id="Condition-优势：唤醒指定线程，保证线程按顺序进行"><a href="#Condition-优势：唤醒指定线程，保证线程按顺序进行" class="headerlink" title="Condition 优势：唤醒指定线程，保证线程按顺序进行"></a>Condition 优势：唤醒指定线程，保证线程按顺序进行</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103511826.png" alt="image-20240416103511826"></p>
+<h2 id="Callable"><a href="#Callable" class="headerlink" title="Callable"></a>Callable</h2><p>对比 Runable:</p>
 <ul>
-<li><p>连接用户名为 root，密码为 123456 的数据库服务：mysql -uroot -p123456</p>
-</li>
-<li><p>show databases;：列出所有数据库</p>
-</li>
-<li><p>create database kob;：创建数据库</p>
-</li>
-<li><p>drop database kob;：删除数据库</p>
-</li>
-<li><p>use kob;：使用数据库 kob</p>
-</li>
-<li><p>show tables;：列出当前数据库的所有表</p>
-</li>
-<li><p>create table user(id int, username varchar(100))：创建名称为 user 的表，表中包含 id 和 username 两个属性。</p>
-</li>
-<li><p>drop table user;：删除表</p>
-</li>
-<li><p>insert into user values(1, ‘yxc’);：在表中插入数据</p>
-</li>
-<li><p>select * from user;：查询表中所有数据</p>
-</li>
-<li><p>delete from user where id &#x3D; 2;：删除某行数据</p>
-</li>
+<li>可以返回结果，并且可以抛出异常。</li>
 </ul>
-<h3 id="运行建表脚本"><a href="#运行建表脚本" class="headerlink" title="运行建表脚本"></a>运行建表脚本</h3><p>创建 create_table.sql</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /home/acs/create_table.sql</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装-Java8"><a href="#安装-Java8" class="headerlink" title="安装 Java8"></a>安装 Java8</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置-nginx"><a href="#配置-nginx" class="headerlink" title="配置 nginx"></a>配置 nginx</h2><ul>
-<li>添加的配置文件：</li>
-</ul>
-<p>&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
-<p>&#x2F;etc&#x2F;nginx&#x2F;cert&#x2F;acapp.key</p>
-<p>&#x2F;etc&#x2F;nginx&#x2F;cert&#x2F;acapp.pem</p>
-<ul>
-<li>启动 nginx:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> /etc/init.d/nginx start</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>最后的项目地址：<a href="https://app6715.acapp.acwing.com.cn/">https://app6715.acapp.acwing.com.cn</a></li>
-</ul>
+<p>Callable 实现类通过 FutureTask 传给 Thread</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103834257.png" alt="image-20240416103834257"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416103926883.png" alt="image-20240416103926883"></p>
 ]]></content>
-      <categories>
-        <category>SpringBoot</category>
-      </categories>
-      <tags>
-        <tag>SpringBoot</tag>
-        <tag>项目</tag>
-        <tag>云服务器</tag>
-        <tag>腾讯云</tag>
-      </tags>
   </entry>
   <entry>
     <title>Java String类</title>
@@ -1604,34 +1604,18 @@
       </categories>
   </entry>
   <entry>
-    <title>反射和注解</title>
-    <url>/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/</url>
-    <content><![CDATA[<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException &#123;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">person</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="comment">//获取Class类的方式</span></span><br><span class="line">        <span class="comment">// 方式一:通过对象获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c1</span> <span class="operator">=</span> person.getClass();</span><br><span class="line">        System.out.println(c1.hashCode());</span><br><span class="line">        <span class="comment">// 方式二:forName获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c2</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;com.hyl.Student&quot;</span>);</span><br><span class="line">        System.out.println(c2.hashCode());</span><br><span class="line">        <span class="comment">// 方式三:通过类名.class获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c3</span> <span class="operator">=</span> Student.class;</span><br><span class="line">        System.out.println(c3.hashCode());</span><br><span class="line">        <span class="comment">// 方式四 :基本内置类型的包装类都有一个Type属性</span></span><br><span class="line">        Class c4= Integer.TYPE;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取构造方法实例化对象</span></span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> c1.getConstructor();</span><br><span class="line">        <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> constructor.newInstance();</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">        System.out.println(obj.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取方法并调用</span></span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> c1.getMethod(<span class="string">&quot;study&quot;</span>, String.class);<span class="comment">//方法名，参数类型的Class对象</span></span><br><span class="line">        <span class="comment">// 使用某个对象调用该方法</span></span><br><span class="line">        method.invoke(obj,<span class="string">&quot;Java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//name字段是父类Person的</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">personClass</span> <span class="operator">=</span> c1.getSuperclass();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取字段</span></span><br><span class="line">        <span class="type">Field</span> <span class="variable">field</span> <span class="operator">=</span> personClass.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        field.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 获取某个对象的字段</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> field.get(obj);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        <span class="comment">// 修改某个对象的字段</span></span><br><span class="line">        field.set(obj,<span class="string">&quot;学生obj&quot;</span>);</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    String name;</span><br><span class="line">    Person()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;学生&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">(String course)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学生&quot;</span> + <span class="built_in">this</span>.hashCode() + <span class="string">&quot;正在学习&quot;</span> + course);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    Teacher()&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;老师&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>元数据，和程序元素（package,class,method,field）有关的数据。</p>
-<h3 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h3><ul>
-<li><code>@Override</code>：重写</li>
-<li><code>@Deprecated</code>：过时</li>
-<li><code>@SuppressWarnings</code>： 抑制编译器警告，需要传入一个 value 参数</li>
-</ul>
-<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><p>定义：负责注解其他注解</p>
+    <title>虚拟机</title>
+    <url>/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
+    <content><![CDATA[<p>虚拟机：VMWare</p>
+<p>操作系统：CentOS，Ubuntu</p>
+<p>客户端：连接虚拟机，操作更友好</p>
 <ul>
-<li><strong>@Target：描述注解使用范围</strong> class，method，field</li>
-<li><strong>@Retention：什么级别</strong>，注解在什么地方有效 runtime&gt;class&gt;source</li>
-<li>@Document：注解包含在 javadoc 中</li>
-<li>@Inherited：子类可以继承该注解</li>
+<li>MobarXterm（ssh客户端）</li>
+<li>git bash</li>
+<li>AC terminal</li>
 </ul>
-<h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416002140919.png" alt="image-20240416002140919"></p>
-<h2 id="反射操作注解"><a href="#反射操作注解" class="headerlink" title="反射操作注解"></a>反射操作注解</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416000049318.png" alt="image-20240416000049318"></p>
-<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h2 id="Java-内存"><a href="#Java-内存" class="headerlink" title="Java 内存"></a>Java 内存</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231522844.png" alt="image-20240415231522844"></p>
-<h2 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231552966.png" alt="image-20240415231552966"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415233828250.png" alt="image-20240415233828250"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415232226415.png" alt="image-20240415232226415"></p>
-<h2 id="类什么时候初始化"><a href="#类什么时候初始化" class="headerlink" title="类什么时候初始化"></a>类什么时候初始化</h2><p>new 对象和反射</p>
+<p>Linux常见应用：vim，ssh，ftp</p>
 ]]></content>
-      <categories>
-        <category>JVM</category>
-      </categories>
   </entry>
   <entry>
     <title>Javs设计模式</title>
@@ -2007,18 +1991,75 @@
       </categories>
   </entry>
   <entry>
-    <title>虚拟机</title>
-    <url>/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
-    <content><![CDATA[<p>虚拟机：VMWare</p>
-<p>操作系统：CentOS，Ubuntu</p>
-<p>客户端：连接虚拟机，操作更友好</p>
-<ul>
-<li>MobarXterm（ssh客户端）</li>
-<li>git bash</li>
-<li>AC terminal</li>
+    <title>反射和注解</title>
+    <url>/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/</url>
+    <content><![CDATA[<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException &#123;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">person</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="comment">//获取Class类的方式</span></span><br><span class="line">        <span class="comment">// 方式一:通过对象获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c1</span> <span class="operator">=</span> person.getClass();</span><br><span class="line">        System.out.println(c1.hashCode());</span><br><span class="line">        <span class="comment">// 方式二:forName获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c2</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;com.hyl.Student&quot;</span>);</span><br><span class="line">        System.out.println(c2.hashCode());</span><br><span class="line">        <span class="comment">// 方式三:通过类名.class获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c3</span> <span class="operator">=</span> Student.class;</span><br><span class="line">        System.out.println(c3.hashCode());</span><br><span class="line">        <span class="comment">// 方式四 :基本内置类型的包装类都有一个Type属性</span></span><br><span class="line">        Class c4= Integer.TYPE;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取构造方法实例化对象</span></span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> c1.getConstructor();</span><br><span class="line">        <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> constructor.newInstance();</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">        System.out.println(obj.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取方法并调用</span></span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> c1.getMethod(<span class="string">&quot;study&quot;</span>, String.class);<span class="comment">//方法名，参数类型的Class对象</span></span><br><span class="line">        <span class="comment">// 使用某个对象调用该方法</span></span><br><span class="line">        method.invoke(obj,<span class="string">&quot;Java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//name字段是父类Person的</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">personClass</span> <span class="operator">=</span> c1.getSuperclass();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取字段</span></span><br><span class="line">        <span class="type">Field</span> <span class="variable">field</span> <span class="operator">=</span> personClass.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        field.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 获取某个对象的字段</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> field.get(obj);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        <span class="comment">// 修改某个对象的字段</span></span><br><span class="line">        field.set(obj,<span class="string">&quot;学生obj&quot;</span>);</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    String name;</span><br><span class="line">    Person()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;学生&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">(String course)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学生&quot;</span> + <span class="built_in">this</span>.hashCode() + <span class="string">&quot;正在学习&quot;</span> + course);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    Teacher()&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;老师&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>元数据，和程序元素（package,class,method,field）有关的数据。</p>
+<h3 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h3><ul>
+<li><code>@Override</code>：重写</li>
+<li><code>@Deprecated</code>：过时</li>
+<li><code>@SuppressWarnings</code>： 抑制编译器警告，需要传入一个 value 参数</li>
 </ul>
-<p>Linux常见应用：vim，ssh，ftp</p>
+<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><p>定义：负责注解其他注解</p>
+<ul>
+<li><strong>@Target：描述注解使用范围</strong> class，method，field</li>
+<li><strong>@Retention：什么级别</strong>，注解在什么地方有效 runtime&gt;class&gt;source</li>
+<li>@Document：注解包含在 javadoc 中</li>
+<li>@Inherited：子类可以继承该注解</li>
+</ul>
+<h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416002140919.png" alt="image-20240416002140919"></p>
+<h2 id="反射操作注解"><a href="#反射操作注解" class="headerlink" title="反射操作注解"></a>反射操作注解</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416000049318.png" alt="image-20240416000049318"></p>
+<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h2 id="Java-内存"><a href="#Java-内存" class="headerlink" title="Java 内存"></a>Java 内存</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231522844.png" alt="image-20240415231522844"></p>
+<h2 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231552966.png" alt="image-20240415231552966"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415233828250.png" alt="image-20240415233828250"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415232226415.png" alt="image-20240415232226415"></p>
+<h2 id="类什么时候初始化"><a href="#类什么时候初始化" class="headerlink" title="类什么时候初始化"></a>类什么时候初始化</h2><p>new 对象和反射</p>
 ]]></content>
+      <categories>
+        <category>JVM</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>SpringBoot</title>
+    <url>/2024/09/07/2024-09-03-SpringBoot/</url>
+    <content><![CDATA[<h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ol>
+<li><p>两种形式：<code>application.yml</code> 或 <code>application.properties</code></p>
+</li>
+<li><p>yaml格式：</p>
+<ul>
+<li>缩进表层级，-表数组，#表注释</li>
+<li>参数前加空格</li>
+</ul>
+</li>
+<li><p>**<code>application.yml</code>**是默认配置文件，Spring Boot 首先加载。如果要激活其他配置文件（<code>application-dev.yml</code> 和 <code>application-local.yml</code>）</p>
+</li>
+</ol>
+<p>  在 <code>application.yml</code> 中可以设置如下：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+
+<p>  在 <code>application.properties</code> 中可以设置如下：</p>
+  <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring.profiles.active</span>=<span class="string">dev</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-从yaml读取数据"><a href="#4-从yaml读取数据" class="headerlink" title="4. 从yaml读取数据"></a>4. 从yaml读取数据</h3><p>配置文件：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">lesson:</span> <span class="string">SpringBoot</span></span><br><span class="line"></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"> <span class="attr">port:</span> <span class="number">82</span></span><br><span class="line"></span><br><span class="line"><span class="attr">enterprise:</span></span><br><span class="line"> <span class="attr">name:</span> <span class="string">itcast</span></span><br><span class="line"> <span class="attr">age:</span> <span class="number">16</span></span><br><span class="line"> <span class="attr">te1:</span> <span class="number">4006184000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">subject:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">Java</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">前端</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">大数据</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>@Value</code>读取单个数据：<code>@Value(&quot;$&#123;一级属性名.二级属性名.xx.xx&#125;&quot;)</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;server.port&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> port;</span><br><span class="line"></span><br><span class="line"><span class="comment">//读数组</span></span><br><span class="line"><span class="meta">@Value(&quot;$&#123;enterprise.subject[1]&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> String[]subject_01;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><code>@Autowired</code>读到整个文件数据到环境变量<code>Environment</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowird</span></span><br><span class="line">Environment environment;</span><br><span class="line"></span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;server.port&quot;</span>));</span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;enterprise.subject[1]&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>自定义对象，<code>@ConfigurationProperties(prefix = &quot;xxx&quot;)</code>指定</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;enterprise&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Enterprise</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String[] subject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="SpringSecurity"><a href="#SpringSecurity" class="headerlink" title="SpringSecurity"></a>SpringSecurity</h2><h3 id="jwt-Token-TODO"><a href="#jwt-Token-TODO" class="headerlink" title="jwt Token TODO"></a>jwt Token TODO</h3><h3 id="权限控制-TODO"><a href="#权限控制-TODO" class="headerlink" title="权限控制 TODO"></a>权限控制 TODO</h3>]]></content>
   </entry>
   <entry>
     <title>Java集合</title>
@@ -2315,6 +2356,89 @@
       </categories>
   </entry>
   <entry>
+    <title>Docker</title>
+    <url>/2024/09/03/2024-09-03-Docker/</url>
+    <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
+<li><p>build，run，share<strong>只需配置一次适用不同环境</strong>（开发，测试，实际生产）</p>
+</li>
+<li><p>和虚拟机的区别：使用宿主机的系统，<strong>不需要运行另一个操作系统</strong></p>
+<p><strong>容器</strong>：运行的实例，一个应用程序</p>
+</li>
+</ol>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205031746.png" alt="image-20240903205031746"></p>
+<ol start="3">
+<li><p>基本原理</p>
+<p>**镜像（image）和容器(container)**：模板和实例，Java 类和对象</p>
+<p>Docker 仓库：存储和管理 Docker 镜像</p>
+<p>daemon:守护进程</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205559674.png" alt="image-20240903205559674"></p>
+</li>
+<li><p>应用<strong>容器化</strong>和<strong>DockerFile</strong></p>
+<p>容器化：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205911563.png" alt="image-20240903205911563"></p>
+<p>DockerFile：一堆命令的文件,构建镜像</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903211253344.png" alt="image-20240903211253344"></p>
+<p>没有镜像文件？镜像存储比较特殊，<code>docker save [fileName].tar [imageName]</code>导出镜像文件（.tar）,<code>docker load [fileName].tar</code>导入</p>
+</li>
+<li><p>Docker 每次关闭文件数据会消失，<strong>逻辑卷</strong>进行持久化，目录映射到宿主机</p>
+</li>
+<li><p>docker-compose.yml：配置文件，将相关联的容器<strong>组合</strong>起来</p>
+<p><code>docker compose up</code>:自动安装依赖和配置环境</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903210908070.png" alt="image-20240903210908070"></p>
+</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>(根据操作系统版本上网搜索安装，配置 Docker，Yum<strong>仓库镜像</strong>)</p>
+<p>Centos 系统：Yum 安装</p>
+<p>Ubuntu 系统：Apt 安装</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#显示运行的容器</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示所有容器</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动容器</span></span><br><span class="line">docker start [ctnId]</span><br></pre></td></tr></table></figure>
+
+<h2 id="CentOs"><a href="#CentOs" class="headerlink" title="CentOs"></a>CentOs</h2><ol>
+<li>启动和检验</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动Docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止Docker</span></span><br><span class="line">systemctl stop docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置开机自启</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行docker ps命令，如果不报错，说明安装启动成功</span></span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h2 id="Docker-命令（Ubuntu）"><a href="#Docker-命令（Ubuntu）" class="headerlink" title="Docker 命令（Ubuntu）"></a>Docker 命令（Ubuntu）</h2><h3 id="将当前用户添加到-docker-用户组"><a href="#将当前用户添加到-docker-用户组" class="headerlink" title="将当前用户添加到 docker 用户组"></a>将当前用户添加到 docker 用户组</h3><p>为了避免每次使用 docker 命令都需要加上 sudo 权限，可以将当前用户加入安装中自动创建的 docker 用户组(可以参考官方文档)：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure>
+
+<p>执行完此操作后，需要退出服务器，再重新登录回来，才可以省去 sudo 权限。</p>
+<h3 id="镜像（images）"><a href="#镜像（images）" class="headerlink" title="镜像（images）"></a>镜像（images）</h3><ol>
+<li><code>docker pull ubuntu:20.04</code>：拉取一个镜像</li>
+<li><code>docker images</code>：列出本地所有镜像</li>
+<li><code>docker image rm ubuntu:20.04</code> 或 <code>docker rmi ubuntu:20.04</code>：删除镜像<code>ubuntu:20.04</code></li>
+<li><code>docker [container] commit CONTAINER IMAGE_NAME:TAG</code>：创建某个 container 的镜像</li>
+<li><code>docker save -o ubuntu_20_04.tar ubuntu:20.04</code>：将镜像 ubuntu:20.04 导出到本地文件 ubuntu_20_04.tar 中</li>
+<li><code>docker load -i ubuntu_20_04.tar</code>：将镜像 ubuntu:20.04 从本地文件 ubuntu_20_04.tar 中加载出来</li>
+</ol>
+<h3 id="容器-container"><a href="#容器-container" class="headerlink" title="容器(container)"></a>容器(container)</h3><ol>
+<li><code>docker [container] create -it ubuntu:20.04</code>：利用镜像 ubuntu:20.04 创建一个容器。</li>
+<li><code>docker ps -a</code>：查看本地的所有容器</li>
+<li><code>docker [container] start CONTAINER</code>：启动容器</li>
+<li><code>docker [container] stop CONTAINER</code>：停止容器</li>
+<li><code>docker [container] restart CONTAINER</code>：重启容器</li>
+<li><code>docker [contaienr] run -itd ubuntu:20.04</code>：创建并启动一个容器</li>
+<li><code>docker [container] attach CONTAINER</code>：进入容器<ul>
+<li>先按 Ctrl-p，再按 Ctrl-q 可以挂起容器</li>
+</ul>
+</li>
+<li><code>docker [container] exec CONTAINER COMMAND</code>：在容器中执行命令</li>
+<li><code>docker [container] rm CONTAINER</code>：删除容器</li>
+<li><code>docker container prune</code>：删除所有已停止的容器</li>
+<li><code>docker export -o xxx.tar CONTAINER</code>：将容器 CONTAINER 导出到本地文件 xxx.tar 中</li>
+<li><code>docker import xxx.tar image_name:tag</code>：将本地文件 xxx.tar 导入成镜像，并将镜像命名为 image_name:tag</li>
+<li><code>docker export/import</code>与<code>docker save/load</code>的区别：<ul>
+<li><code>export/import</code>会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</li>
+<li><code>save/load</code>会保存完整记录，体积更大</li>
+</ul>
+</li>
+<li><code>docker top CONTAINER</code>：查看某个容器内的所有进程</li>
+<li><code>docker stats</code>：查看所有容器的统计信息，包括 CPU、内存、存储、网络等信息</li>
+<li><code>docker cp xxx CONTAINER:xxx 或 docker cp CONTAINER:xxx xxx</code>：在本地和容器间复制文件</li>
+<li><code>docker rename CONTAINER1 CONTAINER2</code>：重命名容器</li>
+<li><code>docker update CONTAINER --memory 500MB</code>：修改容器限制</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Spring</title>
     <url>/2024/09/04/2024-09-03-Spring/</url>
     <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="一些-JavaWeb-知识"><a href="#一些-JavaWeb-知识" class="headerlink" title="一些 JavaWeb 知识"></a>一些 JavaWeb 知识</h2><h3 id="Tomcat-服务器"><a href="#Tomcat-服务器" class="headerlink" title="Tomcat 服务器"></a>Tomcat 服务器</h3><p>Web 服务器：封装 http 协议，提供 web 服务，部署 web 应用。</p>
@@ -2496,130 +2620,6 @@
 <h2 id="文件上传和下载"><a href="#文件上传和下载" class="headerlink" title="文件上传和下载"></a>文件上传和下载</h2><p>把前端传输的文件用 CommonMultipartFile file 接收；</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">file.getInputStrean() <span class="comment">//获取输入流</span></span><br><span class="line"></span><br><span class="line">file.transferTo() <span class="comment">//保存文件</span></span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Docker</title>
-    <url>/2024/09/03/2024-09-03-Docker/</url>
-    <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
-<li><p>build，run，share<strong>只需配置一次适用不同环境</strong>（开发，测试，实际生产）</p>
-</li>
-<li><p>和虚拟机的区别：使用宿主机的系统，<strong>不需要运行另一个操作系统</strong></p>
-<p><strong>容器</strong>：运行的实例，一个应用程序</p>
-</li>
-</ol>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205031746.png" alt="image-20240903205031746"></p>
-<ol start="3">
-<li><p>基本原理</p>
-<p>**镜像（image）和容器(container)**：模板和实例，Java 类和对象</p>
-<p>Docker 仓库：存储和管理 Docker 镜像</p>
-<p>daemon:守护进程</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205559674.png" alt="image-20240903205559674"></p>
-</li>
-<li><p>应用<strong>容器化</strong>和<strong>DockerFile</strong></p>
-<p>容器化：</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903205911563.png" alt="image-20240903205911563"></p>
-<p>DockerFile：一堆命令的文件,构建镜像</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903211253344.png" alt="image-20240903211253344"></p>
-<p>没有镜像文件？镜像存储比较特殊，<code>docker save [fileName].tar [imageName]</code>导出镜像文件（.tar）,<code>docker load [fileName].tar</code>导入</p>
-</li>
-<li><p>Docker 每次关闭文件数据会消失，<strong>逻辑卷</strong>进行持久化，目录映射到宿主机</p>
-</li>
-<li><p>docker-compose.yml：配置文件，将相关联的容器<strong>组合</strong>起来</p>
-<p><code>docker compose up</code>:自动安装依赖和配置环境</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240903210908070.png" alt="image-20240903210908070"></p>
-</li>
-</ol>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>(根据操作系统版本上网搜索安装，配置 Docker，Yum<strong>仓库镜像</strong>)</p>
-<p>Centos 系统：Yum 安装</p>
-<p>Ubuntu 系统：Apt 安装</p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#显示运行的容器</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示所有容器</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动容器</span></span><br><span class="line">docker start [ctnId]</span><br></pre></td></tr></table></figure>
-
-<h2 id="CentOs"><a href="#CentOs" class="headerlink" title="CentOs"></a>CentOs</h2><ol>
-<li>启动和检验</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动Docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止Docker</span></span><br><span class="line">systemctl stop docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置开机自启</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行docker ps命令，如果不报错，说明安装启动成功</span></span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h2 id="Docker-命令（Ubuntu）"><a href="#Docker-命令（Ubuntu）" class="headerlink" title="Docker 命令（Ubuntu）"></a>Docker 命令（Ubuntu）</h2><h3 id="将当前用户添加到-docker-用户组"><a href="#将当前用户添加到-docker-用户组" class="headerlink" title="将当前用户添加到 docker 用户组"></a>将当前用户添加到 docker 用户组</h3><p>为了避免每次使用 docker 命令都需要加上 sudo 权限，可以将当前用户加入安装中自动创建的 docker 用户组(可以参考官方文档)：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure>
-
-<p>执行完此操作后，需要退出服务器，再重新登录回来，才可以省去 sudo 权限。</p>
-<h3 id="镜像（images）"><a href="#镜像（images）" class="headerlink" title="镜像（images）"></a>镜像（images）</h3><ol>
-<li><code>docker pull ubuntu:20.04</code>：拉取一个镜像</li>
-<li><code>docker images</code>：列出本地所有镜像</li>
-<li><code>docker image rm ubuntu:20.04</code> 或 <code>docker rmi ubuntu:20.04</code>：删除镜像<code>ubuntu:20.04</code></li>
-<li><code>docker [container] commit CONTAINER IMAGE_NAME:TAG</code>：创建某个 container 的镜像</li>
-<li><code>docker save -o ubuntu_20_04.tar ubuntu:20.04</code>：将镜像 ubuntu:20.04 导出到本地文件 ubuntu_20_04.tar 中</li>
-<li><code>docker load -i ubuntu_20_04.tar</code>：将镜像 ubuntu:20.04 从本地文件 ubuntu_20_04.tar 中加载出来</li>
-</ol>
-<h3 id="容器-container"><a href="#容器-container" class="headerlink" title="容器(container)"></a>容器(container)</h3><ol>
-<li><code>docker [container] create -it ubuntu:20.04</code>：利用镜像 ubuntu:20.04 创建一个容器。</li>
-<li><code>docker ps -a</code>：查看本地的所有容器</li>
-<li><code>docker [container] start CONTAINER</code>：启动容器</li>
-<li><code>docker [container] stop CONTAINER</code>：停止容器</li>
-<li><code>docker [container] restart CONTAINER</code>：重启容器</li>
-<li><code>docker [contaienr] run -itd ubuntu:20.04</code>：创建并启动一个容器</li>
-<li><code>docker [container] attach CONTAINER</code>：进入容器<ul>
-<li>先按 Ctrl-p，再按 Ctrl-q 可以挂起容器</li>
-</ul>
-</li>
-<li><code>docker [container] exec CONTAINER COMMAND</code>：在容器中执行命令</li>
-<li><code>docker [container] rm CONTAINER</code>：删除容器</li>
-<li><code>docker container prune</code>：删除所有已停止的容器</li>
-<li><code>docker export -o xxx.tar CONTAINER</code>：将容器 CONTAINER 导出到本地文件 xxx.tar 中</li>
-<li><code>docker import xxx.tar image_name:tag</code>：将本地文件 xxx.tar 导入成镜像，并将镜像命名为 image_name:tag</li>
-<li><code>docker export/import</code>与<code>docker save/load</code>的区别：<ul>
-<li><code>export/import</code>会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</li>
-<li><code>save/load</code>会保存完整记录，体积更大</li>
-</ul>
-</li>
-<li><code>docker top CONTAINER</code>：查看某个容器内的所有进程</li>
-<li><code>docker stats</code>：查看所有容器的统计信息，包括 CPU、内存、存储、网络等信息</li>
-<li><code>docker cp xxx CONTAINER:xxx 或 docker cp CONTAINER:xxx xxx</code>：在本地和容器间复制文件</li>
-<li><code>docker rename CONTAINER1 CONTAINER2</code>：重命名容器</li>
-<li><code>docker update CONTAINER --memory 500MB</code>：修改容器限制</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>SpringBoot</title>
-    <url>/2024/09/07/2024-09-03-SpringBoot/</url>
-    <content><![CDATA[<h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ol>
-<li><p>两种形式：<code>application.yml</code> 或 <code>application.properties</code></p>
-</li>
-<li><p>yaml格式：</p>
-<ul>
-<li>缩进表层级，-表数组，#表注释</li>
-<li>参数前加空格</li>
-</ul>
-</li>
-<li><p>**<code>application.yml</code>**是默认配置文件，Spring Boot 首先加载。如果要激活其他配置文件（<code>application-dev.yml</code> 和 <code>application-local.yml</code>）</p>
-</li>
-</ol>
-<p>  在 <code>application.yml</code> 中可以设置如下：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
-
-<p>  在 <code>application.properties</code> 中可以设置如下：</p>
-  <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring.profiles.active</span>=<span class="string">dev</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-从yaml读取数据"><a href="#4-从yaml读取数据" class="headerlink" title="4. 从yaml读取数据"></a>4. 从yaml读取数据</h3><p>配置文件：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">lesson:</span> <span class="string">SpringBoot</span></span><br><span class="line"></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"> <span class="attr">port:</span> <span class="number">82</span></span><br><span class="line"></span><br><span class="line"><span class="attr">enterprise:</span></span><br><span class="line"> <span class="attr">name:</span> <span class="string">itcast</span></span><br><span class="line"> <span class="attr">age:</span> <span class="number">16</span></span><br><span class="line"> <span class="attr">te1:</span> <span class="number">4006184000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">subject:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">Java</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">前端</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">大数据</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><code>@Value</code>读取单个数据：<code>@Value(&quot;$&#123;一级属性名.二级属性名.xx.xx&#125;&quot;)</code></li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;server.port&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> port;</span><br><span class="line"></span><br><span class="line"><span class="comment">//读数组</span></span><br><span class="line"><span class="meta">@Value(&quot;$&#123;enterprise.subject[1]&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> String[]subject_01;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><code>@Autowired</code>读到整个文件数据到环境变量<code>Environment</code></li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowird</span></span><br><span class="line">Environment environment;</span><br><span class="line"></span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;server.port&quot;</span>));</span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;enterprise.subject[1]&quot;</span>));</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>自定义对象，<code>@ConfigurationProperties(prefix = &quot;xxx&quot;)</code>指定</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;enterprise&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Enterprise</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String[] subject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="SpringSecurity"><a href="#SpringSecurity" class="headerlink" title="SpringSecurity"></a>SpringSecurity</h2><h3 id="jwt-Token-TODO"><a href="#jwt-Token-TODO" class="headerlink" title="jwt Token TODO"></a>jwt Token TODO</h3><h3 id="权限控制-TODO"><a href="#权限控制-TODO" class="headerlink" title="权限控制 TODO"></a>权限控制 TODO</h3>]]></content>
   </entry>
   <entry>
     <title>MyBatisPlus</title>
