@@ -183,6 +183,181 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">git教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-18 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-18T00:00:00+08:00">2023-03-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-04-19 00:07:23" itemprop="dateModified" datetime="2024-04-19T00:07:23+08:00">2024-04-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h1><p><code>git init</code>：将目录初始化为git仓库</p>
+<p><code>git status</code>：查看工作区状态</p>
+<p><code>git diff &lt;file&gt;</code>：查看某个文件的修改内容</p>
+<p><code>git add &lt;file&gt;</code>：添加某个文件到暂存区 </p>
+<p><code>git add .</code>  把所有文件添加到暂存区</p>
+<p><code>git commit -m &quot;提交说明&quot;</code>  提交所有文件</p>
+<p><strong>远程仓库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;YL H&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;1074747648@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>git remote add origin git@server-name:path/repo-name.git</code> 关联一个远程仓库，<code>origin</code>是远程仓库默认习惯命名</p>
+<p><code>git push -u origin master</code>第一次推送master分支的所有内容</p>
+<p><code>git push origin master</code>推送最新修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@git.acwing.com:hyle/kob.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
+<h2 id="时空机穿梭"><a href="#时空机穿梭" class="headerlink" title="时空机穿梭"></a>时空机穿梭</h2><ul>
+<li><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
+</li>
+<li><p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff &lt;file&gt;</code>可以查看修改内容。</p>
+</li>
+</ul>
+<h3 id="版本库回退"><a href="#版本库回退" class="headerlink" title="版本库回退"></a>版本库回退</h3><ul>
+<li><p><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard &lt;commit_id&gt;</code>。</p>
+</li>
+<li><p>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</p>
+</li>
+<li><p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
+<blockquote>
+<p>Git必须知道当前版本是哪个版本，在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>1094adb...</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><p>工作区：电脑里能看到的目录</p>
+<p>版本库(repository)：工作区的一个隐藏目录.git是git的版本库。</p>
+<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322222552238.png" alt="image-20230322222552238"></p>
+<p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<p>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
+<p>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+<p>可以简单理解为，需要 &#x3D;&#x3D;提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改&#x3D;&#x3D; 。</p>
+<h3 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h3><p>git管理的是修改而不是文件，每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>git commit</code>中，即修改不会提交到本地仓库。</p>
+<p>如果修改文件后无法提交到本地仓库，需要检查将修改后的文件是不是没有<code>git add</code>加入到暂存区。</p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- &lt;file&gt;</code>。（checkout 检验更新）</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+<blockquote>
+<p>一种情况是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code></p>
+<p>另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- test.txt</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;<code>git checkout</code>其实是用版本库里的版本替换工作区的版本&#x3D;&#x3D;，无论工作区是修改还是删除，都可以“一键还原”</p>
+</blockquote>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><blockquote>
+<p>要关联一个远程库，使用命令<code>git remote add origin git@&lt;server-name:path/repo-name.git&gt;</code>；</p>
+<blockquote>
+<p>git remote add origin <a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:hyle777&#x2F;git_learn</p>
+</blockquote>
+<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
+<p><em>补充</em>：</p>
+<p>列出所有远程仓库信息：<code>git remote -v</code></p>
+<p>在本地仓库删除远程仓库(解除关联)：<code>git remote rm origin</code></p>
+<p>仓库地址可以用http协议(添加关联)：<code>git remote add origin https://github.com/hyle777/git_learn</code></p>
+</blockquote>
+<h3 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h3><blockquote>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</p>
+<p>Git支持多种协议，包括<code>https</code>，但<code>ssh</code>协议速度最快。</p>
+<p>git clone <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:hyle777.github.io</p>
+<p>GitHub给出的地址不止一个，还可以用<code>https://github.com/hyle777/hyle777.github.io</code>这样的地址。</p>
+</blockquote>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h3><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即<code>master</code>分支(github中主分支为main)。<code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的，所以，<code>HEAD</code>指向的就是当前分支。</p>
+<p><code>git merge</code>命令用于合并指定分支到当前分支。合并后，再查看<code>readme.txt</code>的内容，就可以看到，和<code>dev</code>分支的最新提交是完全一样的。注意到上面的<code>Fast-forward</code>信息，Git告诉我们，这次合并是“快进模式”，也就是直接把<code>master</code>指向<code>dev</code>的当前提交，所以合并速度非常快。当然，也不是每次合并都能<code>Fast-forward</code>，我们后面会讲其他方式的合并。</p>
+<p>因为创建、合并和删除分支非常快，所以<strong>Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在<code>master</code>分支上工作效果是一样的，但过程更安全。</strong></p>
+<p>合并完成后，就可以放心地删除<code>dev</code>分支了：</p>
+<blockquote>
+<p>Git鼓励大量使用分支：</p>
+<p>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）</p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+</blockquote>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p>
+<p>解决冲突就是把Git<strong>合并失败的文件手动编辑</strong>为我们希望的内容，再提交。</p>
+<p>用<code>git log --graph</code>命令可以看到分支合并图。</p>
+<h3 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h3><p>Git分支十分强大，在团队开发中应该充分应用。</p>
+<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+<h4 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h4><p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
+<p>首先，<code>master</code>分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
+<p>那在哪干活呢？干活都在<code>dev</code>分支上，也就是说，<code>dev</code>分支是不稳定的，到某个时候，比如1.0版本发布时，再把<code>dev</code>分支合并到<code>master</code>上，在<code>master</code>分支发布1.0版本；</p>
+<p>你和你的小伙伴们每个人都在<code>dev</code>分支上干活，每个人都有自己的分支，时不时地往<code>dev</code>分支上合并就可以了。</p>
+<p>所以，团队合作的分支看起来就像这样：</p>
+<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/0" alt="git-br-policy"></p>
+<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>当你从远程仓库克隆时，实际上Git自动把本地的<code>master</code>分支和远程的<code>master</code>分支对应起来了，并且，远程仓库的默认名称是<code>origin</code>。</p>
+<p>在本地仓库创建dev分支，将工作区的文件提交到dev分支，再推送到远程仓库的dev分支。</p>
+<blockquote>
+<p>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）<br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/08/2023-03-08-JavaScript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1194,12 +1369,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">

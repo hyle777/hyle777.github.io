@@ -183,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/09/2024-09-09-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -197,7 +197,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/09/08/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2024/09/09/2024-09-09-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/" class="post-title-link" itemprop="url">代码生成器</a>
         </h2>
 
         <div class="post-meta">
@@ -208,7 +208,16 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2024-09-08 23:56:24 / Modified: 22:55:03" itemprop="dateCreated datePublished" datetime="2024-09-08T23:56:24+08:00">2024-09-08</time>
+              <time title="Created: 2024-09-09 00:00:00 / Modified: 00:35:58" itemprop="dateCreated datePublished" datetime="2024-09-09T00:00:00+08:00">2024-09-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MyBatis/" itemprop="url" rel="index"><span itemprop="name">MyBatis</span></a>
+                </span>
             </span>
 
           
@@ -222,225 +231,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="MySQL-基础架构"><a href="#MySQL-基础架构" class="headerlink" title="MySQL 基础架构"></a>MySQL 基础架构</h2><h3 id="一个-SQL-语句在-MySQL-的执行流程？MySQL-的架构？S"><a href="#一个-SQL-语句在-MySQL-的执行流程？MySQL-的架构？S" class="headerlink" title="一个 SQL 语句在 MySQL 的执行流程？MySQL 的架构？S"></a>一个 SQL 语句在 MySQL 的执行流程？MySQL 的架构？S</h3><ul>
-<li>Server 层</li>
-<li>存储引擎</li>
-</ul>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405142205656.png" alt="image-20240405142205656"></p>
-<h2 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h2><ol>
-<li><p>MySQL 提供了哪些存储引擎?</p>
-<p>可以通过 <code>show engines; </code>命令查看 MySQL 提供的所有存储引擎。</p>
-<ul>
-<li>InnoDB</li>
-<li>MyISAM</li>
-<li>Memory</li>
-</ul>
-</li>
-</ol>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405142952891.png" alt="image-20240405142952891"></p>
-<ol start="2">
-<li><p>MySQL 存储引擎架构了解吗？</p>
-<p>MySQL 存储引擎采⽤的是<strong>插件式架构</strong>，⽀持多种存储引擎，我们甚⾄ 可以为不同的数据库表设置不同的存储引擎以适应不同场景的需要。存储引擎是<strong>基于表的</strong>，⽽不是数据库。</p>
-</li>
-</ol>
-<h3 id="3-MyISAM-和-InnoDB-的区别-SS"><a href="#3-MyISAM-和-InnoDB-的区别-SS" class="headerlink" title="3. MyISAM 和 InnoDB 的区别? SS"></a>3. MyISAM 和 InnoDB 的区别? SS</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405144216669.png" alt="image-20240405144216669"></p>
-<h2 id="MySQL-事务"><a href="#MySQL-事务" class="headerlink" title="MySQL 事务"></a>MySQL 事务</h2><h3 id="1-什么是事务？什么是数据库事务？SS"><a href="#1-什么是事务？什么是数据库事务？SS" class="headerlink" title="1. 什么是事务？什么是数据库事务？SS"></a>1. 什么是事务？什么是数据库事务？SS</h3><ul>
-<li><p>事务是一组 SQL 操作，被视为一个单独的工作单元，要么全部成功提交，要么全部失败回滚。</p>
-</li>
-<li><p>数据库事务可以保证多个对数据库的操作（也就是 SQL 语句）构成⼀ 个逻辑上的整体。构成这个逻辑上的整体的这些数据库操作遵循：要么全部执⾏ 成功,要么全部不执⾏ 。关系型数据库（例如： MySQL 、 SQL Server 、 Orac le 等）事务都有 ACID 特性。</p>
-</li>
-</ul>
-<h3 id="2-ACID-特性？SS"><a href="#2-ACID-特性？SS" class="headerlink" title="2. ACID 特性？SS"></a>2. ACID 特性？SS</h3><ul>
-<li>保证了事务的持久性、原⼦性、隔离性之后，⼀致性才能得到保障。也就是说 A、I、D 是⼿段，C 是⽬的</li>
-</ul>
-<p>​ <img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405145958556.png" alt="image-20240405145958556"></p>
-<h3 id="3-并发事务带来了哪些问题-SS"><a href="#3-并发事务带来了哪些问题-SS" class="headerlink" title="3. 并发事务带来了哪些问题? SS"></a>3. 并发事务带来了哪些问题? SS</h3><ul>
-<li>脏读（Dirty read）：读取了未提交的数据</li>
-<li>丢失修改（Lost to modify）：一个事务的修改覆盖了另一个事务</li>
-<li>不可重复读 （Unrepeatable read）：重复读了同一数据前后不一致</li>
-<li>幻读（Phantom read）：读某个表多了一行数据</li>
-</ul>
-<h3 id="4-SQL-标准定义了哪些事务隔离级别-SS"><a href="#4-SQL-标准定义了哪些事务隔离级别-SS" class="headerlink" title="4. SQL 标准定义了哪些事务隔离级别?SS"></a>4. SQL 标准定义了哪些事务隔离级别?SS</h3><ul>
-<li>READ-UNCOMMITTED(读取未提交)：同时读，同时写，同时读写</li>
-<li>READ-COMMITTED(读取已提交)：同时写，同时读写</li>
-<li>REPEATABLE-READ(可重复读)：同时读写</li>
-<li>SERIALIZABLE(可串⾏化)。</li>
-</ul>
-<p>​ <img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405151026709.png" alt="image-20240405151026709"></p>
-<h3 id="5-不可重复读和幻读区别-SS"><a href="#5-不可重复读和幻读区别-SS" class="headerlink" title="5. 不可重复读和幻读区别 SS"></a>5. 不可重复读和幻读区别 SS</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405150631528.png" alt="image-20240405150631528"></p>
-<h3 id="6-什么是-MVCC？有什么⽤？原理了解么？SS"><a href="#6-什么是-MVCC？有什么⽤？原理了解么？SS" class="headerlink" title="6. 什么是 MVCC？有什么⽤？原理了解么？SS"></a>6. 什么是 MVCC？有什么⽤？原理了解么？SS</h3><p>RC（Read Committed，读提交）和 RR（Repeatable Read，可重复读）这两个隔离级别的实现都离不开 MVCC。</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405144625344.png" alt="image-20240405144625344"></p>
-<h2 id="MySQL-锁"><a href="#MySQL-锁" class="headerlink" title="MySQL 锁"></a>MySQL 锁</h2><h3 id="锁的分类-SS"><a href="#锁的分类-SS" class="headerlink" title="锁的分类 SS"></a>锁的分类 SS</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405155716071.png" alt="image-20240405155716071"></p>
-<ol>
-<li><p>表级锁和⾏级锁了解吗？有什么区别？</p>
-<p>表级锁(table-level locking)⼀锁就锁整张表。⾏级锁的粒度更⼩，仅对相关的记录上锁即可（对⼀⾏或者多⾏记录加锁）</p>
-</li>
-<li><p>⾏级锁的使⽤有什么注意事项？</p>
-<p>InnoDB 的⾏锁是针对索引字段加的锁，表级锁是针对⾮索引字段加的 锁。当我们执⾏ UPDATE、 DELETE 语句时，如果 WHERE 条 件中字段没有命 中索引或者索引失效的话，就会导致扫描全表对表中的所有记录进⾏加锁。</p>
-</li>
-<li><p>意向锁有什么作⽤？</p>
-<p>快速判断是否可以对某个表使⽤表锁。意向锁是表级锁，共有两种。并且，意向锁之间是互相兼容的。</p>
-</li>
-</ol>
-<h2 id="MySQL-索引"><a href="#MySQL-索引" class="headerlink" title="MySQL 索引"></a>MySQL 索引</h2><h3 id="1-何为索引？有什么作⽤？"><a href="#1-何为索引？有什么作⽤？" class="headerlink" title="1. 何为索引？有什么作⽤？"></a>1. 何为索引？有什么作⽤？</h3><ul>
-<li>索引：书的目录，能够快速地定位到数据库中存储的数据记录</li>
-<li>作用：<ol>
-<li>加快数据检索速度和效率</li>
-<li>提高唯一性约束</li>
-<li>加速排序和分组操作</li>
-<li>优化连接操作</li>
-</ol>
-</li>
-<li>缺点：索引并不都是好的，创建索引和维护索引也需要耗费资源和时间</li>
-</ul>
-<ol start="2">
-<li><p>索引的底层数据结构</p>
-<p>在 MySQL 中，MyISAM 引擎和 InnoDB 引擎都是使⽤ <strong>B+Tree</strong> 作为索引结构，但是，两者的实现⽅式不太⼀样。</p>
-</li>
-</ol>
-<h3 id="3-MySQL-的索引结构为什么使⽤-B-树？"><a href="#3-MySQL-的索引结构为什么使⽤-B-树？" class="headerlink" title="3. MySQL 的索引结构为什么使⽤ B+树？"></a>3. MySQL 的索引结构为什么使⽤ B+树？</h3><ul>
-<li><p>结合⼆叉查找树、平衡⼆叉树、红⿊树、B 树存在的缺陷来回答这个问题。</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405234602286.png" alt="image-20240405234602286"></p>
-<p>参考连接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/653822688">https://zhuanlan.zhihu.com/p/653822688</a></p>
-</li>
-</ul>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405165103739.png" alt="image-20240405165103739"></p>
-<h3 id="4-索引分类"><a href="#4-索引分类" class="headerlink" title="4. 索引分类"></a>4. 索引分类</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515141350362.png" alt="image-20240515141350362"></p>
-<h3 id="主键索引和二级索引"><a href="#主键索引和二级索引" class="headerlink" title="主键索引和二级索引"></a>主键索引和二级索引</h3><ul>
-<li><p>数据表的主键列使⽤的就是主键索引。</p>
-</li>
-<li><p>⼆级索引⼜称为辅助索引，是因 为⼆级索引的叶⼦节点存储的数据是主键列。也就是说，通过⼆级索引，可以定位主键的位置。唯⼀索引，普通索引，前缀索引等索引属于⼆级索引。</p>
-</li>
-</ul>
-<h3 id="聚集索引和非聚集索引"><a href="#聚集索引和非聚集索引" class="headerlink" title="聚集索引和非聚集索引"></a>聚集索引和非聚集索引</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515143403717.png" alt="image-20240515143403717"></p>
-<ul>
-<li><p>聚集索引：索引结构和数据放一起。<strong>主键索引</strong>属于聚集索引。一个表只有一个聚集索引（数据存一份），一般是主键列。</p>
-</li>
-<li><p>非聚集索引：结构和数据分开放。一般存这个列和主键。</p>
-</li>
-<li><p>回表：查询某个非聚集索引得到主键，通过主键的聚集索引返回完整的记录。</p>
-<p>主键索引不需要回表。</p>
-</li>
-<li><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515142023085.png" alt="image-20240515142023085"></p>
-<p>聚集索引：</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515142247280.png" alt="image-20240515142247280"></p>
-<p>非聚集索引：</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515142329966.png" alt="image-20240515142329966"></p>
-</li>
-</ul>
-<h3 id="回表："><a href="#回表：" class="headerlink" title="回表："></a>回表：</h3><pre><code>使用索引定位到符合条件的行，再次访问表获取完整信息。
+          <h2 id="1-引入依赖"><a href="#1-引入依赖" class="headerlink" title="1. 引入依赖"></a>1. 引入依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.velocity<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>velocity-engine-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-情况：
 
-- 查询字段数：没有覆盖索引
-- 查询条件：部分条件没有索引
 
-### MyISAM的索引
-</code></pre>
-<ul>
-<li>没有聚集索引，只有稀疏索引。索引叶子节点存的是索引列和地址。</li>
-</ul>
-<p>稀疏索引和二级索引</p>
-<h3 id="5-SQL-优化"><a href="#5-SQL-优化" class="headerlink" title="5. SQL 优化"></a>5. SQL 优化</h3><p>思路：</p>
-<pre><code>  1. 慢日志定位慢查询
+<h2 id="2-在启动类同级目录下添加Generator-java："><a href="#2-在启动类同级目录下添加Generator-java：" class="headerlink" title="2. 在启动类同级目录下添加Generator.java："></a>2. 在启动类同级目录下添加Generator.java：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.IdType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.AutoGenerator;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.DataSourceConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.GlobalConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.PackageConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.StrategyConfig;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Generator</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要经常改的</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//根据哪个表生成代码</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">TABLE_NAME</span> <span class="operator">=</span> <span class="string">&quot;user&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//最好默认不要覆盖文件，运行的时候CTRL改为1</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">CTRL</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Boolean</span> <span class="variable">OVERRIDE</span> <span class="operator">=</span> CTRL == <span class="number">0</span>?<span class="literal">false</span>:<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 下面只要改一次</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//数据库连接</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_CNT</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://localhost:3306/codingsystem?serverTimezone=UTC&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_USER_NAME</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_PASSWORD</span> <span class="operator">=</span> <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">AUTHOR</span> <span class="operator">=</span> <span class="string">&quot;huyuliang&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//文件生成位置</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">File_PATH</span> <span class="operator">=</span> System.getProperty(<span class="string">&quot;user.dir&quot;</span>)+<span class="string">&quot;/src/main/java&quot;</span>;</span><br><span class="line">    <span class="comment">//包名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">PARENT_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;com.hyl&quot;</span>;</span><br><span class="line">    <span class="comment">//实体层包名（entity，DO）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">ENTITY_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;entity&quot;</span>;</span><br><span class="line">    <span class="comment">//映射层包名（mapper,DAO）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">MAPPER_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;mapper&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">AutoGenerator</span> <span class="variable">autoGenerator</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AutoGenerator</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//数据源相关配置：读取数据库中的信息，根据数据库表结构生成代码</span></span><br><span class="line">        <span class="type">DataSourceConfig</span> <span class="variable">dataSourceConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataSourceConfig</span>();</span><br><span class="line">        dataSourceConfig.setUrl(SQL_CNT);</span><br><span class="line">        dataSourceConfig.setDriverName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line">        dataSourceConfig.setUsername(SQL_USER_NAME);</span><br><span class="line">        dataSourceConfig.setPassword(SQL_PASSWORD);</span><br><span class="line">        autoGenerator.setDataSource(dataSourceConfig);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置全局配置</span></span><br><span class="line">        <span class="type">GlobalConfig</span> <span class="variable">globalConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GlobalConfig</span>();</span><br><span class="line">        globalConfig.setOutputDir(File_PATH);</span><br><span class="line">        globalConfig.setOpen(<span class="literal">false</span>);</span><br><span class="line">        globalConfig.setAuthor(AUTHOR);</span><br><span class="line">        globalConfig.setFileOverride(OVERRIDE);</span><br><span class="line">        <span class="comment">//%s是占位符 默认是Mapper</span></span><br><span class="line">        <span class="comment">//globalConfig.setMapperName(&quot;%sDao&quot;);</span></span><br><span class="line">        globalConfig.setIdType(IdType.ASSIGN_ID);</span><br><span class="line">        autoGenerator.setGlobalConfig(globalConfig);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//包相关配置</span></span><br><span class="line">        <span class="type">PackageConfig</span> <span class="variable">packageInfo</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PackageConfig</span>();</span><br><span class="line">        packageInfo.setParent(PARENT_PACKAGE);</span><br><span class="line">        packageInfo.setEntity(ENTITY_PACKAGE);</span><br><span class="line">        packageInfo.setMapper(MAPPER_PACKAGE);</span><br><span class="line">        autoGenerator.setPackageInfo(packageInfo);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//策略配置</span></span><br><span class="line">        <span class="type">StrategyConfig</span> <span class="variable">strategy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StrategyConfig</span>();</span><br><span class="line"></span><br><span class="line">        strategy.setInclude(TABLE_NAME);</span><br><span class="line">        <span class="comment">//strategy.setTablePrefix(&quot;tbl_&quot;);</span></span><br><span class="line">        strategy.setRestControllerStyle(<span class="literal">true</span>);</span><br><span class="line">        strategy.setEntityLombokModel(<span class="literal">true</span>);</span><br><span class="line">        strategy.setLogicDeleteFieldName(<span class="string">&quot;deleted&quot;</span>);</span><br><span class="line">        <span class="comment">//strategy.setVersionFieldName(&quot;version&quot;);</span></span><br><span class="line">        autoGenerator.setStrategy(strategy);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        autoGenerator.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-  2. explain查看执行计划，分析sql
-
-  3. 修改sql，让sql尽量走索引
-</code></pre>
-<h4 id="慢日志"><a href="#慢日志" class="headerlink" title="慢日志"></a>慢日志</h4><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515144919521.png" alt="image-20240515144919521"></p>
-<h4 id="explain-查看执行计划"><a href="#explain-查看执行计划" class="headerlink" title="explain 查看执行计划"></a>explain 查看执行计划</h4><ul>
-<li>优化器对 sql 语句优化，生成执行计划。</li>
-<li>作用：查看走了哪个索引、查询的具体方式、多表连接顺序</li>
-</ul>
-<p>比较重要：key、type、extra</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515145755627.png" alt="image-20240515145755627"></p>
-<h4 id="select-type"><a href="#select-type" class="headerlink" title="select_type"></a>select_type</h4><p>物化表：把查询结果放在内存中</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515150712755.png" alt="image-20240515150712755"></p>
-<h4 id="type-访问类型"><a href="#type-访问类型" class="headerlink" title="type 访问类型"></a>type 访问类型</h4><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515150944849.png" alt="image-20240515150944849"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515152125849.png" alt="image-20240515152125849"></p>
-<h4 id="extra"><a href="#extra" class="headerlink" title="extra"></a>extra</h4><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515153030322.png" alt="image-20240515153030322"></p>
-<h3 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h3><p>覆盖索引即需要查询的字段正好是索引的字段，那么直接根据该索引， 就可以查到数据了，⽽⽆需回表查询。</p>
-<h3 id="最左匹配原则"><a href="#最左匹配原则" class="headerlink" title="最左匹配原则"></a>最左匹配原则</h3><p>在 MySQL 建⽴联合索引时会遵守最左前缀匹配原则，即最左优先，在 检索数据时从联合索引的最左边开始匹配。</p>
-<h3 id="6-索引失效的情况"><a href="#6-索引失效的情况" class="headerlink" title="6.索引失效的情况"></a>6.索引失效的情况</h3><ol>
-<li><p>模糊匹配%，like 查询以“%”开头；</p>
-</li>
-<li><p>or 语句前后没有同时使用索引；</p>
-</li>
-<li><p>where 语句对索引列进行了运算</p>
-</li>
-<li><p>联合索引中不是使用第一列索引；</p>
-<ul>
-<li>（联合索引(column1, column2)，查询条件有 column2，没有 column1，不会走索引）</li>
-</ul>
-</li>
-<li><p>在索引列上使用“is null”或“is not null”操作；</p>
-</li>
-<li><p>在索引字段上使用“not”，“！&#x3D;”等。</p>
-</li>
-</ol>
-<h3 id="7-建立索引的使用场景"><a href="#7-建立索引的使用场景" class="headerlink" title="7.建立索引的使用场景"></a>7.建立索引的使用场景</h3><p>在<strong>最频繁使用</strong>的、用以缩小查询范围的字段，<strong>需要排列</strong>的字段上建立索引。<br>不宜：</p>
-<ol>
-<li>查询中很少涉及或者重复值比较多的字段；</li>
-<li>频繁更新的字段。</li>
-<li>一些特殊的数据类型，比如文本字段（text）等。</li>
-</ol>
-<h3 id="7-创建索引的注意事项有哪些"><a href="#7-创建索引的注意事项有哪些" class="headerlink" title="7. 创建索引的注意事项有哪些"></a>7. 创建索引的注意事项有哪些</h3><ul>
-<li>尽可能建⽴联合索引⽽不是单列索引</li>
-<li><strong>避免在大数据量表上创建过多索引</strong>，会影响插入、删除、更新的性能</li>
-<li><strong>避免在频繁更新的字段上创建索引</strong></li>
-</ul>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240406001310190.png" alt="image-20240406001310190"></p>
-<h2 id="数据库表设计"><a href="#数据库表设计" class="headerlink" title="数据库表设计"></a>数据库表设计</h2><p>符合第三范式：</p>
-<ul>
-<li>多对多，三张表，关系表加外键</li>
-<li>一对多，两张表，多的表加外键</li>
-</ul>
-<h2 id="MySQL-日志"><a href="#MySQL-日志" class="headerlink" title="MySQL 日志"></a>MySQL 日志</h2><ol>
-<li>MySQL 中常⻅的⽇志有哪些？</li>
-</ol>
-<p>错误⽇志（error log）、⼆进制⽇志（binary log）、⼀般查询⽇志 （general query log）、慢查询⽇志（slow query log） 、事务⽇志(redo log 和 undo log) ……。</p>
-<p>mysql 三大日志——binlog、redolog、undolog</p>
-<p>答：</p>
-<p>redolog:是 InnoDB 存储引擎层的日志，物理日志。又称重做日志文件，用于记录事务操作的变化，记录的是数据修改后的值，不管事务是否提交都会记录下来。<br>Binlog：是 Mysql Server 层面的，又称为归档日志，属于逻辑日志，以二进制的形式记录的，用于记录数据库执行的写入性操作（不包括查询）信息。</p>
-<p>Undolog：主要记录了数据的逻辑变化，保存了事务发生之前的数据的一个版本，这样在发生错误时，就能回滚到事务之前的数据状态。</p>
-<ol start="2">
-<li><p>慢查询⽇志有什么⽤？</p>
-<p>慢查询⽇志记录了执⾏时间超过 long_query_time （默认是 10s） 的所有查询，在我们解决 SQL 慢查询（SQL 执⾏时间过⻓）问题的时候经常会⽤ 到。</p>
-</li>
-</ol>
-<h3 id="3-binlog-主要记录了什么？有什么⽤？SS"><a href="#3-binlog-主要记录了什么？有什么⽤？SS" class="headerlink" title="3. binlog 主要记录了什么？有什么⽤？SS"></a>3. binlog 主要记录了什么？有什么⽤？SS</h3><pre><code>MySQL binlog(binary log 即⼆进制⽇志⽂件) 主要记录了 MySQL 数据 库中数据的所有变化(数据库执⾏的所有 DDL 和 DML 语句)。
-</code></pre>
-<h3 id="4-redo-log-如何保证事务的持久性？SS"><a href="#4-redo-log-如何保证事务的持久性？SS" class="headerlink" title="4. redo log 如何保证事务的持久性？SS"></a>4. redo log 如何保证事务的持久性？SS</h3><pre><code>redo log 主要做的事情就是记录⻚的修改，⽐如某个⻚⾯某个偏移量处 修改了⼏个字节的值以及具体被修改的内容是什么。在事务提交时，我们会将 redo log 按照刷盘策略刷到磁盘上去，这样即使 MySQL 宕机了，重启之后也能 恢复未能写⼊磁盘的数据，从⽽保证事务的持久性。
-</code></pre>
-<h3 id="5-⻚修改之后为什么不直接刷盘呢？"><a href="#5-⻚修改之后为什么不直接刷盘呢？" class="headerlink" title="5. ⻚修改之后为什么不直接刷盘呢？"></a>5. ⻚修改之后为什么不直接刷盘呢？</h3><pre><code>性能⾮常差！InnoDB ⻚的⼤⼩⼀般为 16KB，⽽⻚⼜是磁盘和内存交 互的基本单位。这就导致即使我们只修改了⻚中的⼏个字节数据，⼀次刷盘操作 也需要将 16KB ⼤⼩的⻚整个都刷新到磁盘中。⽽且，这些修改的⻚可能并不相 邻，也就是说这还是随机 IO。
-</code></pre>
-<h3 id="6-binlog-和-redolog-有什么区别？"><a href="#6-binlog-和-redolog-有什么区别？" class="headerlink" title="6. binlog 和 redolog 有什么区别？"></a>6. binlog 和 redolog 有什么区别？</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240406002036126.png" alt="image-20240406002036126"></p>
-<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="1-SQL-优化-SS-结合项目来聊"><a href="#1-SQL-优化-SS-结合项目来聊" class="headerlink" title="1. SQL 优化 SS 结合项目来聊"></a>1. SQL 优化 SS 结合项目来聊</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240406002235940.png" alt="image-20240406002235940"></p>
-<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1899907">https://cloud.tencent.com/developer/article/1899907</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247488618&idx=1&sn=e70a31865b5eadcb151f439004a4dd72&chksm=cea25ba1f9d5d2b795222ba90e0326618d649e858ec23e9c7360f90fbfc23a7786c33bff9556&token=1647609083&lang=zh_CN#rd">https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&amp;mid=2247488618&amp;idx=1&amp;sn=e70a31865b5eadcb151f439004a4dd72&amp;chksm=cea25ba1f9d5d2b795222ba90e0326618d649e858ec23e9c7360f90fbfc23a7786c33bff9556&amp;token=1647609083&amp;lang=zh_CN#rd</a></p>
-<h3 id="2-慢查询优化-结合项目来聊"><a href="#2-慢查询优化-结合项目来聊" class="headerlink" title="2. 慢查询优化 结合项目来聊"></a>2. 慢查询优化 结合项目来聊</h3><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/sPO-6ULwIfUexLY3V4acBg">https://mp.weixin.qq.com/s/sPO-6ULwIfUexLY3V4acBg</a></p>
-<h2 id="SQL-语句"><a href="#SQL-语句" class="headerlink" title="SQL 语句"></a>SQL 语句</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/sql.png"></p>
-<p>DQL：</p>
-<ul>
-<li>DISTINCT：从结果集中删除重复行。<code>SELECT DISTINCT</code></li>
-<li>WHERE：对检索到的数据进行条件过滤。</li>
-<li>ORDER BY：对结果集进行排序。</li>
-<li>GROUP BY：对结果集进行分组。</li>
-<li>HAVING：对 GROUP BY 分组后的结果进行条件过滤。</li>
-<li>LIMIT &#x2F; OFFSET：限制结果集的行数，用于分页。</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>InnoDB 为什么使用自增 id?</p>
-<ul>
-<li><p>使用自增主键，每次插入新记录，记录就会顺序添加到当前索引节点的后续位置，当一页写满，就会自动开辟一个新的页。</p>
-</li>
-<li><p>使用随机值主键，每次插入新纪录，记录会插到索引页中间某个位置，频繁移动，分页操作产生大量的碎片。</p>
-</li>
-</ul>
-<p>分库分表</p>
-<p>大表查询 SS</p>
-<p>mysql 主从复制</p>
-<p>mysql 主从复制如何保证数据的一致性？</p>
 
       
     </div>
@@ -1289,6 +1085,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/" class="post-title-link" itemprop="url">反射和注解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-15 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-15T00:00:00+08:00">2024-04-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException &#123;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">person</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="comment">//获取Class类的方式</span></span><br><span class="line">        <span class="comment">// 方式一:通过对象获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c1</span> <span class="operator">=</span> person.getClass();</span><br><span class="line">        System.out.println(c1.hashCode());</span><br><span class="line">        <span class="comment">// 方式二:forName获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c2</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;com.hyl.Student&quot;</span>);</span><br><span class="line">        System.out.println(c2.hashCode());</span><br><span class="line">        <span class="comment">// 方式三:通过类名.class获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c3</span> <span class="operator">=</span> Student.class;</span><br><span class="line">        System.out.println(c3.hashCode());</span><br><span class="line">        <span class="comment">// 方式四 :基本内置类型的包装类都有一个Type属性</span></span><br><span class="line">        Class c4= Integer.TYPE;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取构造方法实例化对象</span></span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> c1.getConstructor();</span><br><span class="line">        <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> constructor.newInstance();</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">        System.out.println(obj.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取方法并调用</span></span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> c1.getMethod(<span class="string">&quot;study&quot;</span>, String.class);<span class="comment">//方法名，参数类型的Class对象</span></span><br><span class="line">        <span class="comment">// 使用某个对象调用该方法</span></span><br><span class="line">        method.invoke(obj,<span class="string">&quot;Java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//name字段是父类Person的</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">personClass</span> <span class="operator">=</span> c1.getSuperclass();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取字段</span></span><br><span class="line">        <span class="type">Field</span> <span class="variable">field</span> <span class="operator">=</span> personClass.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        field.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 获取某个对象的字段</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> field.get(obj);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        <span class="comment">// 修改某个对象的字段</span></span><br><span class="line">        field.set(obj,<span class="string">&quot;学生obj&quot;</span>);</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    String name;</span><br><span class="line">    Person()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;学生&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">(String course)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学生&quot;</span> + <span class="built_in">this</span>.hashCode() + <span class="string">&quot;正在学习&quot;</span> + course);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    Teacher()&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;老师&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>元数据，和程序元素（package,class,method,field）有关的数据。</p>
+<h3 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h3><ul>
+<li><code>@Override</code>：重写</li>
+<li><code>@Deprecated</code>：过时</li>
+<li><code>@SuppressWarnings</code>： 抑制编译器警告，需要传入一个 value 参数</li>
+</ul>
+<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><p>定义：负责注解其他注解</p>
+<ul>
+<li><strong>@Target：描述注解使用范围</strong> class，method，field</li>
+<li><strong>@Retention：什么级别</strong>，注解在什么地方有效 runtime&gt;class&gt;source</li>
+<li>@Document：注解包含在 javadoc 中</li>
+<li>@Inherited：子类可以继承该注解</li>
+</ul>
+<h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416002140919.png" alt="image-20240416002140919"></p>
+<h2 id="反射操作注解"><a href="#反射操作注解" class="headerlink" title="反射操作注解"></a>反射操作注解</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416000049318.png" alt="image-20240416000049318"></p>
+<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h2 id="Java-内存"><a href="#Java-内存" class="headerlink" title="Java 内存"></a>Java 内存</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231522844.png" alt="image-20240415231522844"></p>
+<h2 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231552966.png" alt="image-20240415231552966"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415233828250.png" alt="image-20240415233828250"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415232226415.png" alt="image-20240415232226415"></p>
+<h2 id="类什么时候初始化"><a href="#类什么时候初始化" class="headerlink" title="类什么时候初始化"></a>类什么时候初始化</h2><p>new 对象和反射</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-Java%E9%9B%86%E5%90%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1644,101 +1535,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/" class="post-title-link" itemprop="url">反射和注解</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-04-15 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-15T00:00:00+08:00">2024-04-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException &#123;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">person</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="comment">//获取Class类的方式</span></span><br><span class="line">        <span class="comment">// 方式一:通过对象获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c1</span> <span class="operator">=</span> person.getClass();</span><br><span class="line">        System.out.println(c1.hashCode());</span><br><span class="line">        <span class="comment">// 方式二:forName获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c2</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;com.hyl.Student&quot;</span>);</span><br><span class="line">        System.out.println(c2.hashCode());</span><br><span class="line">        <span class="comment">// 方式三:通过类名.class获得</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c3</span> <span class="operator">=</span> Student.class;</span><br><span class="line">        System.out.println(c3.hashCode());</span><br><span class="line">        <span class="comment">// 方式四 :基本内置类型的包装类都有一个Type属性</span></span><br><span class="line">        Class c4= Integer.TYPE;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取构造方法实例化对象</span></span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> c1.getConstructor();</span><br><span class="line">        <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> constructor.newInstance();</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">        System.out.println(obj.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取方法并调用</span></span><br><span class="line">        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> c1.getMethod(<span class="string">&quot;study&quot;</span>, String.class);<span class="comment">//方法名，参数类型的Class对象</span></span><br><span class="line">        <span class="comment">// 使用某个对象调用该方法</span></span><br><span class="line">        method.invoke(obj,<span class="string">&quot;Java&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//name字段是父类Person的</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">personClass</span> <span class="operator">=</span> c1.getSuperclass();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取字段</span></span><br><span class="line">        <span class="type">Field</span> <span class="variable">field</span> <span class="operator">=</span> personClass.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        field.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 获取某个对象的字段</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> field.get(obj);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        <span class="comment">// 修改某个对象的字段</span></span><br><span class="line">        field.set(obj,<span class="string">&quot;学生obj&quot;</span>);</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    String name;</span><br><span class="line">    Person()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;学生&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">(String course)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学生&quot;</span> + <span class="built_in">this</span>.hashCode() + <span class="string">&quot;正在学习&quot;</span> + course);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span> <span class="keyword">extends</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    Teacher()&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = <span class="string">&quot;老师&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>元数据，和程序元素（package,class,method,field）有关的数据。</p>
-<h3 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h3><ul>
-<li><code>@Override</code>：重写</li>
-<li><code>@Deprecated</code>：过时</li>
-<li><code>@SuppressWarnings</code>： 抑制编译器警告，需要传入一个 value 参数</li>
-</ul>
-<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><p>定义：负责注解其他注解</p>
-<ul>
-<li><strong>@Target：描述注解使用范围</strong> class，method，field</li>
-<li><strong>@Retention：什么级别</strong>，注解在什么地方有效 runtime&gt;class&gt;source</li>
-<li>@Document：注解包含在 javadoc 中</li>
-<li>@Inherited：子类可以继承该注解</li>
-</ul>
-<h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416002140919.png" alt="image-20240416002140919"></p>
-<h2 id="反射操作注解"><a href="#反射操作注解" class="headerlink" title="反射操作注解"></a>反射操作注解</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240416000049318.png" alt="image-20240416000049318"></p>
-<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h2 id="Java-内存"><a href="#Java-内存" class="headerlink" title="Java 内存"></a>Java 内存</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231522844.png" alt="image-20240415231522844"></p>
-<h2 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415231552966.png" alt="image-20240415231552966"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415233828250.png" alt="image-20240415233828250"></p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240415232226415.png" alt="image-20240415232226415"></p>
-<h2 id="类什么时候初始化"><a href="#类什么时候初始化" class="headerlink" title="类什么时候初始化"></a>类什么时候初始化</h2><p>new 对象和反射</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1808,12 +1604,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">

@@ -797,6 +797,298 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/05/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/05/2024-04-05-MySQL%E9%9D%A2%E8%AF%95/" class="post-title-link" itemprop="url">MySQL面试</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-05 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-05T00:00:00+08:00">2024-04-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-09 00:33:05" itemprop="dateModified" datetime="2024-09-09T00:33:05+08:00">2024-09-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="MySQL-基础架构"><a href="#MySQL-基础架构" class="headerlink" title="MySQL 基础架构"></a>MySQL 基础架构</h2><h3 id="一个-SQL-语句在-MySQL-的执行流程？MySQL-的架构？S"><a href="#一个-SQL-语句在-MySQL-的执行流程？MySQL-的架构？S" class="headerlink" title="一个 SQL 语句在 MySQL 的执行流程？MySQL 的架构？S"></a>一个 SQL 语句在 MySQL 的执行流程？MySQL 的架构？S</h3><ul>
+<li>Server 层</li>
+<li>存储引擎</li>
+</ul>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405142205656.png" alt="image-20240405142205656"></p>
+<h2 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h2><ol>
+<li><p>MySQL 提供了哪些存储引擎?</p>
+<p>可以通过 <code>show engines; </code>命令查看 MySQL 提供的所有存储引擎。</p>
+<ul>
+<li>InnoDB</li>
+<li>MyISAM</li>
+<li>Memory</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405142952891.png" alt="image-20240405142952891"></p>
+<ol start="2">
+<li><p>MySQL 存储引擎架构了解吗？</p>
+<p>MySQL 存储引擎采⽤的是<strong>插件式架构</strong>，⽀持多种存储引擎，我们甚⾄ 可以为不同的数据库表设置不同的存储引擎以适应不同场景的需要。存储引擎是<strong>基于表的</strong>，⽽不是数据库。</p>
+</li>
+</ol>
+<h3 id="3-MyISAM-和-InnoDB-的区别-SS"><a href="#3-MyISAM-和-InnoDB-的区别-SS" class="headerlink" title="3. MyISAM 和 InnoDB 的区别? SS"></a>3. MyISAM 和 InnoDB 的区别? SS</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405144216669.png" alt="image-20240405144216669"></p>
+<h2 id="MySQL-事务"><a href="#MySQL-事务" class="headerlink" title="MySQL 事务"></a>MySQL 事务</h2><h3 id="1-什么是事务？什么是数据库事务？SS"><a href="#1-什么是事务？什么是数据库事务？SS" class="headerlink" title="1. 什么是事务？什么是数据库事务？SS"></a>1. 什么是事务？什么是数据库事务？SS</h3><ul>
+<li><p>事务是一组 SQL 操作，被视为一个单独的工作单元，要么全部成功提交，要么全部失败回滚。</p>
+</li>
+<li><p>数据库事务可以保证多个对数据库的操作（也就是 SQL 语句）构成⼀ 个逻辑上的整体。构成这个逻辑上的整体的这些数据库操作遵循：要么全部执⾏ 成功,要么全部不执⾏ 。关系型数据库（例如： MySQL 、 SQL Server 、 Orac le 等）事务都有 ACID 特性。</p>
+</li>
+</ul>
+<h3 id="2-ACID-特性？SS"><a href="#2-ACID-特性？SS" class="headerlink" title="2. ACID 特性？SS"></a>2. ACID 特性？SS</h3><ul>
+<li>保证了事务的持久性、原⼦性、隔离性之后，⼀致性才能得到保障。也就是说 A、I、D 是⼿段，C 是⽬的</li>
+</ul>
+<p> <img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405145958556.png" alt="image-20240405145958556"></p>
+<h3 id="3-并发事务带来了哪些问题-SS"><a href="#3-并发事务带来了哪些问题-SS" class="headerlink" title="3. 并发事务带来了哪些问题? SS"></a>3. 并发事务带来了哪些问题? SS</h3><ul>
+<li>脏读（Dirty read）：读取了未提交的数据</li>
+<li>丢失修改（Lost to modify）：一个事务的修改覆盖了另一个事务</li>
+<li>不可重复读 （Unrepeatable read）：重复读了同一数据前后不一致</li>
+<li>幻读（Phantom read）：读某个表多了一行数据</li>
+</ul>
+<h3 id="4-SQL-标准定义了哪些事务隔离级别-SS"><a href="#4-SQL-标准定义了哪些事务隔离级别-SS" class="headerlink" title="4. SQL 标准定义了哪些事务隔离级别?SS"></a>4. SQL 标准定义了哪些事务隔离级别?SS</h3><ul>
+<li>READ-UNCOMMITTED(读取未提交)：同时读，同时写，同时读写</li>
+<li>READ-COMMITTED(读取已提交)：同时写，同时读写</li>
+<li>REPEATABLE-READ(可重复读)：同时读写</li>
+<li>SERIALIZABLE(可串⾏化)。</li>
+</ul>
+<p> <img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405151026709.png" alt="image-20240405151026709"></p>
+<h3 id="5-不可重复读和幻读区别-SS"><a href="#5-不可重复读和幻读区别-SS" class="headerlink" title="5. 不可重复读和幻读区别 SS"></a>5. 不可重复读和幻读区别 SS</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405150631528.png" alt="image-20240405150631528"></p>
+<h3 id="6-什么是-MVCC？有什么⽤？原理了解么？SS"><a href="#6-什么是-MVCC？有什么⽤？原理了解么？SS" class="headerlink" title="6. 什么是 MVCC？有什么⽤？原理了解么？SS"></a>6. 什么是 MVCC？有什么⽤？原理了解么？SS</h3><p>RC（Read Committed，读提交）和 RR（Repeatable Read，可重复读）这两个隔离级别的实现都离不开 MVCC。</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405144625344.png" alt="image-20240405144625344"></p>
+<h2 id="MySQL-锁"><a href="#MySQL-锁" class="headerlink" title="MySQL 锁"></a>MySQL 锁</h2><h3 id="锁的分类-SS"><a href="#锁的分类-SS" class="headerlink" title="锁的分类 SS"></a>锁的分类 SS</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405155716071.png" alt="image-20240405155716071"></p>
+<ol>
+<li><p>表级锁和⾏级锁了解吗？有什么区别？</p>
+<p>表级锁(table-level locking)⼀锁就锁整张表。⾏级锁的粒度更⼩，仅对相关的记录上锁即可（对⼀⾏或者多⾏记录加锁）</p>
+</li>
+<li><p>⾏级锁的使⽤有什么注意事项？</p>
+<p>InnoDB 的⾏锁是针对索引字段加的锁，表级锁是针对⾮索引字段加的 锁。当我们执⾏ UPDATE、 DELETE 语句时，如果 WHERE 条 件中字段没有命 中索引或者索引失效的话，就会导致扫描全表对表中的所有记录进⾏加锁。</p>
+</li>
+<li><p>意向锁有什么作⽤？</p>
+<p>快速判断是否可以对某个表使⽤表锁。意向锁是表级锁，共有两种。并且，意向锁之间是互相兼容的。</p>
+</li>
+</ol>
+<h2 id="MySQL-索引"><a href="#MySQL-索引" class="headerlink" title="MySQL 索引"></a>MySQL 索引</h2><h3 id="1-何为索引？有什么作⽤？"><a href="#1-何为索引？有什么作⽤？" class="headerlink" title="1. 何为索引？有什么作⽤？"></a>1. 何为索引？有什么作⽤？</h3><ul>
+<li>索引：书的目录，能够快速地定位到数据库中存储的数据记录</li>
+<li>作用：<ol>
+<li>加快数据检索速度和效率</li>
+<li>提高唯一性约束</li>
+<li>加速排序和分组操作</li>
+<li>优化连接操作</li>
+</ol>
+</li>
+<li>缺点：索引并不都是好的，创建索引和维护索引也需要耗费资源和时间</li>
+</ul>
+<ol start="2">
+<li><p>索引的底层数据结构</p>
+<p>在 MySQL 中，MyISAM 引擎和 InnoDB 引擎都是使⽤ <strong>B+Tree</strong> 作为索引结构，但是，两者的实现⽅式不太⼀样。</p>
+</li>
+</ol>
+<h3 id="3-MySQL-的索引结构为什么使⽤-B-树？"><a href="#3-MySQL-的索引结构为什么使⽤-B-树？" class="headerlink" title="3. MySQL 的索引结构为什么使⽤ B+树？"></a>3. MySQL 的索引结构为什么使⽤ B+树？</h3><ul>
+<li><p>结合⼆叉查找树、平衡⼆叉树、红⿊树、B 树存在的缺陷来回答这个问题。</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405234602286.png" alt="image-20240405234602286"></p>
+<p>参考连接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/653822688">https://zhuanlan.zhihu.com/p/653822688</a></p>
+</li>
+</ul>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405165103739.png" alt="image-20240405165103739"></p>
+<h3 id="4-索引分类"><a href="#4-索引分类" class="headerlink" title="4. 索引分类"></a>4. 索引分类</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515141350362.png" alt="image-20240515141350362"></p>
+<h3 id="主键索引和二级索引"><a href="#主键索引和二级索引" class="headerlink" title="主键索引和二级索引"></a>主键索引和二级索引</h3><ul>
+<li><p>数据表的主键列使⽤的就是主键索引。</p>
+</li>
+<li><p>⼆级索引⼜称为辅助索引，是因 为⼆级索引的叶⼦节点存储的数据是主键列。也就是说，通过⼆级索引，可以定位主键的位置。唯⼀索引，普通索引，前缀索引等索引属于⼆级索引。</p>
+</li>
+</ul>
+<h3 id="聚集索引和非聚集索引"><a href="#聚集索引和非聚集索引" class="headerlink" title="聚集索引和非聚集索引"></a>聚集索引和非聚集索引</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515143403717.png" alt="image-20240515143403717"></p>
+<ul>
+<li><p>聚集索引：索引结构和数据放一起。<strong>主键索引</strong>属于聚集索引。一个表只有一个聚集索引（数据存一份），一般是主键列。</p>
+</li>
+<li><p>非聚集索引：结构和数据分开放。一般存这个列和主键。</p>
+</li>
+<li><p>回表：查询某个非聚集索引得到主键，通过主键的聚集索引返回完整的记录。</p>
+<p>主键索引不需要回表。</p>
+</li>
+<li><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515142023085.png" alt="image-20240515142023085"></p>
+<p>聚集索引：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515142247280.png" alt="image-20240515142247280"></p>
+<p>非聚集索引：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515142329966.png" alt="image-20240515142329966"></p>
+</li>
+</ul>
+<h3 id="回表："><a href="#回表：" class="headerlink" title="回表："></a>回表：</h3><pre><code>使用索引定位到符合条件的行，再次访问表获取完整信息。
+
+情况：
+
+- 查询字段数：没有覆盖索引
+- 查询条件：部分条件没有索引
+
+### MyISAM的索引
+</code></pre>
+<ul>
+<li>没有聚集索引，只有稀疏索引。索引叶子节点存的是索引列和地址。</li>
+</ul>
+<p>稀疏索引和二级索引</p>
+<h3 id="5-SQL-优化"><a href="#5-SQL-优化" class="headerlink" title="5. SQL 优化"></a>5. SQL 优化</h3><p>思路：</p>
+<pre><code>  1. 慢日志定位慢查询
+
+  2. explain查看执行计划，分析sql
+
+  3. 修改sql，让sql尽量走索引
+</code></pre>
+<h4 id="慢日志"><a href="#慢日志" class="headerlink" title="慢日志"></a>慢日志</h4><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515144919521.png" alt="image-20240515144919521"></p>
+<h4 id="explain-查看执行计划"><a href="#explain-查看执行计划" class="headerlink" title="explain 查看执行计划"></a>explain 查看执行计划</h4><ul>
+<li>优化器对 sql 语句优化，生成执行计划。</li>
+<li>作用：查看走了哪个索引、查询的具体方式、多表连接顺序</li>
+</ul>
+<p>比较重要：key、type、extra</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515145755627.png" alt="image-20240515145755627"></p>
+<h4 id="select-type"><a href="#select-type" class="headerlink" title="select_type"></a>select_type</h4><p>物化表：把查询结果放在内存中</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515150712755.png" alt="image-20240515150712755"></p>
+<h4 id="type-访问类型"><a href="#type-访问类型" class="headerlink" title="type 访问类型"></a>type 访问类型</h4><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515150944849.png" alt="image-20240515150944849"></p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515152125849.png" alt="image-20240515152125849"></p>
+<h4 id="extra"><a href="#extra" class="headerlink" title="extra"></a>extra</h4><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240515153030322.png" alt="image-20240515153030322"></p>
+<h3 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h3><p>覆盖索引即需要查询的字段正好是索引的字段，那么直接根据该索引， 就可以查到数据了，⽽⽆需回表查询。</p>
+<h3 id="最左匹配原则"><a href="#最左匹配原则" class="headerlink" title="最左匹配原则"></a>最左匹配原则</h3><p>在 MySQL 建⽴联合索引时会遵守最左前缀匹配原则，即最左优先，在 检索数据时从联合索引的最左边开始匹配。</p>
+<h3 id="6-索引失效的情况"><a href="#6-索引失效的情况" class="headerlink" title="6.索引失效的情况"></a>6.索引失效的情况</h3><ol>
+<li><p>模糊匹配%，like 查询以“%”开头；</p>
+</li>
+<li><p>or 语句前后没有同时使用索引；</p>
+</li>
+<li><p>where 语句对索引列进行了运算</p>
+</li>
+<li><p>联合索引中不是使用第一列索引；</p>
+<ul>
+<li>（联合索引(column1, column2)，查询条件有 column2，没有 column1，不会走索引）</li>
+</ul>
+</li>
+<li><p>在索引列上使用“is null”或“is not null”操作；</p>
+</li>
+<li><p>在索引字段上使用“not”，“！&#x3D;”等。</p>
+</li>
+</ol>
+<h3 id="7-建立索引的使用场景"><a href="#7-建立索引的使用场景" class="headerlink" title="7.建立索引的使用场景"></a>7.建立索引的使用场景</h3><p>在<strong>最频繁使用</strong>的、用以缩小查询范围的字段，<strong>需要排列</strong>的字段上建立索引。<br>不宜：</p>
+<ol>
+<li>查询中很少涉及或者重复值比较多的字段；</li>
+<li>频繁更新的字段。</li>
+<li>一些特殊的数据类型，比如文本字段（text）等。</li>
+</ol>
+<h3 id="7-创建索引的注意事项有哪些"><a href="#7-创建索引的注意事项有哪些" class="headerlink" title="7. 创建索引的注意事项有哪些"></a>7. 创建索引的注意事项有哪些</h3><ul>
+<li>尽可能建⽴联合索引⽽不是单列索引</li>
+<li><strong>避免在大数据量表上创建过多索引</strong>，会影响插入、删除、更新的性能</li>
+<li><strong>避免在频繁更新的字段上创建索引</strong></li>
+</ul>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240406001310190.png" alt="image-20240406001310190"></p>
+<h2 id="数据库表设计"><a href="#数据库表设计" class="headerlink" title="数据库表设计"></a>数据库表设计</h2><p>符合第三范式：</p>
+<ul>
+<li>多对多，三张表，关系表加外键</li>
+<li>一对多，两张表，多的表加外键</li>
+</ul>
+<h2 id="MySQL-日志"><a href="#MySQL-日志" class="headerlink" title="MySQL 日志"></a>MySQL 日志</h2><ol>
+<li>MySQL 中常⻅的⽇志有哪些？</li>
+</ol>
+<p>错误⽇志（error log）、⼆进制⽇志（binary log）、⼀般查询⽇志 （general query log）、慢查询⽇志（slow query log） 、事务⽇志(redo log 和 undo log) ……。</p>
+<p>mysql 三大日志——binlog、redolog、undolog</p>
+<p>答：</p>
+<p>redolog:是 InnoDB 存储引擎层的日志，物理日志。又称重做日志文件，用于记录事务操作的变化，记录的是数据修改后的值，不管事务是否提交都会记录下来。<br>Binlog：是 Mysql Server 层面的，又称为归档日志，属于逻辑日志，以二进制的形式记录的，用于记录数据库执行的写入性操作（不包括查询）信息。</p>
+<p>Undolog：主要记录了数据的逻辑变化，保存了事务发生之前的数据的一个版本，这样在发生错误时，就能回滚到事务之前的数据状态。</p>
+<ol start="2">
+<li><p>慢查询⽇志有什么⽤？</p>
+<p>慢查询⽇志记录了执⾏时间超过 long_query_time （默认是 10s） 的所有查询，在我们解决 SQL 慢查询（SQL 执⾏时间过⻓）问题的时候经常会⽤ 到。</p>
+</li>
+</ol>
+<h3 id="3-binlog-主要记录了什么？有什么⽤？SS"><a href="#3-binlog-主要记录了什么？有什么⽤？SS" class="headerlink" title="3. binlog 主要记录了什么？有什么⽤？SS"></a>3. binlog 主要记录了什么？有什么⽤？SS</h3><pre><code>MySQL binlog(binary log 即⼆进制⽇志⽂件) 主要记录了 MySQL 数据 库中数据的所有变化(数据库执⾏的所有 DDL 和 DML 语句)。
+</code></pre>
+<h3 id="4-redo-log-如何保证事务的持久性？SS"><a href="#4-redo-log-如何保证事务的持久性？SS" class="headerlink" title="4. redo log 如何保证事务的持久性？SS"></a>4. redo log 如何保证事务的持久性？SS</h3><pre><code>redo log 主要做的事情就是记录⻚的修改，⽐如某个⻚⾯某个偏移量处 修改了⼏个字节的值以及具体被修改的内容是什么。在事务提交时，我们会将 redo log 按照刷盘策略刷到磁盘上去，这样即使 MySQL 宕机了，重启之后也能 恢复未能写⼊磁盘的数据，从⽽保证事务的持久性。
+</code></pre>
+<h3 id="5-⻚修改之后为什么不直接刷盘呢？"><a href="#5-⻚修改之后为什么不直接刷盘呢？" class="headerlink" title="5. ⻚修改之后为什么不直接刷盘呢？"></a>5. ⻚修改之后为什么不直接刷盘呢？</h3><pre><code>性能⾮常差！InnoDB ⻚的⼤⼩⼀般为 16KB，⽽⻚⼜是磁盘和内存交 互的基本单位。这就导致即使我们只修改了⻚中的⼏个字节数据，⼀次刷盘操作 也需要将 16KB ⼤⼩的⻚整个都刷新到磁盘中。⽽且，这些修改的⻚可能并不相 邻，也就是说这还是随机 IO。
+</code></pre>
+<h3 id="6-binlog-和-redolog-有什么区别？"><a href="#6-binlog-和-redolog-有什么区别？" class="headerlink" title="6. binlog 和 redolog 有什么区别？"></a>6. binlog 和 redolog 有什么区别？</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240406002036126.png" alt="image-20240406002036126"></p>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="1-SQL-优化-SS-结合项目来聊"><a href="#1-SQL-优化-SS-结合项目来聊" class="headerlink" title="1. SQL 优化 SS 结合项目来聊"></a>1. SQL 优化 SS 结合项目来聊</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240406002235940.png" alt="image-20240406002235940"></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1899907">https://cloud.tencent.com/developer/article/1899907</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247488618&idx=1&sn=e70a31865b5eadcb151f439004a4dd72&chksm=cea25ba1f9d5d2b795222ba90e0326618d649e858ec23e9c7360f90fbfc23a7786c33bff9556&token=1647609083&lang=zh_CN#rd">https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&amp;mid=2247488618&amp;idx=1&amp;sn=e70a31865b5eadcb151f439004a4dd72&amp;chksm=cea25ba1f9d5d2b795222ba90e0326618d649e858ec23e9c7360f90fbfc23a7786c33bff9556&amp;token=1647609083&amp;lang=zh_CN#rd</a></p>
+<h3 id="2-慢查询优化-结合项目来聊"><a href="#2-慢查询优化-结合项目来聊" class="headerlink" title="2. 慢查询优化 结合项目来聊"></a>2. 慢查询优化 结合项目来聊</h3><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/sPO-6ULwIfUexLY3V4acBg">https://mp.weixin.qq.com/s/sPO-6ULwIfUexLY3V4acBg</a></p>
+<h2 id="SQL-语句"><a href="#SQL-语句" class="headerlink" title="SQL 语句"></a>SQL 语句</h2><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/sql.png"></p>
+<p>DQL：</p>
+<ul>
+<li>DISTINCT：从结果集中删除重复行。<code>SELECT DISTINCT</code></li>
+<li>WHERE：对检索到的数据进行条件过滤。</li>
+<li>ORDER BY：对结果集进行排序。</li>
+<li>GROUP BY：对结果集进行分组。</li>
+<li>HAVING：对 GROUP BY 分组后的结果进行条件过滤。</li>
+<li>LIMIT &#x2F; OFFSET：限制结果集的行数，用于分页。</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>InnoDB 为什么使用自增 id?</p>
+<ul>
+<li><p>使用自增主键，每次插入新记录，记录就会顺序添加到当前索引节点的后续位置，当一页写满，就会自动开辟一个新的页。</p>
+</li>
+<li><p>使用随机值主键，每次插入新纪录，记录会插到索引页中间某个位置，频繁移动，分页操作产生大量的碎片。</p>
+</li>
+</ul>
+<p>分库分表</p>
+<p>大表查询 SS</p>
+<p>mysql 主从复制</p>
+<p>mysql 主从复制如何保证数据的一致性？</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/05/2024-04-05-%E5%B9%B3%E8%A1%A1%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -856,118 +1148,6 @@
 <p>右旋：新根的右子树成为旧根的左子树</p>
 <p>左旋：新根的左子树成为旧根的右子树</p>
 <p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240405192453728.png" alt="image-20240405192453728"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">贪吃蛇对战系统项目总结</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-03-25 00:00:00 / Modified: 19:24:49" itemprop="dateCreated datePublished" datetime="2024-03-25T00:00:00+08:00">2024-03-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">SpringBoot项目</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="实现用户注册登录功能"><a href="#实现用户注册登录功能" class="headerlink" title="实现用户注册登录功能"></a>实现用户注册登录功能</h2><ul>
-<li><p>注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据</p>
-</li>
-<li><p>登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。</p>
-</li>
-<li><p>获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。</p>
-</li>
-<li><p>使用 Spring Security 配置JWT认证机制，使用JWT来进行用户认证，后端实现JWT的token的生成与验证，根据token获取用户信息，最后实现登录和开发的业务。</p>
-</li>
-</ul>
-<h2 id="游戏动画的实现："><a href="#游戏动画的实现：" class="headerlink" title="游戏动画的实现："></a>游戏动画的实现：</h2><p>游戏动画在前端实现，通过js的requestAnimationFrame函数在浏览器实现动画，实现一个游戏对象递归调用该函数，在该函数调用前实现一些游戏的逻辑，游戏的逻辑涉及随机地图的生成，蛇的移动，地图和蛇的位置的数据存储在数组中，之后使用绘画标签canvas将地图和蛇渲染在页面上。</p>
-<h2 id="游戏同步："><a href="#游戏同步：" class="headerlink" title="游戏同步："></a>游戏同步：</h2><p>使用websocket实现前后端实时相互通信，使用WebSocketServer这个类来维护websocket连接。前端用户通过websocket向后端传输操作数据。后端要将游戏开始产生的地图数据以及游戏双方操作后两条蛇的坐标数据通过webserver实时通信到两个客户端，然后客户端将数据渲染到浏览器。</p>
-<h2 id="游戏逻辑的实现："><a href="#游戏逻辑的实现：" class="headerlink" title="游戏逻辑的实现："></a>游戏逻辑的实现：</h2><ul>
-<li>随机地图的生成：</li>
-</ul>
-<p>使用一个二维数组来存储地图信息，把空地设置为0，把障碍设置为1，地图的四周设置为1，每次生成障碍时生成两个随机数表示行号和列号，把它设置为1,要保证地图是公平的，使用障碍坐标中心对称后的坐标也设置为1，要保证两条蛇有交互性，则保证地图是连通的，可以使用bfs算法来判断地图是否连通。</p>
-<ul>
-<li>蛇移动的逻辑：</li>
-</ul>
-<p>使用一个动态数组来存储蛇身的坐标，使用dx，dy两个数组来表示蛇上下左右移动的偏移量，由于蛇每次移动所有坐标都要变换的逻辑过于复杂，我们可以将它理解成头和尾在移动，每次蛇移动时，在动态数组前面插入一个蛇头的新坐标即可，然后判断当前回合蛇是否增长，如果不增长，则将蛇尾坐标在数组中删除，如果增长，则保持不变。从而实现了蛇移动的逻辑。</p>
-<ul>
-<li>游戏流程：</li>
-</ul>
-<p>为了保证游戏不会阻塞其他的玩家的匹配，游戏等业务，游戏整个逻辑需要使用多线程来实现。</p>
-<p>在两名玩家匹配成功后，会启动游戏线程，初始化会生成地图数据和两条蛇的初始坐标。</p>
-<p>使用一个status变量来表示游戏的状态，一个loser变量来记录胜负。</p>
-<p>游戏循环n个回合，n是游戏最大的回合数，每个回合，先判断游戏是否结束，如果结束，将游戏结果返回给前端，否则等待两个玩家的输入，5s则视为超时，判负处理，游戏状态改为结束；若两名玩家都有输入，判断操作是否合理，操作不合理判负，游戏状态改成结束，操作合理则会存储蛇移动的数据并进入下一回合。</p>
-<h2 id="匹配系统的实现："><a href="#匹配系统的实现：" class="headerlink" title="匹配系统的实现："></a>匹配系统的实现：</h2><p>匹配的逻辑额外使用另一个微服务来实现。</p>
-<p>前端通过websocket向后端传输匹配者的信息，后端再把信息传输给匹配系统的微服务，匹配系统把匹配成功后的消息在传输给后端，后端再调用游戏的逻辑开始一局游戏，后端和匹配系统之间的数据传输通过RestTemplate来实现。</p>
-<ul>
-<li><p>匹配流程：</p>
-<p>为了保证匹配不会阻塞其他玩家的匹配，匹配功能需要使用多线程来实现。</p>
-<p>使用一个列表来存储所有玩家，称做匹配池。每次后端发来一个请求时，如果请求匹配，把玩家的数据加入到匹配池中；如果请求取消匹配时，在匹配池删去该玩家。</p>
-<p>每个玩家会有一个分数变量，我们根据分数差距来匹配，随着匹配时间的增长，每增长一秒，允许玩家分数差距增加10。</p>
-<p>写一个死循环，每次线程sleep 1s，然后扫描匹配池所有玩家，将玩家匹配时间的变量加1，然后循环每一个玩家，去和其他玩家判断是否符合匹配条件，符合条件，将两个玩家的数据返回给后端，退出循环，否则进入下一次循环。</p>
-</li>
-</ul>
-<h2 id="我的Bot的实现："><a href="#我的Bot的实现：" class="headerlink" title="我的Bot的实现："></a>我的Bot的实现：</h2><p>实现Bot数据的CRUD接口，Bot数据主要有id，标题，代码等。</p>
-<h2 id="执行Bot代码："><a href="#执行Bot代码：" class="headerlink" title="执行Bot代码："></a>执行Bot代码：</h2><p>执行Bot代码产生蛇的下一步操作通过另一个微服务来实现。前端匹配时发了一个bot_id表示通过bot操作，后端在执行游戏流程时，不会从前端等待用户输入，而是向Bot微服务发送一个请求。</p>
-<ul>
-<li>Bot执行代码的流程：</li>
-</ul>
-<p>维护一个存储 <code>Bot</code> 对象的队列 <code>bots</code>，后端发来请求时，往队列加入一个bot对象，使用一个consumer类来消费bot对象，获取bot的代码，使用反射来动态编译代码，最后利用反射获取编译后的Bot实例，调用它的nextMove获取蛇下一步移动方向，最后把数据返回给后端。</p>
-<h2 id="排行榜和录像功能："><a href="#排行榜和录像功能：" class="headerlink" title="排行榜和录像功能："></a>排行榜和录像功能：</h2><p>排行榜：根据用户的分数来进行排行，后端实现列表查询接口，包含分页查询的逻辑；</p>
-<p>录像功能：每一次游戏会将地图数据，两条蛇的移动数据存成字符串到数据库，从数据库获取数据传到前端并模拟一遍即可。</p>
 
       
     </div>
@@ -1226,6 +1406,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/03/25/2024-03-25-%E8%B4%AA%E5%90%83%E8%9B%87%E5%AF%B9%E6%88%98%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">贪吃蛇对战系统项目总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-03-25 00:00:00 / Modified: 19:24:49" itemprop="dateCreated datePublished" datetime="2024-03-25T00:00:00+08:00">2024-03-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">SpringBoot项目</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="实现用户注册登录功能"><a href="#实现用户注册登录功能" class="headerlink" title="实现用户注册登录功能"></a>实现用户注册登录功能</h2><ul>
+<li><p>注册：判断数据非空和是否合理，初始化，调用接口向数据库添加数据</p>
+</li>
+<li><p>登录：使用Spring Security的方法 将账号，密码加密成JwtToken，如果登录成功向前端返回JwtToken,登录失败Spring Security会自动处理。</p>
+</li>
+<li><p>获取个人信息：用户发送请求时，还会发送JwtToken，使用Spring Sercurity的函数解析token获取用户个人信息。</p>
+</li>
+<li><p>使用 Spring Security 配置JWT认证机制，使用JWT来进行用户认证，后端实现JWT的token的生成与验证，根据token获取用户信息，最后实现登录和开发的业务。</p>
+</li>
+</ul>
+<h2 id="游戏动画的实现："><a href="#游戏动画的实现：" class="headerlink" title="游戏动画的实现："></a>游戏动画的实现：</h2><p>游戏动画在前端实现，通过js的requestAnimationFrame函数在浏览器实现动画，实现一个游戏对象递归调用该函数，在该函数调用前实现一些游戏的逻辑，游戏的逻辑涉及随机地图的生成，蛇的移动，地图和蛇的位置的数据存储在数组中，之后使用绘画标签canvas将地图和蛇渲染在页面上。</p>
+<h2 id="游戏同步："><a href="#游戏同步：" class="headerlink" title="游戏同步："></a>游戏同步：</h2><p>使用websocket实现前后端实时相互通信，使用WebSocketServer这个类来维护websocket连接。前端用户通过websocket向后端传输操作数据。后端要将游戏开始产生的地图数据以及游戏双方操作后两条蛇的坐标数据通过webserver实时通信到两个客户端，然后客户端将数据渲染到浏览器。</p>
+<h2 id="游戏逻辑的实现："><a href="#游戏逻辑的实现：" class="headerlink" title="游戏逻辑的实现："></a>游戏逻辑的实现：</h2><ul>
+<li>随机地图的生成：</li>
+</ul>
+<p>使用一个二维数组来存储地图信息，把空地设置为0，把障碍设置为1，地图的四周设置为1，每次生成障碍时生成两个随机数表示行号和列号，把它设置为1,要保证地图是公平的，使用障碍坐标中心对称后的坐标也设置为1，要保证两条蛇有交互性，则保证地图是连通的，可以使用bfs算法来判断地图是否连通。</p>
+<ul>
+<li>蛇移动的逻辑：</li>
+</ul>
+<p>使用一个动态数组来存储蛇身的坐标，使用dx，dy两个数组来表示蛇上下左右移动的偏移量，由于蛇每次移动所有坐标都要变换的逻辑过于复杂，我们可以将它理解成头和尾在移动，每次蛇移动时，在动态数组前面插入一个蛇头的新坐标即可，然后判断当前回合蛇是否增长，如果不增长，则将蛇尾坐标在数组中删除，如果增长，则保持不变。从而实现了蛇移动的逻辑。</p>
+<ul>
+<li>游戏流程：</li>
+</ul>
+<p>为了保证游戏不会阻塞其他的玩家的匹配，游戏等业务，游戏整个逻辑需要使用多线程来实现。</p>
+<p>在两名玩家匹配成功后，会启动游戏线程，初始化会生成地图数据和两条蛇的初始坐标。</p>
+<p>使用一个status变量来表示游戏的状态，一个loser变量来记录胜负。</p>
+<p>游戏循环n个回合，n是游戏最大的回合数，每个回合，先判断游戏是否结束，如果结束，将游戏结果返回给前端，否则等待两个玩家的输入，5s则视为超时，判负处理，游戏状态改为结束；若两名玩家都有输入，判断操作是否合理，操作不合理判负，游戏状态改成结束，操作合理则会存储蛇移动的数据并进入下一回合。</p>
+<h2 id="匹配系统的实现："><a href="#匹配系统的实现：" class="headerlink" title="匹配系统的实现："></a>匹配系统的实现：</h2><p>匹配的逻辑额外使用另一个微服务来实现。</p>
+<p>前端通过websocket向后端传输匹配者的信息，后端再把信息传输给匹配系统的微服务，匹配系统把匹配成功后的消息在传输给后端，后端再调用游戏的逻辑开始一局游戏，后端和匹配系统之间的数据传输通过RestTemplate来实现。</p>
+<ul>
+<li><p>匹配流程：</p>
+<p>为了保证匹配不会阻塞其他玩家的匹配，匹配功能需要使用多线程来实现。</p>
+<p>使用一个列表来存储所有玩家，称做匹配池。每次后端发来一个请求时，如果请求匹配，把玩家的数据加入到匹配池中；如果请求取消匹配时，在匹配池删去该玩家。</p>
+<p>每个玩家会有一个分数变量，我们根据分数差距来匹配，随着匹配时间的增长，每增长一秒，允许玩家分数差距增加10。</p>
+<p>写一个死循环，每次线程sleep 1s，然后扫描匹配池所有玩家，将玩家匹配时间的变量加1，然后循环每一个玩家，去和其他玩家判断是否符合匹配条件，符合条件，将两个玩家的数据返回给后端，退出循环，否则进入下一次循环。</p>
+</li>
+</ul>
+<h2 id="我的Bot的实现："><a href="#我的Bot的实现：" class="headerlink" title="我的Bot的实现："></a>我的Bot的实现：</h2><p>实现Bot数据的CRUD接口，Bot数据主要有id，标题，代码等。</p>
+<h2 id="执行Bot代码："><a href="#执行Bot代码：" class="headerlink" title="执行Bot代码："></a>执行Bot代码：</h2><p>执行Bot代码产生蛇的下一步操作通过另一个微服务来实现。前端匹配时发了一个bot_id表示通过bot操作，后端在执行游戏流程时，不会从前端等待用户输入，而是向Bot微服务发送一个请求。</p>
+<ul>
+<li>Bot执行代码的流程：</li>
+</ul>
+<p>维护一个存储 <code>Bot</code> 对象的队列 <code>bots</code>，后端发来请求时，往队列加入一个bot对象，使用一个consumer类来消费bot对象，获取bot的代码，使用反射来动态编译代码，最后利用反射获取编译后的Bot实例，调用它的nextMove获取蛇下一步移动方向，最后把数据返回给后端。</p>
+<h2 id="排行榜和录像功能："><a href="#排行榜和录像功能：" class="headerlink" title="排行榜和录像功能："></a>排行榜和录像功能：</h2><p>排行榜：根据用户的分数来进行排行，后端实现列表查询接口，包含分页查询的逻辑；</p>
+<p>录像功能：每一次游戏会将地图数据，两条蛇的移动数据存成字符串到数据库，从数据库获取数据传到前端并模拟一遍即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/10/11/2023-03-21-javadoc%E6%B3%A8%E9%87%8A%E6%A0%BC%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1396,6 +1688,125 @@
 <li>VO（View Object）：显示层对象，通常是 Web 向模板渲染引擎层传输的对象。</li>
 </ul>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/" class="post-title-link" itemprop="url">SpringBoot中常见的注解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-21 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-21T00:00:00+08:00">2023-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-07 20:31:45" itemprop="dateModified" datetime="2024-09-07T20:31:45+08:00">2024-09-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="类前面加注解"><a href="#类前面加注解" class="headerlink" title="类前面加注解"></a>类前面加注解</h2><p>@Mapper：&#x2F;mapper，映射层</p>
+<p>@Service：&#x2F;service&#x2F;impl，业务层</p>
+<p>@RestController：&#x2F;controller，控制器层</p>
+<p>实体层常用的注解：</p>
+<blockquote>
+<p> Lombok 库提供的注解，可以自动生成一些常见的代码。</p>
+<ol>
+<li><strong>@Data</strong>:</li>
+</ol>
+<ul>
+<li>@Data 会为类中的所有属性自动生成 getter、setter 方法、equals、hashCode 和 toString 方法。</li>
+</ul>
+<ol start="2">
+<li><strong>@NoArgsConstructor</strong>:</li>
+</ol>
+<ul>
+<li>@NoArgsConstructor 为类生成一个无参构造方法。</li>
+</ul>
+<ol start="3">
+<li><strong>@AllArgsConstructor</strong>:</li>
+</ol>
+<ul>
+<li>@AllArgsConstructor 会为类生成一个包含所有参数的构造方法。</li>
+</ul>
+</blockquote>
+<h2 id="函数前加注解"><a href="#函数前加注解" class="headerlink" title="函数前加注解"></a>函数前加注解</h2><p>@RequestMapping: 映射所有请求类型</p>
+<p>@GetMapping：映射Get请求</p>
+<p>@PostMapping：映射Post请求</p>
+<h2 id="函数参数注解"><a href="#函数参数注解" class="headerlink" title="函数参数注解"></a>函数参数注解</h2><p>@PathVariable：get请求的路径变量</p>
+<p>@RequestParam：</p>
+<ul>
+<li>用于从请求 URL 中获取参数值。</li>
+<li>通常用于获取 GET 方法的参数或 POST 方法中以表单形式提交的参数。</li>
+<li>参数传递方式：通过 URL 查询参数或表单数据。</li>
+<li>适用于简单数据类型，如字符串、数字等。</li>
+</ul>
+<p> @RequestBody：</p>
+<ul>
+<li>通常用于处理 POST 请求中发送的复杂对象或数据。</li>
+<li>参数传递方式：请求体中传递数据，通常是 JSON 格式。</li>
+<li>适用于复杂对象类型，如实体类、集合等。</li>
+</ul>
+<p>@ModelAttribute：把请求参数自动绑定到一个对象上</p>
+<p>@Param(“problemQuery”)：可以在映射文件引用该参数</p>
+<h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><h2 id="接口文档-Swagger"><a href="#接口文档-Swagger" class="headerlink" title="接口文档(Swagger)"></a>接口文档(Swagger)</h2><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>@SpringBootTest：类注解</p>
+<p>@Test：方法注解</p>
+<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2>
       
     </div>
 
@@ -1610,300 +2021,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/21/2023-03-21-SpringBoot%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3/" class="post-title-link" itemprop="url">SpringBoot中常见的注解</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-03-21 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-21T00:00:00+08:00">2023-03-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-07 20:31:45" itemprop="dateModified" datetime="2024-09-07T20:31:45+08:00">2024-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="类前面加注解"><a href="#类前面加注解" class="headerlink" title="类前面加注解"></a>类前面加注解</h2><p>@Mapper：&#x2F;mapper，映射层</p>
-<p>@Service：&#x2F;service&#x2F;impl，业务层</p>
-<p>@RestController：&#x2F;controller，控制器层</p>
-<p>实体层常用的注解：</p>
-<blockquote>
-<p> Lombok 库提供的注解，可以自动生成一些常见的代码。</p>
-<ol>
-<li><strong>@Data</strong>:</li>
-</ol>
-<ul>
-<li>@Data 会为类中的所有属性自动生成 getter、setter 方法、equals、hashCode 和 toString 方法。</li>
-</ul>
-<ol start="2">
-<li><strong>@NoArgsConstructor</strong>:</li>
-</ol>
-<ul>
-<li>@NoArgsConstructor 为类生成一个无参构造方法。</li>
-</ul>
-<ol start="3">
-<li><strong>@AllArgsConstructor</strong>:</li>
-</ol>
-<ul>
-<li>@AllArgsConstructor 会为类生成一个包含所有参数的构造方法。</li>
-</ul>
-</blockquote>
-<h2 id="函数前加注解"><a href="#函数前加注解" class="headerlink" title="函数前加注解"></a>函数前加注解</h2><p>@RequestMapping: 映射所有请求类型</p>
-<p>@GetMapping：映射Get请求</p>
-<p>@PostMapping：映射Post请求</p>
-<h2 id="函数参数注解"><a href="#函数参数注解" class="headerlink" title="函数参数注解"></a>函数参数注解</h2><p>@PathVariable：get请求的路径变量</p>
-<p>@RequestParam：</p>
-<ul>
-<li>用于从请求 URL 中获取参数值。</li>
-<li>通常用于获取 GET 方法的参数或 POST 方法中以表单形式提交的参数。</li>
-<li>参数传递方式：通过 URL 查询参数或表单数据。</li>
-<li>适用于简单数据类型，如字符串、数字等。</li>
-</ul>
-<p> @RequestBody：</p>
-<ul>
-<li>通常用于处理 POST 请求中发送的复杂对象或数据。</li>
-<li>参数传递方式：请求体中传递数据，通常是 JSON 格式。</li>
-<li>适用于复杂对象类型，如实体类、集合等。</li>
-</ul>
-<p>@ModelAttribute：把请求参数自动绑定到一个对象上</p>
-<p>@Param(“problemQuery”)：可以在映射文件引用该参数</p>
-<h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><h2 id="接口文档-Swagger"><a href="#接口文档-Swagger" class="headerlink" title="接口文档(Swagger)"></a>接口文档(Swagger)</h2><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>@SpringBootTest：类注解</p>
-<p>@Test：方法注解</p>
-<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/18/2023-03-18-git%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">git教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-03-18 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-18T00:00:00+08:00">2023-03-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-04-19 00:07:23" itemprop="dateModified" datetime="2024-04-19T00:07:23+08:00">2024-04-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h1><p><code>git init</code>：将目录初始化为git仓库</p>
-<p><code>git status</code>：查看工作区状态</p>
-<p><code>git diff &lt;file&gt;</code>：查看某个文件的修改内容</p>
-<p><code>git add &lt;file&gt;</code>：添加某个文件到暂存区 </p>
-<p><code>git add .</code>  把所有文件添加到暂存区</p>
-<p><code>git commit -m &quot;提交说明&quot;</code>  提交所有文件</p>
-<p><strong>远程仓库</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;YL H&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;1074747648@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>git remote add origin git@server-name:path/repo-name.git</code> 关联一个远程仓库，<code>origin</code>是远程仓库默认习惯命名</p>
-<p><code>git push -u origin master</code>第一次推送master分支的所有内容</p>
-<p><code>git push origin master</code>推送最新修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@git.acwing.com:hyle/kob.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
-<h2 id="时空机穿梭"><a href="#时空机穿梭" class="headerlink" title="时空机穿梭"></a>时空机穿梭</h2><ul>
-<li><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
-</li>
-<li><p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff &lt;file&gt;</code>可以查看修改内容。</p>
-</li>
-</ul>
-<h3 id="版本库回退"><a href="#版本库回退" class="headerlink" title="版本库回退"></a>版本库回退</h3><ul>
-<li><p><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard &lt;commit_id&gt;</code>。</p>
-</li>
-<li><p>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</p>
-</li>
-<li><p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
-<blockquote>
-<p>Git必须知道当前版本是哪个版本，在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>1094adb...</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><p>工作区：电脑里能看到的目录</p>
-<p>版本库(repository)：工作区的一个隐藏目录.git是git的版本库。</p>
-<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
-<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/image-20230322222552238.png" alt="image-20230322222552238"></p>
-<p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
-<p>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
-<p>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
-<p>可以简单理解为，需要 &#x3D;&#x3D;提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改&#x3D;&#x3D; 。</p>
-<h3 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h3><p>git管理的是修改而不是文件，每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>git commit</code>中，即修改不会提交到本地仓库。</p>
-<p>如果修改文件后无法提交到本地仓库，需要检查将修改后的文件是不是没有<code>git add</code>加入到暂存区。</p>
-<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- &lt;file&gt;</code>。（checkout 检验更新）</p>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
-<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
-<blockquote>
-<p>一种情况是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code></p>
-<p>另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- test.txt</span><br></pre></td></tr></table></figure>
-
-<p>&#x3D;&#x3D;<code>git checkout</code>其实是用版本库里的版本替换工作区的版本&#x3D;&#x3D;，无论工作区是修改还是删除，都可以“一键还原”</p>
-</blockquote>
-<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><blockquote>
-<p>要关联一个远程库，使用命令<code>git remote add origin git@&lt;server-name:path/repo-name.git&gt;</code>；</p>
-<blockquote>
-<p>git remote add origin <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a>:hyle777&#x2F;git_learn</p>
-</blockquote>
-<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
-<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
-<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
-<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
-<p><em>补充</em>：</p>
-<p>列出所有远程仓库信息：<code>git remote -v</code></p>
-<p>在本地仓库删除远程仓库(解除关联)：<code>git remote rm origin</code></p>
-<p>仓库地址可以用http协议(添加关联)：<code>git remote add origin https://github.com/hyle777/git_learn</code></p>
-</blockquote>
-<h3 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h3><blockquote>
-<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</p>
-<p>Git支持多种协议，包括<code>https</code>，但<code>ssh</code>协议速度最快。</p>
-<p>git clone <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:hyle777.github.io</p>
-<p>GitHub给出的地址不止一个，还可以用<code>https://github.com/hyle777/hyle777.github.io</code>这样的地址。</p>
-</blockquote>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h3><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即<code>master</code>分支(github中主分支为main)。<code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的，所以，<code>HEAD</code>指向的就是当前分支。</p>
-<p><code>git merge</code>命令用于合并指定分支到当前分支。合并后，再查看<code>readme.txt</code>的内容，就可以看到，和<code>dev</code>分支的最新提交是完全一样的。注意到上面的<code>Fast-forward</code>信息，Git告诉我们，这次合并是“快进模式”，也就是直接把<code>master</code>指向<code>dev</code>的当前提交，所以合并速度非常快。当然，也不是每次合并都能<code>Fast-forward</code>，我们后面会讲其他方式的合并。</p>
-<p>因为创建、合并和删除分支非常快，所以<strong>Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在<code>master</code>分支上工作效果是一样的，但过程更安全。</strong></p>
-<p>合并完成后，就可以放心地删除<code>dev</code>分支了：</p>
-<blockquote>
-<p>Git鼓励大量使用分支：</p>
-<p>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）</p>
-<p>创建分支：<code>git branch &lt;name&gt;</code></p>
-<p>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></p>
-<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></p>
-<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
-<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
-</blockquote>
-<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p>
-<p>解决冲突就是把Git<strong>合并失败的文件手动编辑</strong>为我们希望的内容，再提交。</p>
-<p>用<code>git log --graph</code>命令可以看到分支合并图。</p>
-<h3 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h3><p>Git分支十分强大，在团队开发中应该充分应用。</p>
-<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
-<h4 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h4><p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
-<p>首先，<code>master</code>分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
-<p>那在哪干活呢？干活都在<code>dev</code>分支上，也就是说，<code>dev</code>分支是不稳定的，到某个时候，比如1.0版本发布时，再把<code>dev</code>分支合并到<code>master</code>上，在<code>master</code>分支发布1.0版本；</p>
-<p>你和你的小伙伴们每个人都在<code>dev</code>分支上干活，每个人都有自己的分支，时不时地往<code>dev</code>分支上合并就可以了。</p>
-<p>所以，团队合作的分支看起来就像这样：</p>
-<p><img src="http://rqld0sdbx.hn-bkt.clouddn.com/note/0" alt="git-br-policy"></p>
-<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>当你从远程仓库克隆时，实际上Git自动把本地的<code>master</code>分支和远程的<code>master</code>分支对应起来了，并且，远程仓库的默认名称是<code>origin</code>。</p>
-<p>在本地仓库创建dev分支，将工作区的文件提交到dev分支，再推送到远程仓库的dev分支。</p>
-<blockquote>
-<p>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code>（当前分支前面会标一个<code>*</code>号）<br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1973,12 +2090,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
