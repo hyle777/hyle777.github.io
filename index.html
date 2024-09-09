@@ -17,15 +17,17 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hyle777.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hyle777.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="也许事与愿违~">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://hyle777.github.io/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="也许事与愿违~">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Cayl">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://hyle777.github.io/">
@@ -183,278 +185,12 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/08/2024-09-08-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/08/2024-09-08-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/" class="post-title-link" itemprop="url">代码生成器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-09-08 00:00:00" itemprop="dateCreated datePublished" datetime="2024-09-08T00:00:00+08:00">2024-09-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-09 01:01:13" itemprop="dateModified" datetime="2024-09-09T01:01:13+08:00">2024-09-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MyBatis/" itemprop="url" rel="index"><span itemprop="name">MyBatis</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-引入依赖"><a href="#1-引入依赖" class="headerlink" title="1. 引入依赖"></a>1. 引入依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.velocity<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>velocity-engine-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-在启动类同级目录下添加Generator-java："><a href="#2-在启动类同级目录下添加Generator-java：" class="headerlink" title="2. 在启动类同级目录下添加Generator.java："></a>2. 在启动类同级目录下添加Generator.java：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.IdType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.AutoGenerator;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.DataSourceConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.GlobalConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.PackageConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.StrategyConfig;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Generator</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要经常改的</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//根据哪个表生成代码</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">TABLE_NAME</span> <span class="operator">=</span> <span class="string">&quot;user&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//最好默认不要覆盖文件，运行的时候CTRL改为1</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">CTRL</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Boolean</span> <span class="variable">OVERRIDE</span> <span class="operator">=</span> CTRL == <span class="number">0</span>?<span class="literal">false</span>:<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 下面只要改一次</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//数据库连接</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_CNT</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://localhost:3306/codingsystem?serverTimezone=UTC&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_USER_NAME</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_PASSWORD</span> <span class="operator">=</span> <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">AUTHOR</span> <span class="operator">=</span> <span class="string">&quot;huyuliang&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//文件生成位置</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">File_PATH</span> <span class="operator">=</span> System.getProperty(<span class="string">&quot;user.dir&quot;</span>)+<span class="string">&quot;/src/main/java&quot;</span>;</span><br><span class="line">    <span class="comment">//包名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">PARENT_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;com.hyl&quot;</span>;</span><br><span class="line">    <span class="comment">//实体层包名（entity，DO）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">ENTITY_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;entity&quot;</span>;</span><br><span class="line">    <span class="comment">//映射层包名（mapper,DAO）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">MAPPER_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;mapper&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">AutoGenerator</span> <span class="variable">autoGenerator</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AutoGenerator</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//数据源相关配置：读取数据库中的信息，根据数据库表结构生成代码</span></span><br><span class="line">        <span class="type">DataSourceConfig</span> <span class="variable">dataSourceConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataSourceConfig</span>();</span><br><span class="line">        dataSourceConfig.setUrl(SQL_CNT);</span><br><span class="line">        dataSourceConfig.setDriverName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line">        dataSourceConfig.setUsername(SQL_USER_NAME);</span><br><span class="line">        dataSourceConfig.setPassword(SQL_PASSWORD);</span><br><span class="line">        autoGenerator.setDataSource(dataSourceConfig);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置全局配置</span></span><br><span class="line">        <span class="type">GlobalConfig</span> <span class="variable">globalConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GlobalConfig</span>();</span><br><span class="line">        globalConfig.setOutputDir(File_PATH);</span><br><span class="line">        globalConfig.setOpen(<span class="literal">false</span>);</span><br><span class="line">        globalConfig.setAuthor(AUTHOR);</span><br><span class="line">        globalConfig.setFileOverride(OVERRIDE);</span><br><span class="line">        <span class="comment">//%s是占位符 默认是Mapper</span></span><br><span class="line">        <span class="comment">//globalConfig.setMapperName(&quot;%sDao&quot;);</span></span><br><span class="line">        globalConfig.setIdType(IdType.ASSIGN_ID);</span><br><span class="line">        autoGenerator.setGlobalConfig(globalConfig);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//包相关配置</span></span><br><span class="line">        <span class="type">PackageConfig</span> <span class="variable">packageInfo</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PackageConfig</span>();</span><br><span class="line">        packageInfo.setParent(PARENT_PACKAGE);</span><br><span class="line">        packageInfo.setEntity(ENTITY_PACKAGE);</span><br><span class="line">        packageInfo.setMapper(MAPPER_PACKAGE);</span><br><span class="line">        autoGenerator.setPackageInfo(packageInfo);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//策略配置</span></span><br><span class="line">        <span class="type">StrategyConfig</span> <span class="variable">strategy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StrategyConfig</span>();</span><br><span class="line"></span><br><span class="line">        strategy.setInclude(TABLE_NAME);</span><br><span class="line">        <span class="comment">//strategy.setTablePrefix(&quot;tbl_&quot;);</span></span><br><span class="line">        strategy.setRestControllerStyle(<span class="literal">true</span>);</span><br><span class="line">        strategy.setEntityLombokModel(<span class="literal">true</span>);</span><br><span class="line">        strategy.setLogicDeleteFieldName(<span class="string">&quot;deleted&quot;</span>);</span><br><span class="line">        <span class="comment">//strategy.setVersionFieldName(&quot;version&quot;);</span></span><br><span class="line">        autoGenerator.setStrategy(strategy);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        autoGenerator.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-07-MyBatisPlus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="post-title-link" itemprop="url">MyBatisPlus</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-09-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-09-07T00:00:00+08:00">2024-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="MyBatis-Plus"><a href="#MyBatis-Plus" class="headerlink" title="MyBatis Plus"></a>MyBatis Plus</h1><h2 id="Mapper-和数据库表映射"><a href="#Mapper-和数据库表映射" class="headerlink" title="Mapper 和数据库表映射"></a>Mapper 和数据库表映射</h2><p><code>@TableName(&quot;xxx&quot;)</code>：类和表名映射</p>
-<p><code>@TableFiled(&quot;xxx&quot;)</code>：字段的映射</p>
-<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><p>查询接口：</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png" alt="image-20240907182943968"></p>
-<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><ol>
-<li><p>设置分页拦截器，AOP 思想，查询后进行 limit</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MpCongfig</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">pageInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行分页查询</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPage page <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">userDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">System.out.printIn(<span class="string">&quot;当前页码：&quot;</span>+page.getCurrent());</span><br><span class="line">System.out.println(<span class="string">&quot;每页数据总量：&quot;</span>+page.getSize());</span><br><span class="line">System.out.println(<span class="string">&quot;总页数：&quot;</span>+page.getPages));</span><br><span class="line">System.out.println(<span class="string">&quot;数据总量：&quot;</span>+page.getTotal());</span><br><span class="line">System.out.println(<span class="string">&quot;当前页数据：&quot;</span>+page.getRecords());</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907184702964.png" alt="image-20240907184702964"></p>
-<p><code>QueryWrapper</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QueryWrapper&lt;User&gt; qw = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">qw.1t(<span class="string">&quot;age&quot;</span>,<span class="number">65</span>);</span><br><span class="line">  .ge(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
-
-<p><code>Lambda格式</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">1qw.1t(User:getAge,<span class="number">65</span>).ge(User:getAge,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
-
-<p>&#x3D;&#x3D;null 值处理&#x3D;&#x3D;：字段为 null 就不要这个判断条件</p>
-<p>手动 if 或 lambda 条件参数：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line">1qw.ge(<span class="literal">null</span> !userQuery.getAge(),User:getAge,userQuery.getAge())</span><br><span class="line">   .1t(<span class="literal">null</span> !userQuery.getAge2(),User:getAge,userQuery.getAge2());</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询投影："><a href="#查询投影：" class="headerlink" title="查询投影："></a>查询投影：</h3><p><code>lqw.select(User::getName,User::getAge)</code>或<code>qw.select(&quot;name&quot;,&quot;age&quot;)</code>：选择查询的字段</p>
-<p><code>qw.select(&quot;count(*) as count&quot;)</code>：把 sql 中 select 后面的部分进行替换</p>
-<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><p><code>@TableId(type = IdType.AUTO)</code>：指定 Id 生成策略</p>
-<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907180422816.png" alt="image-20240907180422816"></p>
-<p><code>@TableLogic(value = &quot;0&quot;, delval = &quot;1&quot;)</code>：把字段标记为逻辑删除字段</p>
-<p><code>@Version</code>：乐观锁</p>
-<p>以上可以在<code>.yml</code>进行全局配置</p>
-<h2 id="代码生成器"><a href="#代码生成器" class="headerlink" title="代码生成器"></a>代码生成器</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-03-SpringBoot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/07/2024-09-03-SpringBoot/" class="post-title-link" itemprop="url">SpringBoot</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-09-07 00:00:00 / Modified: 23:13:04" itemprop="dateCreated datePublished" datetime="2024-09-07T00:00:00+08:00">2024-09-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ol>
-<li><p>两种形式：<code>application.yml</code> 或 <code>application.properties</code></p>
-</li>
-<li><p>yaml格式：</p>
-<ul>
-<li>缩进表层级，-表数组，#表注释</li>
-<li>参数前加空格</li>
-</ul>
-</li>
-<li><p>**<code>application.yml</code>**是默认配置文件，Spring Boot 首先加载。如果要激活其他配置文件（<code>application-dev.yml</code> 和 <code>application-local.yml</code>）</p>
-</li>
-</ol>
-<p>  在 <code>application.yml</code> 中可以设置如下：</p>
-  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
-
-<p>  在 <code>application.properties</code> 中可以设置如下：</p>
-  <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring.profiles.active</span>=<span class="string">dev</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-从yaml读取数据"><a href="#4-从yaml读取数据" class="headerlink" title="4. 从yaml读取数据"></a>4. 从yaml读取数据</h3><p>配置文件：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">lesson:</span> <span class="string">SpringBoot</span></span><br><span class="line"></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"> <span class="attr">port:</span> <span class="number">82</span></span><br><span class="line"></span><br><span class="line"><span class="attr">enterprise:</span></span><br><span class="line"> <span class="attr">name:</span> <span class="string">itcast</span></span><br><span class="line"> <span class="attr">age:</span> <span class="number">16</span></span><br><span class="line"> <span class="attr">te1:</span> <span class="number">4006184000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">subject:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">Java</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">前端</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">大数据</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><code>@Value</code>读取单个数据：<code>@Value(&quot;$&#123;一级属性名.二级属性名.xx.xx&#125;&quot;)</code></li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;server.port&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> port;</span><br><span class="line"></span><br><span class="line"><span class="comment">//读数组</span></span><br><span class="line"><span class="meta">@Value(&quot;$&#123;enterprise.subject[1]&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> String[]subject_01;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><code>@Autowired</code>读到整个文件数据到环境变量<code>Environment</code></li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowird</span></span><br><span class="line">Environment environment;</span><br><span class="line"></span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;server.port&quot;</span>));</span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;enterprise.subject[1]&quot;</span>));</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>自定义对象，<code>@ConfigurationProperties(prefix = &quot;xxx&quot;)</code>指定</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;enterprise&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Enterprise</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String[] subject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="SpringSecurity"><a href="#SpringSecurity" class="headerlink" title="SpringSecurity"></a>SpringSecurity</h2><h3 id="jwt-Token-TODO"><a href="#jwt-Token-TODO" class="headerlink" title="jwt Token TODO"></a>jwt Token TODO</h3><h3 id="权限控制-TODO"><a href="#权限控制-TODO" class="headerlink" title="权限控制 TODO"></a>权限控制 TODO</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/04/2024-09-03-Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -467,6 +203,11 @@
         </h2>
 
         <div class="post-meta">
+			
+				<i class="fa fa-thumb-tack"></i>
+				<font color=7D26CD>置顶</font>
+				<span class="post-meta-divider">|</span>
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -480,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-08 22:55:02" itemprop="dateModified" datetime="2024-09-08T22:55:02+08:00">2024-09-08</time>
+                <time title="Modified: 2024-09-09 21:50:56" itemprop="dateModified" datetime="2024-09-09T21:50:56+08:00">2024-09-09</time>
               </span>
 
           
@@ -691,12 +432,281 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/08/2024-09-08-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/09/08/2024-09-08-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8/" class="post-title-link" itemprop="url">代码生成器</a>
+        </h2>
+
+        <div class="post-meta">
+			
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-09-08 00:00:00" itemprop="dateCreated datePublished" datetime="2024-09-08T00:00:00+08:00">2024-09-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-09 01:01:13" itemprop="dateModified" datetime="2024-09-09T01:01:13+08:00">2024-09-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MyBatis/" itemprop="url" rel="index"><span itemprop="name">MyBatis</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-引入依赖"><a href="#1-引入依赖" class="headerlink" title="1. 引入依赖"></a>1. 引入依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.velocity<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>velocity-engine-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-在启动类同级目录下添加Generator-java："><a href="#2-在启动类同级目录下添加Generator-java：" class="headerlink" title="2. 在启动类同级目录下添加Generator.java："></a>2. 在启动类同级目录下添加Generator.java：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hyl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.IdType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.AutoGenerator;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.DataSourceConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.GlobalConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.PackageConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.StrategyConfig;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Generator</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要经常改的</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//根据哪个表生成代码</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">TABLE_NAME</span> <span class="operator">=</span> <span class="string">&quot;user&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//最好默认不要覆盖文件，运行的时候CTRL改为1</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">CTRL</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Boolean</span> <span class="variable">OVERRIDE</span> <span class="operator">=</span> CTRL == <span class="number">0</span>?<span class="literal">false</span>:<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 下面只要改一次</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//数据库连接</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_CNT</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://localhost:3306/codingsystem?serverTimezone=UTC&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_USER_NAME</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SQL_PASSWORD</span> <span class="operator">=</span> <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">AUTHOR</span> <span class="operator">=</span> <span class="string">&quot;huyuliang&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//文件生成位置</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">File_PATH</span> <span class="operator">=</span> System.getProperty(<span class="string">&quot;user.dir&quot;</span>)+<span class="string">&quot;/src/main/java&quot;</span>;</span><br><span class="line">    <span class="comment">//包名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">PARENT_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;com.hyl&quot;</span>;</span><br><span class="line">    <span class="comment">//实体层包名（entity，DO）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">ENTITY_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;entity&quot;</span>;</span><br><span class="line">    <span class="comment">//映射层包名（mapper,DAO）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">MAPPER_PACKAGE</span> <span class="operator">=</span> <span class="string">&quot;mapper&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">AutoGenerator</span> <span class="variable">autoGenerator</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AutoGenerator</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//数据源相关配置：读取数据库中的信息，根据数据库表结构生成代码</span></span><br><span class="line">        <span class="type">DataSourceConfig</span> <span class="variable">dataSourceConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataSourceConfig</span>();</span><br><span class="line">        dataSourceConfig.setUrl(SQL_CNT);</span><br><span class="line">        dataSourceConfig.setDriverName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line">        dataSourceConfig.setUsername(SQL_USER_NAME);</span><br><span class="line">        dataSourceConfig.setPassword(SQL_PASSWORD);</span><br><span class="line">        autoGenerator.setDataSource(dataSourceConfig);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置全局配置</span></span><br><span class="line">        <span class="type">GlobalConfig</span> <span class="variable">globalConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GlobalConfig</span>();</span><br><span class="line">        globalConfig.setOutputDir(File_PATH);</span><br><span class="line">        globalConfig.setOpen(<span class="literal">false</span>);</span><br><span class="line">        globalConfig.setAuthor(AUTHOR);</span><br><span class="line">        globalConfig.setFileOverride(OVERRIDE);</span><br><span class="line">        <span class="comment">//%s是占位符 默认是Mapper</span></span><br><span class="line">        <span class="comment">//globalConfig.setMapperName(&quot;%sDao&quot;);</span></span><br><span class="line">        globalConfig.setIdType(IdType.ASSIGN_ID);</span><br><span class="line">        autoGenerator.setGlobalConfig(globalConfig);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//包相关配置</span></span><br><span class="line">        <span class="type">PackageConfig</span> <span class="variable">packageInfo</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PackageConfig</span>();</span><br><span class="line">        packageInfo.setParent(PARENT_PACKAGE);</span><br><span class="line">        packageInfo.setEntity(ENTITY_PACKAGE);</span><br><span class="line">        packageInfo.setMapper(MAPPER_PACKAGE);</span><br><span class="line">        autoGenerator.setPackageInfo(packageInfo);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//策略配置</span></span><br><span class="line">        <span class="type">StrategyConfig</span> <span class="variable">strategy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StrategyConfig</span>();</span><br><span class="line"></span><br><span class="line">        strategy.setInclude(TABLE_NAME);</span><br><span class="line">        <span class="comment">//strategy.setTablePrefix(&quot;tbl_&quot;);</span></span><br><span class="line">        strategy.setRestControllerStyle(<span class="literal">true</span>);</span><br><span class="line">        strategy.setEntityLombokModel(<span class="literal">true</span>);</span><br><span class="line">        strategy.setLogicDeleteFieldName(<span class="string">&quot;deleted&quot;</span>);</span><br><span class="line">        <span class="comment">//strategy.setVersionFieldName(&quot;version&quot;);</span></span><br><span class="line">        autoGenerator.setStrategy(strategy);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        autoGenerator.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-03-SpringBoot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/09/07/2024-09-03-SpringBoot/" class="post-title-link" itemprop="url">SpringBoot</a>
+        </h2>
+
+        <div class="post-meta">
+			
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-09-07 00:00:00 / Modified: 23:13:04" itemprop="dateCreated datePublished" datetime="2024-09-07T00:00:00+08:00">2024-09-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ol>
+<li><p>两种形式：<code>application.yml</code> 或 <code>application.properties</code></p>
+</li>
+<li><p>yaml格式：</p>
+<ul>
+<li>缩进表层级，-表数组，#表注释</li>
+<li>参数前加空格</li>
+</ul>
+</li>
+<li><p>**<code>application.yml</code>**是默认配置文件，Spring Boot 首先加载。如果要激活其他配置文件（<code>application-dev.yml</code> 和 <code>application-local.yml</code>）</p>
+</li>
+</ol>
+<p>  在 <code>application.yml</code> 中可以设置如下：</p>
+  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+
+<p>  在 <code>application.properties</code> 中可以设置如下：</p>
+  <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring.profiles.active</span>=<span class="string">dev</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-从yaml读取数据"><a href="#4-从yaml读取数据" class="headerlink" title="4. 从yaml读取数据"></a>4. 从yaml读取数据</h3><p>配置文件：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">lesson:</span> <span class="string">SpringBoot</span></span><br><span class="line"></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"> <span class="attr">port:</span> <span class="number">82</span></span><br><span class="line"></span><br><span class="line"><span class="attr">enterprise:</span></span><br><span class="line"> <span class="attr">name:</span> <span class="string">itcast</span></span><br><span class="line"> <span class="attr">age:</span> <span class="number">16</span></span><br><span class="line"> <span class="attr">te1:</span> <span class="number">4006184000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">subject:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">Java</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">前端</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">大数据</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>@Value</code>读取单个数据：<code>@Value(&quot;$&#123;一级属性名.二级属性名.xx.xx&#125;&quot;)</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;server.port&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> port;</span><br><span class="line"></span><br><span class="line"><span class="comment">//读数组</span></span><br><span class="line"><span class="meta">@Value(&quot;$&#123;enterprise.subject[1]&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> String[]subject_01;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><code>@Autowired</code>读到整个文件数据到环境变量<code>Environment</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowird</span></span><br><span class="line">Environment environment;</span><br><span class="line"></span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;server.port&quot;</span>));</span><br><span class="line">System.out.printin(env.getProperty(<span class="string">&quot;enterprise.subject[1]&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>自定义对象，<code>@ConfigurationProperties(prefix = &quot;xxx&quot;)</code>指定</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;enterprise&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Enterprise</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String[] subject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="SpringSecurity"><a href="#SpringSecurity" class="headerlink" title="SpringSecurity"></a>SpringSecurity</h2><h3 id="jwt-Token-TODO"><a href="#jwt-Token-TODO" class="headerlink" title="jwt Token TODO"></a>jwt Token TODO</h3><h3 id="权限控制-TODO"><a href="#权限控制-TODO" class="headerlink" title="权限控制 TODO"></a>权限控制 TODO</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/07/2024-09-07-MyBatisPlus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/09/07/2024-09-07-MyBatisPlus/" class="post-title-link" itemprop="url">MyBatisPlus</a>
+        </h2>
+
+        <div class="post-meta">
+			
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-09-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-09-07T00:00:00+08:00">2024-09-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-09-08 22:55:03" itemprop="dateModified" datetime="2024-09-08T22:55:03+08:00">2024-09-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="MyBatis-Plus"><a href="#MyBatis-Plus" class="headerlink" title="MyBatis Plus"></a>MyBatis Plus</h1><h2 id="Mapper-和数据库表映射"><a href="#Mapper-和数据库表映射" class="headerlink" title="Mapper 和数据库表映射"></a>Mapper 和数据库表映射</h2><p><code>@TableName(&quot;xxx&quot;)</code>：类和表名映射</p>
+<p><code>@TableFiled(&quot;xxx&quot;)</code>：字段的映射</p>
+<h2 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h2><p>查询接口：</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907182943968.png" alt="image-20240907182943968"></p>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><ol>
+<li><p>设置分页拦截器，AOP 思想，查询后进行 limit</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MpCongfig</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">pageInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行分页查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPage page <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">userDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">System.out.printIn(<span class="string">&quot;当前页码：&quot;</span>+page.getCurrent());</span><br><span class="line">System.out.println(<span class="string">&quot;每页数据总量：&quot;</span>+page.getSize());</span><br><span class="line">System.out.println(<span class="string">&quot;总页数：&quot;</span>+page.getPages));</span><br><span class="line">System.out.println(<span class="string">&quot;数据总量：&quot;</span>+page.getTotal());</span><br><span class="line">System.out.println(<span class="string">&quot;当前页数据：&quot;</span>+page.getRecords());</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907184702964.png" alt="image-20240907184702964"></p>
+<p><code>QueryWrapper</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QueryWrapper&lt;User&gt; qw = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">qw.1t(<span class="string">&quot;age&quot;</span>,<span class="number">65</span>);</span><br><span class="line">  .ge(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<p><code>Lambda格式</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line"><span class="comment">//查询年龄大于等于18岁，小于65岁的用户</span></span><br><span class="line">1qw.1t(User:getAge,<span class="number">65</span>).ge(User:getAge,<span class="number">18</span>);</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;null 值处理&#x3D;&#x3D;：字段为 null 就不要这个判断条件</p>
+<p>手动 if 或 lambda 条件参数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;User&gt; 1qw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;User&gt;();</span><br><span class="line">1qw.ge(<span class="literal">null</span> !userQuery.getAge(),User:getAge,userQuery.getAge())</span><br><span class="line">   .1t(<span class="literal">null</span> !userQuery.getAge2(),User:getAge,userQuery.getAge2());</span><br><span class="line">List&lt;User&gt;userList userDao.selectList(1qw);</span><br><span class="line">System.out.println(userList);</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询投影："><a href="#查询投影：" class="headerlink" title="查询投影："></a>查询投影：</h3><p><code>lqw.select(User::getName,User::getAge)</code>或<code>qw.select(&quot;name&quot;,&quot;age&quot;)</code>：选择查询的字段</p>
+<p><code>qw.select(&quot;count(*) as count&quot;)</code>：把 sql 中 select 后面的部分进行替换</p>
+<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><p><code>@TableId(type = IdType.AUTO)</code>：指定 Id 生成策略</p>
+<p><img src="https://hyle-1325187152.cos.ap-guangzhou.myqcloud.com/imgs/image-20240907180422816.png" alt="image-20240907180422816"></p>
+<p><code>@TableLogic(value = &quot;0&quot;, delval = &quot;1&quot;)</code>：把字段标记为逻辑删除字段</p>
+<p><code>@Version</code>：乐观锁</p>
+<p>以上可以在<code>.yml</code>进行全局配置</p>
+<h2 id="代码生成器"><a href="#代码生成器" class="headerlink" title="代码生成器"></a>代码生成器</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/03/2024-09-03-Docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -709,6 +719,7 @@
         </h2>
 
         <div class="post-meta">
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -836,9 +847,9 @@
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/09/02/2024-09-02-%E8%99%9A%E6%8B%9F%E6%9C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -851,6 +862,7 @@
         </h2>
 
         <div class="post-meta">
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -909,9 +921,9 @@
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-Java-String%E7%B1%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -924,6 +936,7 @@
         </h2>
 
         <div class="post-meta">
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1024,9 +1037,9 @@
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-Java%E9%9B%86%E5%90%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1039,6 +1052,7 @@
         </h2>
 
         <div class="post-meta">
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1383,9 +1397,9 @@
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/15/2024-04-15-%E5%8F%8D%E5%B0%84%E5%92%8C%E6%B3%A8%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1398,6 +1412,7 @@
         </h2>
 
         <div class="post-meta">
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1478,9 +1493,9 @@
     <link itemprop="mainEntityOfPage" href="https://hyle777.github.io/2024/04/12/2024-04-12-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Cayl">
+      <meta itemprop="description" content="也许事与愿违~">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1493,6 +1508,7 @@
         </h2>
 
         <div class="post-meta">
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1708,8 +1724,10 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
+    <img class="site-author-image" itemprop="image" alt="Cayl"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Cayl</p>
+  <div class="site-description" itemprop="description">也许事与愿违~</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -1760,7 +1778,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Cayl</span>
 </div>
 <!--
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
